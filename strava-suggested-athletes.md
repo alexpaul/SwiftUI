@@ -1,5 +1,7 @@
 # Strava "Suggested Athletes"
 
+Used here is a SwiftUI `ScrollView` along with a `LazyHGrid` to render a series of horizontal `Card`s. 
+
 <img width="1453" alt="Screen Shot 2022-10-30 at 5 05 24 PM" src="https://user-images.githubusercontent.com/1819208/198901617-e5fa9364-146b-4ac1-bf15-ebd46d89d183.png">
 
 
