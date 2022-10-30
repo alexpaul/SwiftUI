@@ -2,7 +2,7 @@
 
 Used here is a SwiftUI `ScrollView` along with a `LazyHGrid` to render a series of horizontal `Card`s. 
 
-<img width="1453" alt="Screen Shot 2022-10-30 at 5 05 24 PM" src="https://user-images.githubusercontent.com/1819208/198901617-e5fa9364-146b-4ac1-bf15-ebd46d89d183.png">
+<img width="1465" alt="Screen Shot 2022-10-30 at 5 10 59 PM" src="https://user-images.githubusercontent.com/1819208/198901806-d1012844-3aad-4132-9269-3d0163b52b0c.png">
 
 
 ```swift
