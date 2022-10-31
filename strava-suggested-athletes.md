@@ -2,7 +2,7 @@
 
 Used here is a SwiftUI `ScrollView` along with a `LazyHGrid` to render a series of horizontal `Card`s. 
 
-<img width="1465" alt="Screen Shot 2022-10-30 at 5 10 59 PM" src="https://user-images.githubusercontent.com/1819208/198901806-d1012844-3aad-4132-9269-3d0163b52b0c.png">
+<img width="1466" alt="Screen Shot 2022-10-31 at 12 34 02 PM" src="https://user-images.githubusercontent.com/1819208/199060549-2b2cdf48-5330-4e32-97ff-f299a9d5cbe4.png">
 
 
 ```swift
@@ -66,16 +66,28 @@ struct ContentView: View {
     private let rows = [GridItem(.adaptive(minimum: 150))]
 
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            LazyHGrid(rows: rows, spacing: 10) {
-                ForEach(0..<20, id: \.self) { _ in
-                    Card()
+        VStack {
+            HStack {
+                Text("Suggested Athletes")
+                    .font(.headline)
+                Spacer()
+                Text("See All")
+                    .font(.footnote)
+                    .foregroundColor(.orange)
+                    .padding(.trailing, 8)
+            }
+            .padding(.top, 8)
+            .padding(.leading, 8)
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHGrid(rows: rows, spacing: 10) {
+                    ForEach(0..<20, id: \.self) { _ in
+                        Card()
+                    }
                 }
+                .padding(.leading, 8)
             }
             .frame(height: 300)
-            .padding(.leading, 8)
         }
-        .frame(maxWidth: .infinity)
         .background(Color(uiColor: .systemGroupedBackground))
     }
 }
