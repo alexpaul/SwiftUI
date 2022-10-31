@@ -4,6 +4,7 @@ Used here is a SwiftUI `ScrollView` along with a `LazyHGrid` to render a series 
 
 <img width="1466" alt="Screen Shot 2022-10-31 at 12 34 02 PM" src="https://user-images.githubusercontent.com/1819208/199060549-2b2cdf48-5330-4e32-97ff-f299a9d5cbe4.png">
 
+try? it out
 
 ```swift
 import SwiftUI
