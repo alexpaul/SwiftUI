@@ -29,3 +29,4 @@ struct ContentView_Previews: PreviewProvider {
 ## Resources 
 
 * [Apple docs: `colorScheme` of the Environment](https://developer.apple.com/documentation/swiftui/environmentvalues/colorscheme)
+* [Apple docs: EnvironmentValues](https://developer.apple.com/documentation/swiftui/environmentvalues)
