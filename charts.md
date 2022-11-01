@@ -1,6 +1,6 @@
 # Swift `Charts`
 
-![Screen Shot 2022-10-31 at 6 18 32 PM](https://user-images.githubusercontent.com/1819208/199120943-49d966bd-d6b7-4981-8dcb-bef4cc5573b8.png)
+![Screen Shot 2022-11-01 at 10 56 34 AM](https://user-images.githubusercontent.com/1819208/199264080-aa7dc3f0-8dcf-43c6-b551-bbf5f48084fb.png)
 
 
 ```swift
@@ -21,9 +21,15 @@ struct ContentView: View {
         .init(week: "Week 4", distance: 33.13)
     ]
 
+    var totalDistance: Double {
+        mileage.reduce(0) { partialResult, mileage in
+            partialResult + mileage.distance
+        }
+    }
+
     var body: some View {
         VStack {
-            Text("October Run Mileage 2022")
+            Text("October Run Mileage \(Int(totalDistance)) miles")
                 .font(.headline)
             Chart(mileage, id: \.id) { item in
                 BarMark(
