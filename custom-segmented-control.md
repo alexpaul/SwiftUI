@@ -1,6 +1,6 @@
 # Custom Segmented Control 
 
-![Screen Shot 2022-11-01 at 9 07 49 PM](https://user-images.githubusercontent.com/1819208/199370986-47f81a04-641f-4a3e-8267-c6e769c90afc.png)
+![Screen Shot 2022-11-02 at 5 57 53 AM](https://user-images.githubusercontent.com/1819208/199460252-161f125b-2986-4317-ac83-cd4baf2fcb2c.png)
 
 
 ```swift
@@ -51,6 +51,8 @@ struct ContentView: View {
                     .background(isLeftSelected ? .clear : .orange)
                 }
             }
+            Spacer()
+            Text(isLeftSelected ? "Viewing your Progress" : "Viewing your Activities")
             Spacer()
         }
     }
