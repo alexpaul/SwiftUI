@@ -2,6 +2,7 @@
 
 ![Screen Shot 2022-11-02 at 5 57 53 AM](https://user-images.githubusercontent.com/1819208/199460252-161f125b-2986-4317-ac83-cd4baf2fcb2c.png)
 
+try? it out 
 
 ```swift
 import SwiftUI
