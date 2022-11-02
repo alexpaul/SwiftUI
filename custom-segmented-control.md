@@ -1,6 +1,6 @@
 # Custom Segmented Control 
 
-![Screen Shot 2022-11-01 at 8 54 26 PM](https://user-images.githubusercontent.com/1819208/199369548-97bb70e5-868c-4688-8e02-792b5de3cafe.png)
+![Screen Shot 2022-11-01 at 9 07 49 PM](https://user-images.githubusercontent.com/1819208/199370986-47f81a04-641f-4a3e-8267-c6e769c90afc.png)
 
 
 ```swift
@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             HStack(alignment: .center, spacing: 0) {
-                Button(action: changeSelection) {
+                Button(action: { changeSelection(true) }) {
                     Text("Progress")
                         .font(.headline)
                         .frame(maxWidth: .infinity)
@@ -25,7 +25,7 @@ struct ContentView: View {
                         .foregroundColor(isLeftSelected ? .orange : .black)
                         .background(.clear)
                 }
-                Button(action: changeSelection) {
+                Button(action: { changeSelection(false) }) {
                     Text("Activities")
                         .font(.headline)
                         .frame(maxWidth: .infinity)
@@ -55,7 +55,8 @@ struct ContentView: View {
         }
     }
 
-    private func changeSelection() {
+    private func changeSelection(_ selection: Bool) {
+        guard selection != isLeftSelected else { return }
         withAnimation {
             isLeftSelected.toggle()
         }
