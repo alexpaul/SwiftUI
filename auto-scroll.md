@@ -1,6 +1,6 @@
 # Auto Scroll a SwiftUI ScrollView
 
-Using [ScrollViewReader](https://developer.apple.com/documentation/swiftui/scrollviewreader) to auto-scroll a SwiftUI ScrollView.
+Using [ScrollViewReader](https://developer.apple.com/documentation/swiftui/scrollviewreader) along with a `Timer` Publisher to auto-scroll a SwiftUI ScrollView.
 
 
 ![scroll](https://user-images.githubusercontent.com/1819208/200452458-d542f836-7d7c-44c7-b001-560063a363eb.gif)
