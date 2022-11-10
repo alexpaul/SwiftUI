@@ -69,3 +69,9 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 ```
+
+***
+
+## Resources 
+
+* [Apple docs: Adding Search to you app](https://developer.apple.com/documentation/swiftui/adding-search-to-your-app)
