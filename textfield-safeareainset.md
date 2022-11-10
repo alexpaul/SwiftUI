@@ -45,4 +45,4 @@ struct ContentView_Previews: PreviewProvider {
 ## Resources
 
 * [Apple docs: `TextField`](https://developer.apple.com/documentation/swiftui/textfield)
-* [Apple docs: `safeareainset`](https://developer.apple.com/documentation/swiftui/view/safeareainset(edge:alignment:spacing:content:)-6gwby)
+* [Apple docs: `safeAreaInset`](https://developer.apple.com/documentation/swiftui/view/safeareainset(edge:alignment:spacing:content:)-6gwby)
