@@ -77,3 +77,11 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 ```
+
+***
+
+## Resources 
+
+* [Apple docs: `Form`](https://developer.apple.com/documentation/swiftui/form)
+* [Apple docs: `listrowinsets(_:)`](https://developer.apple.com/documentation/swiftui/view/listrowinsets(_:))
+* [Apple docs: `listrowseparator(_:edges:)`](https://developer.apple.com/documentation/swiftui/list/listrowseparator(_:edges:))
