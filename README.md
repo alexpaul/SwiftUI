@@ -46,5 +46,5 @@ struct ContentView_Previews: PreviewProvider {
 * [Apple Sample Code: Exploring SwiftUI Sample Apps](https://developer.apple.com/tutorials/Sample-Apps)
 * [Apple Sample Code: Food Truck: Building a SwiftUI multiplatform app](https://developer.apple.com/documentation/swiftui/food_truck_building_a_swiftui_multiplatform_app)
 * [Apple Sample Code: Fruta: Building a Feature-Rich App with SwiftUI](https://developer.apple.com/documentation/swiftui/fruta_building_a_feature-rich_app_with_swiftui)
-* [Apple Sampel Code: Create Accessible Views and more sample code](https://developer.apple.com/documentation/swiftui/creating_accessible_views)
+* [Apple Sample Code: Create Accessible Views and more sample code](https://developer.apple.com/documentation/swiftui/creating_accessible_views)
 
