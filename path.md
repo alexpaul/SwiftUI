@@ -2,7 +2,8 @@
 
 ## Drawing a Curve using `addCurve`
 
-![Screen Shot 2022-11-12 at 9 24 25 AM](https://user-images.githubusercontent.com/1819208/201478687-9aff8aa9-1df5-45b1-8a94-0d73c25f0991.png)
+![Screen Shot 2022-11-12 at 10 24 02 AM](https://user-images.githubusercontent.com/1819208/201481175-e1c02cfb-6888-477d-bded-3e8eedb1f8b1.png)
+
 
 ```swift
 import SwiftUI
@@ -17,8 +18,10 @@ struct ContentView: View {
                 path.move(to: CGPoint(x: 40, y: 300))
                 // endpoint
                 path.addCurve(to: CGPoint(x: width - 40, y: 300),
-                              control1: CGPoint(x: 200, y: 150),
-                              control2: CGPoint(x: 250, y: 400))
+                              // control point above line
+                              control1: CGPoint(x: width * 0.6, y: 200),
+                              // control point below line
+                              control2: CGPoint(x: width * 0.5, y: 400))
             }
             .stroke(.black, lineWidth: 2)
         }
