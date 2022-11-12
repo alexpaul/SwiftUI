@@ -77,6 +77,8 @@ struct ContentView_Previews: PreviewProvider {
 
 ## 3. Drawing a Curve using `addCurve`
 
+> A Curve has two `control` points. As seen below we choose a `control` point above and below the start and the end points to create the desired curve. 
+
 ![Screen Shot 2022-11-12 at 10 24 02 AM](https://user-images.githubusercontent.com/1819208/201481175-e1c02cfb-6888-477d-bded-3e8eedb1f8b1.png)
 
 try? it out 
