@@ -163,7 +163,13 @@ struct ContentView_Previews: PreviewProvider {
 
 ## 5. Drawing a Tooltip with embedded `Text`
 
-<img width="1293" alt="Screen Shot 2022-11-11 at 6 04 22 PM" src="https://user-images.githubusercontent.com/1819208/201442582-1cedd47d-4604-4b33-b02d-dbc73328a792.png">
+iPhone
+
+![iphone-tooltip](https://user-images.githubusercontent.com/1819208/201485699-d1eabe1b-9f44-42eb-bce6-6021dd33f7f8.png)
+
+iPad
+
+![ipad-tooltip](https://user-images.githubusercontent.com/1819208/201485705-fb78ef67-35da-4d88-a13a-49bc66d1426b.png)
 
 try? it out 
 
@@ -174,70 +180,45 @@ struct Tooltip: View {
     let headline: String
     let subheadline: String
 
+    @Environment(\.horizontalSizeClass) var sizeClass
+
     var body: some View {
-        ZStack {
-            Path { path in
-                // starting point
-                path.move(
-                    to: CGPoint(
-                        x: 20,
-                        y: 50)
-                )
-                // top right
-                path.addLine(
-                    to: CGPoint(
-                        x: 370,
-                        y: 50
-                    )
-                )
-                // bottom right
-                path.addLine(
-                    to: CGPoint(
-                        x: 370,
-                        y: 150
-                    )
-                )
-                // right of pointer
-                path.addLine(
-                    to: CGPoint(
-                        x: 360,
-                        y: 150
-                    )
-                )
-                // botton of pointer
-                path.addLine(
-                    to: CGPoint(
-                        x: 334,
-                        y: 190
-                    )
-                )
-                // left of pointer
-                path.addLine(
-                    to: CGPoint(
-                        x: 320,
-                        y: 150
-                    )
-                )
-                // bottom left
-                path.addLine(
-                    to: CGPoint(
-                        x: 20,
-                        y: 150
-                    )
-                )
-                path.closeSubpath()
+        GeometryReader { geometry in
+            let width = geometry.size.width
+            let height = geometry.size.height
+            VStack {
+                ZStack {
+                    Path { path in
+                        // start point
+                        path.move(to: CGPoint(x: 40, y: height * 0.40))
+                        // top right point
+                        path.addLine(to: CGPoint(x: width - 40, y: height * 0.40))
+                        // bottom right point
+                        path.addLine(to: CGPoint(x: width - 40, y: height * 0.60))
+                        // right of point
+                        path.addLine(to: CGPoint(x: width - 60, y: height * 0.60))
+                        // bottom of point
+                        path.addLine(to: CGPoint(x: width - 70, y: height * 0.70))
+                        // left of point
+                        path.addLine(to: CGPoint(x: width - 100, y: height * 0.60))
+                        // bottom left
+                        path.addLine(to: CGPoint(x: 40, y: height * 0.60))
+                        // close paht
+                        path.closeSubpath()
+                    }
+                    .fill(.yellow)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(headline)
+                            .font(.headline)
+                        Text(subheadline)
+                            .font(.subheadline)
+                    }
+                    .frame(width: sizeClass == .regular ? nil : 300)
+                    .background(.orange)
+                }
             }
-            .fill(.yellow)
-            .frame(minHeight: 200)
-            VStack(alignment: .leading, spacing: 4) {
-                Text(headline)
-                    .font(.headline)
-                Text(subheadline)
-                    .font(.subheadline)
-            }
-            .frame(width: 300)
         }
-        .frame(height: 100)
+        .frame(height: 500)
     }
 }
 
@@ -256,7 +237,8 @@ struct ContentView: View {
                 headline: headline,
                 subheadline: subheadline
             )
-            .padding(.bottom, 40)
+            .frame(height: 200)
+            .background(.ultraThinMaterial)
             HStack {
                 Spacer()
                 Button(action: {}) {
@@ -276,7 +258,13 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        // Apple docs: https://developer.apple.com/documentation/swiftui/view/previewdevice(_:)
         ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro"))
+            .previewDisplayName("iPhone 14 Pro")
+        ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPad Pro (12.9-inch) (5th generation)"))
+            .previewDisplayName("iPad Pro 12.9-inch 5th Gen")
     }
 }
 ```
