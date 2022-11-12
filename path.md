@@ -1,9 +1,48 @@
 # Path
 
+## Drawig a Line using `addLine`
+
+![Screen Shot 2022-11-12 at 10 27 38 AM](https://user-images.githubusercontent.com/1819208/201481342-9eea8dd0-e30c-4590-9b7e-d439495a25ac.png)
+
+try? it out 
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        GeometryReader { geometry in
+            let width = geometry.size.width
+            let height = width
+            Path { path in
+                // start point
+                path.move(to: CGPoint(x: 40, y: 300))
+                // endpoint
+                path.addCurve(to: CGPoint(x: width - 40, y: 300),
+                              // control point above line
+                              control1: CGPoint(x: width * 0.6, y: 200),
+                              // control point below line
+                              control2: CGPoint(x: width * 0.5, y: 400))
+            }
+            .stroke(.black, lineWidth: 2)
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
+****
+
 ## Drawing a Curve using `addCurve`
 
 ![Screen Shot 2022-11-12 at 10 24 02 AM](https://user-images.githubusercontent.com/1819208/201481175-e1c02cfb-6888-477d-bded-3e8eedb1f8b1.png)
 
+try? it out 
 
 ```swift
 import SwiftUI
