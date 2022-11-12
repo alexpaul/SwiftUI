@@ -115,7 +115,53 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
-## 4. Drawing a Tooltip
+## 4. Drawing a Tooltip Container
+
+![Screen Shot 2022-11-12 at 11 19 26 AM](https://user-images.githubusercontent.com/1819208/201483845-655dcab9-b0bf-41ce-8732-4f678739ca99.png)
+
+try? it out 
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        GeometryReader { geometry in
+            let width = geometry.size.width
+            let height = width
+            Path { path in
+                // start point
+                path.move(to: CGPoint(x: 40, y: 300))
+                // top right point
+                path.addLine(to: CGPoint(x: width - 40, y: 300))
+                // bottom right point
+                path.addLine(to: CGPoint(x: width - 40, y: 400))
+                // right of point
+                path.addLine(to: CGPoint(x: width - 60, y: 400))
+                // bottom of point
+                path.addLine(to: CGPoint(x: width - 80, y: 440))
+                // left of point
+                path.addLine(to: CGPoint(x: width - 80, y: 400))
+                // bottom left
+                path.addLine(to: CGPoint(x: 40, y: 400))
+                // close paht
+                path.closeSubpath()
+            }
+            .stroke(.black, lineWidth: 2)
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
+***
+
+## 5. Drawing a Tooltip with embedded `Text`
 
 <img width="1293" alt="Screen Shot 2022-11-11 at 6 04 22 PM" src="https://user-images.githubusercontent.com/1819208/201442582-1cedd47d-4604-4b33-b02d-dbc73328a792.png">
 
