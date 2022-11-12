@@ -1,6 +1,6 @@
 # Path
 
-## Drawig a Line using `addLine`
+## 1, Drawig a Line using `addLine`
 
 ![Screen Shot 2022-11-12 at 10 27 38 AM](https://user-images.githubusercontent.com/1819208/201481342-9eea8dd0-e30c-4590-9b7e-d439495a25ac.png)
 
@@ -36,9 +36,42 @@ struct ContentView_Previews: PreviewProvider {
 }
 ```
 
+## 2. Drawing a Quad Curve using `addQuadCurve`
+
+![Screen Shot 2022-11-12 at 10 33 30 AM](https://user-images.githubusercontent.com/1819208/201481627-1a4f97a8-df14-4bba-8165-4f6396f43213.png)
+
+try? it out 
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        GeometryReader { geometry in
+            let width = geometry.size.width
+            let height = width
+            Path { path in
+                // start point
+                path.move(to: CGPoint(x: 40, y: 300))
+                // endpoint
+                path.addQuadCurve(to: CGPoint(x: width - 40, y: 300),
+                                  control: CGPoint(x: width * 0.5, y: 50))
+            }
+            .stroke(.black, lineWidth: 2)
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
 ****
 
-## Drawing a Curve using `addCurve`
+## 3. Drawing a Curve using `addCurve`
 
 ![Screen Shot 2022-11-12 at 10 24 02 AM](https://user-images.githubusercontent.com/1819208/201481175-e1c02cfb-6888-477d-bded-3e8eedb1f8b1.png)
 
@@ -76,7 +109,7 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
-## Drawing a Tooltip
+## 4. Drawing a Tooltip
 
 <img width="1293" alt="Screen Shot 2022-11-11 at 6 04 22 PM" src="https://user-images.githubusercontent.com/1819208/201442582-1cedd47d-4604-4b33-b02d-dbc73328a792.png">
 
