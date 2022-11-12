@@ -1,6 +1,8 @@
 # Path
 
-## 1, Drawig a Line using `addLine`
+Bezier curves allow us to perform custom drawings in iOS. `Path` available in SwiftUI is similar to `UIBezierPath` to UIKit and is the API that allows for this drawing customization. Below are some starter sample code to get you started with custom drawing of paths and curves.
+
+## 1. Drawig a Line using `addLine`
 
 ![Screen Shot 2022-11-12 at 10 27 38 AM](https://user-images.githubusercontent.com/1819208/201481342-9eea8dd0-e30c-4590-9b7e-d439495a25ac.png)
 
