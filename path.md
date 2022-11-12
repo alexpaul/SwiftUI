@@ -40,6 +40,8 @@ struct ContentView_Previews: PreviewProvider {
 
 ## 2. Drawing a Quad Curve using `addQuadCurve`
 
+> A Quad Curve has one `control` point. As seen below we choose a `control` point midway between the starting and ending point and above to get this desired curve. Feel free to adjust the `control` point and see how the shape behaves.
+
 ![Screen Shot 2022-11-12 at 10 33 30 AM](https://user-images.githubusercontent.com/1819208/201481627-1a4f97a8-df14-4bba-8165-4f6396f43213.png)
 
 try? it out 
