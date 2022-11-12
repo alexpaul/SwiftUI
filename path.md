@@ -144,7 +144,7 @@ struct ContentView: View {
                 path.addLine(to: CGPoint(x: width - 80, y: 400))
                 // bottom left
                 path.addLine(to: CGPoint(x: 40, y: 400))
-                // close paht
+                // close path
                 path.closeSubpath()
             }
             .stroke(.black, lineWidth: 2)
@@ -203,7 +203,7 @@ struct Tooltip: View {
                         path.addLine(to: CGPoint(x: width - 100, y: height * 0.60))
                         // bottom left
                         path.addLine(to: CGPoint(x: 40, y: height * 0.60))
-                        // close paht
+                        // close path
                         path.closeSubpath()
                     }
                     .fill(.yellow)
