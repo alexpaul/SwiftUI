@@ -1,5 +1,41 @@
 # Path
 
+## Drawing a Curve using `addCurve`
+
+![Screen Shot 2022-11-12 at 9 24 25 AM](https://user-images.githubusercontent.com/1819208/201478687-9aff8aa9-1df5-45b1-8a94-0d73c25f0991.png)
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        GeometryReader { geometry in
+            let width = geometry.size.width
+            let height = width
+            Path { path in
+                // start point
+                path.move(to: CGPoint(x: 40, y: 300))
+                // endpoint
+                path.addCurve(to: CGPoint(x: width - 40, y: 300),
+                              control1: CGPoint(x: 200, y: 150),
+                              control2: CGPoint(x: 250, y: 400))
+            }
+            .stroke(.black, lineWidth: 2)
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
+***
+
+## Drawing a Tooltip
+
 <img width="1293" alt="Screen Shot 2022-11-11 at 6 04 22 PM" src="https://user-images.githubusercontent.com/1819208/201442582-1cedd47d-4604-4b33-b02d-dbc73328a792.png">
 
 try? it out 
