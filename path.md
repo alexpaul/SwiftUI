@@ -271,6 +271,61 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
+## 6. Drawing a Hexagon 
+
+Hexagon drawing details 
+
+![hex-details](https://user-images.githubusercontent.com/1819208/201501495-e872e99c-d02b-4f3b-8841-056662b03306.jpg)
+
+Hexagon 
+
+![Screen Shot 2022-11-12 at 8 40 49 PM](https://user-images.githubusercontent.com/1819208/201501501-67e8726a-458c-4a9b-a4d3-9caeb362f9b3.png)
+
+
+try? it out 
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        GeometryReader { geometry in
+            let width = geometry.size.width
+            let height = geometry.size.height
+            let center = CGPoint(x: width/2, y: height/2)
+            let size: CGFloat = width * 0.75
+            let half = size / 2
+            let quarter = size / 4
+            VStack {
+                Path { path in
+                    // left
+                    path.move(to: CGPoint(x: center.x - half, y: center.y))
+                    // top left
+                    path.addLine(to: CGPoint(x: center.x - quarter, y: center.y - half))
+                    // top right
+                    path.addLine(to: CGPoint(x: center.x + quarter, y: center.y - half))
+                    // right
+                    path.addLine(to: CGPoint(x: center.x + half, y: center.y))
+                    // bottom right
+                    path.addLine(to: CGPoint(x: center.x + quarter, y: center.y + half))
+                    // bottom left
+                    path.addLine(to: CGPoint(x: center.x - quarter, y: center.y + half))
+                    // close the path
+                    path.closeSubpath()
+                }
+                .fill(.orange)
+            }
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
 ## Resources 
 
 * [Apple docs: `Path`](https://developer.apple.com/documentation/swiftui/path)
