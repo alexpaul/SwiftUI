@@ -330,9 +330,22 @@ struct ContentView_Previews: PreviewProvider {
 
 ## 7. Drawing a Rounded Tooltip
 
-> To get the smooth rounded corners in this tooltip we make use of `addCurve` which takes a `to:` point and two `control` points. We keep the `y` coordinates for the `control` points on the same plain as the `y` top and bottom values accordingly. For the `x` value we give it an `adjustment` value.
+> To get the smooth rounded corners in this tooltip we make use of `addCurve` which takes a `to:` point and two `control` points.
+```swift
+// right curve
+path.addCurve(to: CGPoint(x: center.x + (containerLength/2),
+                          y: center.y + containerHeight),
+              control1: CGPoint(x: center.x + (containerLength/2) + adjustment,
+                                y: center.y - containerHeight/2),
+              control2: CGPoint(x: center.x + (containerLength/2) + adjustment,
+                                y: center.y + containerHeight))
+```
 
-![Screen Shot 2022-11-13 at 5 09 46 PM](https://user-images.githubusercontent.com/1819208/201547065-e24f9127-fc79-41dc-b04d-0c53ca1b8bc4.png)
+>   We keep the `y` coordinates for the `control` points on the same plain as the `y` top and bottom values accordingly. For the `x` value we give it an `adjustment` value e.g `40` points.
+
+![Screen Shot 2022-11-13 at 5 18 22 PM](https://user-images.githubusercontent.com/1819208/201548483-3269523b-318c-4720-b54e-8c4de5282dff.jpg)
+
+![Screen Shot 2022-11-13 at 5 44 23 PM](https://user-images.githubusercontent.com/1819208/201548470-bde8a844-eceb-415f-a170-f8041c85f080.png)
 
 try? it out 
 
@@ -383,7 +396,7 @@ struct RoundedTooltip: View {
                                                 y: center.y - containerHeight/2))
             }
             .stroke(.black, lineWidth: 4)
-            Text("Welcome to our app experience. Check out our this new feature.")
+            Text("Welcome to our app experience. Check out this new feature.")
                 .frame(width: 200)
                 .position(x: geometry.size.width/2,
                           y: geometry.size.height/2
