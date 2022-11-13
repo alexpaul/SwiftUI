@@ -275,7 +275,7 @@ struct ContentView_Previews: PreviewProvider {
 
 Hexagon drawing details 
 
-![hex-details](https://user-images.githubusercontent.com/1819208/201501495-e872e99c-d02b-4f3b-8841-056662b03306.jpg)
+![Screen Shot 2022-11-12 at 8 31 07 PM](https://user-images.githubusercontent.com/1819208/201504941-8bca9fe2-7fd6-41a8-ac54-6d10c7c69522.jpg)
 
 Hexagon 
 
