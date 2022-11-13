@@ -330,8 +330,11 @@ struct ContentView_Previews: PreviewProvider {
 
 ## 7. Drawing a Rounded Tooltip
 
+> To get the smooth rounded corners in this tooltip we make use of `addCurve` which takes a `to:` point and two `control` points. We keep the `y` coordinates for the `control` points on the same plain as the `y` top and bottom values accordingly. For the `x` value we give it an `adjustment` value.
+
 ![Screen Shot 2022-11-13 at 5 09 46 PM](https://user-images.githubusercontent.com/1819208/201547065-e24f9127-fc79-41dc-b04d-0c53ca1b8bc4.png)
 
+try? it out 
 
 ```swift
 import SwiftUI
