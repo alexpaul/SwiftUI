@@ -326,6 +326,90 @@ struct ContentView_Previews: PreviewProvider {
 }
 ```
 
+***
+
+## 7. Drawing a Rounded Tooltip
+
+![Screen Shot 2022-11-13 at 5 09 46 PM](https://user-images.githubusercontent.com/1819208/201547065-e24f9127-fc79-41dc-b04d-0c53ca1b8bc4.png)
+
+
+```swift
+import SwiftUI
+
+struct RoundedTooltip: View {
+    var body: some View {
+        GeometryReader { geometry in
+            let center = CGPoint(x: geometry.size.width/2,
+                                y: geometry.size.height/2)
+            let width = geometry.size.width
+            let containerLength = width * 0.60
+            let containerHeight: CGFloat = 60
+            let adjustment: CGFloat = 60
+            Path { path in
+                // start point
+                path.move(to: CGPoint(x: center.x - (containerLength/2),
+                                      y: center.y - containerHeight/2))
+                // top line
+                path.addLine(to: CGPoint(x: center.x + (containerLength/2),
+                                         y: center.y - containerHeight/2))
+                // right curve
+                path.addCurve(to: CGPoint(x: center.x + (containerLength/2),
+                                          y: center.y + containerHeight),
+                              control1: CGPoint(x: center.x + (containerLength/2) + adjustment,
+                                                y: center.y - containerHeight/2),
+                              control2: CGPoint(x: center.x + (containerLength/2) + adjustment,
+                                                y: center.y + containerHeight))
+                // bottom line at right of point
+                path.addLine(to: CGPoint(x: center.x + 100,
+                                         y: center.y + containerHeight))
+                // bottom of point
+                path.addLine(to: CGPoint(x: center.x + 80,
+                                         y: center.y + 100))
+                // left of point
+                path.addLine(to: CGPoint(x: center.x + 70,
+                                         y: center.y + containerHeight))
+                // bottom line left of point
+                path.addLine(to: CGPoint(x: center.x - (containerLength/2),
+                                         y: center.y + containerHeight))
+                // left curve
+                path.addCurve(to: CGPoint(x: center.x - (containerLength/2),
+                                          y: center.y - containerHeight/2),
+                              control1: CGPoint(x: center.x - (containerLength/2) - adjustment,
+                                                y: center.y + containerHeight),
+                              control2: CGPoint(x: center.x - (containerLength/2) - adjustment,
+                                                y: center.y - containerHeight/2))
+            }
+            .stroke(.black, lineWidth: 4)
+            Text("Welcome to our app experience. Check out our this new feature.")
+                .frame(width: 200)
+                .position(x: geometry.size.width/2,
+                          y: geometry.size.height/2
+                )
+                .offset(y: 8)
+        }
+        .frame(height: 200)
+        .ignoresSafeArea(.all)
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Spacer()
+            RoundedTooltip()
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
+***
+
 ## Resources 
 
 * [Apple docs: `Path`](https://developer.apple.com/documentation/swiftui/path)
