@@ -4,7 +4,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let eventDescription = "This is no leisure tour: be ready to work as you climb over 2000 meters in just under 90 kilometers! And be warned: hitting the Alpe after working your way over the previous climbs proves to be both a mental and physical challenge. Prepare yourself!\n\nDuration: Approximately 4 Hours"
+    private let eventDescription =
+    """
+    This is no leisure tour: be ready to work as you climb over 2000 meters in just under 90 kilometers! And be warned: hitting the Alpe after working your way over the previous climbs proves to be both a mental and physical challenge. Prepare yourself!
+
+    Elevation: 6927 Feet
+
+    Duration: Approximately 4 Hours
+    """
 
     var body: some View {
         ScrollView {
@@ -28,7 +35,7 @@ struct ContentView: View {
                     .font(.headline)
                     .bold()
                 Spacer()
-                Text("Birthday Bike Ride | 2022")
+                Text("Birthday Bike Ride 🥳 | 2022")
             }
             .padding(.horizontal, 20)
             Divider()
