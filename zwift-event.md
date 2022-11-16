@@ -4,7 +4,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let eventDescription =
+    private let eventData =
     """
     This is no leisure tour: be ready to work as you climb over 2000 meters in just under 90 kilometers! And be warned: hitting the Alpe after working your way over the previous climbs proves to be both a mental and physical challenge. Prepare yourself!
 
@@ -21,6 +21,14 @@ struct ContentView: View {
 
     var body: some View {
         ScrollView {
+            header
+            eventDescription
+            resourceLinks
+        }
+    }
+
+    private var header: some View {
+        Group {
             Text("TUESDAY, NOVEMBER 22")
             ZStack {
                 Image("fourHorsemen")
@@ -38,6 +46,11 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity)
                 .background(.orange)
                 .padding(.top, -10)
+        }
+    }
+
+    private var eventDescription: some View {
+        Group {
             HStack {
                 Text("5:00 AM")
                     .font(.headline)
@@ -55,10 +68,15 @@ struct ContentView: View {
             }
             .padding(.horizontal, 20)
             .padding(.bottom, 10)
-            Text(eventDescription)
+            Text(eventData)
                 .font(.footnote)
                 .padding(.horizontal, 20)
                 .padding(.bottom, 20)
+        }
+    }
+
+    private var resourceLinks: some View {
+        Group {
             HStack {
                 Text("RESOURCE LINKS")
                     .font(.headline)
@@ -72,9 +90,14 @@ struct ContentView: View {
                     .onTapGesture {
                         openURL(URL(string: "https://www.strava.com/activities/1748727988")!)
                     }
+                Text("|")
+                    .foregroundColor(Color(uiColor: .systemGray3))
+                Text("Zwift Insider")
+                    .onTapGesture {
+                        openURL(URL(string: "https://zwiftinsider.com/route/four-horsemen/")!)
+                    }
             }
             .foregroundColor(.orange)
-            Spacer()
         }
     }
 }
