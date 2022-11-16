@@ -10,7 +10,7 @@ struct ContentView: View {
 
     Elevation: 6927 Feet
 
-    Distance: 55.5 miles
+    Distance: 55.8 miles
 
     Power Target: > 200 Watts
 
