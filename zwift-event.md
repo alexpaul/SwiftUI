@@ -11,10 +11,6 @@ struct ContentView: View {
     Elevation: 6927 Feet
 
     Distance: 55.8 miles
-
-    Power Target: > 200 Watts
-
-    Duration: < 4:30 Hours
     """
 
     @Environment(\.openURL) private var openURL
@@ -49,8 +45,22 @@ struct ContentView: View {
         }
     }
 
+    struct RaceGroup: Hashable {
+        let color: Color
+        let group: String
+
+        static let allGroups: [RaceGroup] = [
+            .init(color: .red, group: "A"),
+            .init(color: .green, group: "B"),
+            .init(color: .blue, group: "C"),
+            .init(color: .yellow, group: "D"),
+            .init(color: .purple, group: "E")
+        ]
+    }
+
     private var eventDescription: some View {
-        Group {
+        let diameter: Double = 20
+        return Group {
             HStack {
                 Text("5:00 AM")
                     .font(.headline)
@@ -60,6 +70,37 @@ struct ContentView: View {
             }
             .padding(.horizontal, 20)
             Divider()
+            HStack {
+                Text("4 HRS 30 MINS")
+                    .font(.headline)
+                    .bold()
+                Spacer()
+                HStack(alignment: .center, spacing: 2) {
+                    ForEach(RaceGroup.allGroups, id:\.self) { item in
+                        ZStack {
+                            Circle()
+                                .frame(width: diameter, height: diameter)
+                                .foregroundColor(item.color)
+                            Text(item.group)
+                                .font(.caption)
+                                .foregroundColor(.white)
+                                .bold()
+                        }
+                    }
+                }
+            }
+            .padding(.horizontal, 20)
+            Divider()
+            HStack {
+                Text("POWER TARGET")
+                    .font(.headline)
+                    .bold()
+                Spacer()
+                Text("212 Watts")
+            }
+            .padding(.horizontal, 20)
+            Divider()
+
             HStack {
                 Text("EVENT DESCRIPTION")
                     .font(.headline)
@@ -98,6 +139,7 @@ struct ContentView: View {
                     }
             }
             .foregroundColor(.orange)
+            .padding(.bottom, 20)
         }
     }
 }
