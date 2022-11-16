@@ -10,8 +10,14 @@ struct ContentView: View {
 
     Elevation: 6927 Feet
 
-    Duration: Approximately 4 Hours
+    Distance: 55.5 miles
+
+    Power Target: > 200 Watts
+
+    Duration: < 4:30 Hours
     """
+
+    @Environment(\.openURL) private var openURL
 
     var body: some View {
         ScrollView {
@@ -23,7 +29,9 @@ struct ContentView: View {
                     .padding(.bottom, -8)
                 Text("FOUR HORSEMEN")
                     .font(.title)
-                    .offset(x: -80, y: -100)
+                    .bold()
+                    .foregroundColor(.white)
+                    .offset(x: -60, y: -100)
             }
             HStack{}
                 .frame(height: 8)
@@ -50,6 +58,22 @@ struct ContentView: View {
             Text(eventDescription)
                 .font(.footnote)
                 .padding(.horizontal, 20)
+                .padding(.bottom, 20)
+            HStack {
+                Text("RESOURCE LINKS")
+                    .font(.headline)
+                    .bold()
+                Spacer()
+            }
+            .padding(.horizontal, 20)
+            .padding(.bottom, 20)
+            HStack {
+                Text("Strava Segment")
+                    .onTapGesture {
+                        openURL(URL(string: "https://www.strava.com/activities/1748727988")!)
+                    }
+            }
+            .foregroundColor(.orange)
             Spacer()
         }
     }
