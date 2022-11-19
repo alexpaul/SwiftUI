@@ -41,7 +41,6 @@ extension Event {
             distance: "55.8 miles",
             elevation: "6927 feet",
             imageURL: "https://zwiftinsider.com/wp-content/uploads/2020/05/four-horsemen-zwifthub.png",
-            //imageURL: "https://zwifthacks.com/app/routes/svg/route/?world=1&route=16&showprofile=1&showlegend=1",
             stravaSegment: "https://www.strava.com/activities/1748727988",
             zwiftInsiderURL: "https://zwiftinsider.com/route/four-horsemen/",
             powerTarget: "212 Watts"

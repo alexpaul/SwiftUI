@@ -11,13 +11,11 @@ struct EventRow: View {
     let event: Event
 
     var body: some View {
-        VStack {
+        VStack(alignment: .center, spacing: 0) {
             image
-        }.safeAreaInset(edge: .bottom) {
             Color.orange
                 .frame(height: 8)
         }
-        .frame(height: 200)
     }
 
     private var image: some View {

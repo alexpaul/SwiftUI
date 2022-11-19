@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let data: [Event] = [
-        Event.mockEvent(),
-        Event.mockEvent()
-    ]
+    private let data: [Event] = Array(repeating: Event.mockEvent(), count: 12)
+
     var body: some View {
         NavigationView {
             List(data, id: \.self) { event in
@@ -19,6 +17,7 @@ struct ContentView: View {
                     EventRow(event: event)
                 }
             }
+            .listStyle(.plain)
             .navigationTitle("Zwift Events")
         }
     }
