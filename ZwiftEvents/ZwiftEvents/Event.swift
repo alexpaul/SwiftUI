@@ -58,7 +58,7 @@ extension Event {
             description: "This is no leisure tour: be ready to work as you climb over 2000 meters in just under 90 kilometers! And be warned: hitting the Alpe after working your way over the previous climbs proves to be both a mental and physical challenge. Prepare yourself!",
             distance: "55.8 miles",
             elevation: "6927 feet",
-            thumbnailURL: "https://zwiftinsider.com/wp-content/uploads/2020/05/four-horsemen-zwifthub.png",
+            thumbnailURL: "https://preview.redd.it/ojot7r4qapc41.jpg?auto=webp&s=5b337b98734ef5141e57ba1f790d48f718f72724",
             imageURL: "https://zwiftinsider.com/wp-content/uploads/2020/05/four-horsemen-zwifthub.png",
             stravaSegment: "https://www.strava.com/activities/1748727988",
             zwiftInsiderURL: "https://zwiftinsider.com/route/four-horsemen/",

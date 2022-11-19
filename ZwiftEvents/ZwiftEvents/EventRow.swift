@@ -11,10 +11,17 @@ struct EventRow: View {
     let event: Event
 
     var body: some View {
-        VStack(alignment: .center, spacing: 0) {
-            image
-            Color.orange
-                .frame(height: 12)
+        ZStack {
+            VStack(alignment: .center, spacing: 0) {
+                image
+                Color.orange
+                    .frame(height: 12)
+            }
+            Text(event.route)
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .bold()
+                .offset(x: -60, y: -60)
         }
     }
 
