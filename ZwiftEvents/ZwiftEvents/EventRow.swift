@@ -14,7 +14,7 @@ struct EventRow: View {
         VStack(alignment: .center, spacing: 0) {
             image
             Color.orange
-                .frame(height: 8)
+                .frame(height: 12)
         }
     }
 
@@ -23,7 +23,7 @@ struct EventRow: View {
             image
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(height: 200)
+                .frame(height: 220)
         } placeholder: {
             ProgressView()
         }

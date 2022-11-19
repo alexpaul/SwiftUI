@@ -8,17 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let data: [Event] = Array(repeating: Event.mockEvent(), count: 12)
+    private let data: [Event] = [
+        Event.mockEvent(),
+        Event.mockEvent(),
+        Event.mockEvent(),
+        Event.mockEvent(),
+    ]
+
+    private let columns: [GridItem] = [
+        GridItem(.fixed(UIScreen.main.bounds.width))
+    ]
 
     var body: some View {
         NavigationView {
-            List(data, id: \.self) { event in
-                NavigationLink(destination: DetailView()) {
-                    EventRow(event: event)
+            ScrollView(.vertical, showsIndicators: false) {
+                LazyVGrid(columns: columns) {
+                    ForEach(data, id: \.id) { event in
+                        NavigationLink(destination: DetailView()) {
+                            EventRow(event: event)
+                        }
+                    }
                 }
+                .navigationTitle("Zwift Events")
             }
-            .listStyle(.plain)
-            .navigationTitle("Zwift Events")
         }
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 struct Root: Decodable {
     let events: [Event]
 }
-struct Event: Decodable, Hashable {
+struct Event: Decodable, Hashable, Identifiable {
     let route: String
     let date: String
     let startTime: String
@@ -23,6 +23,7 @@ struct Event: Decodable, Hashable {
     let stravaSegment: String
     let zwiftInsiderURL: String
     let powerTarget: String
+    var id = UUID()
 }
 
 extension Event {
