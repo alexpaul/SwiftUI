@@ -11,10 +11,10 @@ final class EventViewModel: ObservableObject {
     @Published var events: [Event] = []
 
     init() {
-        self.fetch()
+        loadEvents()
     }
 
-    private func fetch() {
+    private func loadEvents() {
         do {
             events = try Event.events()
         } catch {
