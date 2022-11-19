@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5737512D29299AA4006854F7 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737512C29299AA4006854F7 /* EventViewModel.swift */; };
 		577FD20D292941510077E363 /* ZwiftEventsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FD20C292941510077E363 /* ZwiftEventsApp.swift */; };
 		577FD20F292941510077E363 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FD20E292941510077E363 /* ContentView.swift */; };
 		577FD211292941520077E363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577FD210292941520077E363 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5737512C29299AA4006854F7 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		577FD209292941510077E363 /* ZwiftEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZwiftEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577FD20C292941510077E363 /* ZwiftEventsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZwiftEventsApp.swift; sourceTree = "<group>"; };
 		577FD20E292941510077E363 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				577FD20C292941510077E363 /* ZwiftEventsApp.swift */,
 				577FD220292945C30077E363 /* Event.swift */,
 				577FD21E292945AA0077E363 /* events.json */,
+				5737512C29299AA4006854F7 /* EventViewModel.swift */,
 				577FD21C2929423B0077E363 /* EventRow.swift */,
 				577FD20E292941510077E363 /* ContentView.swift */,
 				577FD21A292942240077E363 /* DetailView.swift */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				577FD20F292941510077E363 /* ContentView.swift in Sources */,
+				5737512D29299AA4006854F7 /* EventViewModel.swift in Sources */,
 				577FD21B292942240077E363 /* DetailView.swift in Sources */,
 				577FD20D292941510077E363 /* ZwiftEventsApp.swift in Sources */,
 				577FD21D2929423B0077E363 /* EventRow.swift in Sources */,

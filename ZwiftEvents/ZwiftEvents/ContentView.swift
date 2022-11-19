@@ -7,30 +7,7 @@
 
 import SwiftUI
 
-final class EventViewModel: ObservableObject {
-    @Published var events: [Event] = []
-
-    init() {
-        self.fetch()
-    }
-
-    private func fetch() {
-        do {
-            events = try Event.events()
-        } catch {
-            events = []
-        }
-    }
-}
-
 struct ContentView: View {
-    private let data: [Event] = [
-        Event.mockEvent(),
-        Event.mockEvent(),
-        Event.mockEvent(),
-        Event.mockEvent(),
-    ]
-
     private let viewModel = EventViewModel()
 
     private let columns: [GridItem] = [
