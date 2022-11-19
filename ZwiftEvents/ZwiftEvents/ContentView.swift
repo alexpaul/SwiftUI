@@ -42,7 +42,7 @@ struct ContentView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVGrid(columns: columns) {
                     ForEach(viewModel.events, id: \.self) { event in
-                        NavigationLink(destination: DetailView()) {
+                        NavigationLink(destination: DetailView(event: event)) {
                             EventRow(event: event)
                         }
                     }

@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailView: View {
     @Environment(\.openURL) private var openURL
 
-    private var event = Event.mockEvent()
+    let event: Event
 
     var body: some View {
         ScrollView {
@@ -28,15 +28,13 @@ struct DetailView: View {
         Group {
             Text(event.date)
             ZStack {
-                Image("fourHorsemen")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding(.bottom, -8)
-                Text(event.route)
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.white)
-                    .offset(x: -60, y: -100)
+                AsyncImage(url: URL(string: event.imageURL)!) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                } placeholder: {
+                    ProgressView()
+                }
             }
             HStack{}
                 .frame(height: 8)
@@ -152,7 +150,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView()
+            DetailView(event: Event.mockEvent())
         }
     }
 }

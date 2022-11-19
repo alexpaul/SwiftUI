@@ -23,7 +23,8 @@ struct EventRow: View {
             image
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(height: 220)
+                .frame(height: 300)
+                .frame(maxWidth: .infinity)
         } placeholder: {
             ProgressView()
         }
