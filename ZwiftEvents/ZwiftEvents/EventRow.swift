@@ -19,7 +19,7 @@ struct EventRow: View {
     }
 
     private var image: some View {
-        AsyncImage(url: URL(string: event.imageURL)!) { image in
+        AsyncImage(url: URL(string: event.thumbnailURL)!) { image in
             image
                 .resizable()
                 .aspectRatio(contentMode: .fill)

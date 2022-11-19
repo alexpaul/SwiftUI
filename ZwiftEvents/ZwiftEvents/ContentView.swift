@@ -7,6 +7,22 @@
 
 import SwiftUI
 
+final class EventViewModel: ObservableObject {
+    @Published var events: [Event] = []
+
+    init() {
+        self.fetch()
+    }
+
+    private func fetch() {
+        do {
+            events = try Event.events()
+        } catch {
+            events = []
+        }
+    }
+}
+
 struct ContentView: View {
     private let data: [Event] = [
         Event.mockEvent(),
@@ -14,6 +30,8 @@ struct ContentView: View {
         Event.mockEvent(),
         Event.mockEvent(),
     ]
+
+    private let viewModel = EventViewModel()
 
     private let columns: [GridItem] = [
         GridItem(.fixed(UIScreen.main.bounds.width))
@@ -23,7 +41,7 @@ struct ContentView: View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVGrid(columns: columns) {
-                    ForEach(data, id: \.id) { event in
+                    ForEach(viewModel.events, id: \.self) { event in
                         NavigationLink(destination: DetailView()) {
                             EventRow(event: event)
                         }
