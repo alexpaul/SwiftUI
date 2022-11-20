@@ -14,6 +14,21 @@
             "stravaSegment": "https://www.strava.com/activities/1748727988",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/four-horsemen/",
             "powerTarget": "212 Watts"
+        },
+        {
+            "route": "The Mega Pretzel",
+            "date": "TBD",
+            "startTime": "TBD",
+            "estimatedFinishTime": "5 HRS",
+            "title": "TBD",
+            "description": "This route is a bit weird. When free riding, you'll start on the Volcano land bridge road. Events start in the downtown start pen. The route ends on the Volcano land bridge road, as you ride through the crumbling concrete arches heading toward the Italian Villas.",
+            "distance": "66.7 miles",
+            "elevation": "5375 feet",
+            "thumbnailURL": "https://zwiftinsider.com/wp-content/uploads/2022/09/watopia-215-1024x683.jpg",
+            "imageURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/the-mega-pretzel-zwifthub.png",
+            "stravaSegment": "",
+            "zwiftInsiderURL": "https://zwiftinsider.com/route/the-mega-pretzel/",
+            "powerTarget": "212 Watts"
         }
     ]
 }

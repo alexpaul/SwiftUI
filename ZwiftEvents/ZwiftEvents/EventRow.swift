@@ -14,14 +14,15 @@ struct EventRow: View {
         ZStack {
             VStack(alignment: .center, spacing: 0) {
                 image
-                Color.orange
+                Color.zwiftOrange
                     .frame(height: 12)
             }
             Text(event.route)
                 .font(.largeTitle)
-                .foregroundColor(.white)
+                .foregroundColor(.zwiftOrange)
+                .background(Color.black.opacity(0.4))
                 .bold()
-                .offset(x: -60, y: -60)
+                .offset(y: -60)
         }
     }
 

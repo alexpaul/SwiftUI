@@ -130,12 +130,14 @@ struct DetailView: View {
             .padding(.horizontal, 20)
             .padding(.bottom, 20)
             HStack {
-                Text("Strava Segment")
-                    .onTapGesture {
-                        openURL(URL(string: event.stravaSegment)!)
-                    }
-                Text("|")
-                    .foregroundColor(Color(uiColor: .systemGray3))
+                if !event.stravaSegment.isEmpty {
+                    Text("Strava Segment")
+                        .onTapGesture {
+                            openURL(URL(string: event.stravaSegment)!)
+                        }
+                    Text("|")
+                        .foregroundColor(Color(uiColor: .systemGray3))
+                }
                 Text("Zwift Insider")
                     .onTapGesture {
                         openURL(URL(string: event.zwiftInsiderURL)!)
