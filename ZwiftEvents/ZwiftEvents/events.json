@@ -14,7 +14,8 @@
             "strava": "https://www.strava.com/activities/1748727988",
             "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/four-horsemen/",
-            "power": "212 Watts"
+            "power": "212 Watts",
+            "isCompleted": false
         },
         {
             "route": "The Mega Pretzel",
@@ -30,7 +31,8 @@
             "strava": "",
             "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/the-mega-pretzel/",
-            "power": "212 Watts"
+            "power": "212 Watts",
+            "isCompleted": false
         },
         {
             "route": "The PRL Half",
@@ -46,7 +48,8 @@
             "strava": "",
             "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/the-prl-half/",
-            "power": "212 Watts"
+            "power": "212 Watts",
+            "isCompleted": false
         },
         {
             "route": "The PRL Full",
@@ -62,7 +65,8 @@
             "strava": "",
             "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/the-prl-full/",
-            "power": "212 Watts"
+            "power": "212 Watts",
+            "isCompleted": false
         },
         {
             "route": "Surrey Hills",
@@ -78,7 +82,8 @@
             "strava": "",
             "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/surrey-hills/",
-            "power": "212 Watts"
+            "power": "212 Watts",
+            "isCompleted": false
         },
         {
             "route": "Road to Sky",
@@ -94,7 +99,8 @@
             "strava": "https://www.strava.com/activities/8145838626",
             "segment": "https://www.strava.com/activities/8145838626/segments/3029468886916071912",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/road-to-sky/",
-            "power": "206 Watts"
+            "power": "206 Watts",
+            "isCompleted": true
         }
     ]
 }

@@ -24,7 +24,7 @@ struct ContentView: View {
                         }
                     }
                 }
-                .navigationTitle("Zwift Events")
+                .navigationTitle("Zwift Routes")
             }
         }
     }

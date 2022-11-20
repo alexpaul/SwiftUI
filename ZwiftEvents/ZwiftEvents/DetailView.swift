@@ -151,7 +151,8 @@ struct DetailView: View {
                         }
                 }
             }
-            .foregroundColor(.orange)
+            .bold()
+            .foregroundColor(.zwiftOrange)
             .padding(.bottom, 20)
         }
     }

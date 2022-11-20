@@ -10,6 +10,8 @@ import SwiftUI
 struct EventRow: View {
     let event: Event
 
+    private let badgeSize: Double = 40
+
     var body: some View {
         ZStack {
             VStack(alignment: .center, spacing: 0) {
@@ -23,6 +25,15 @@ struct EventRow: View {
                 .background(Color.black.opacity(0.6))
                 .bold()
                 .offset(y: -60)
+            if event.isCompleted {
+                Image(systemName: "checkmark.seal.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: badgeSize, height: badgeSize)
+                    .foregroundColor(.zwiftOrange)
+                    .offset(x: 180, y: -120)
+                    .shadow(color: .black, radius: 8)
+            }
         }
     }
 

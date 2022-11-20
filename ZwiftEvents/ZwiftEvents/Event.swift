@@ -25,6 +25,7 @@ struct Event: Decodable, Hashable {
     let segment: String
     let zwiftInsiderURL: String
     let power: String
+    let isCompleted: Bool
 }
 
 extension Event {
@@ -64,7 +65,8 @@ extension Event {
             strava: "https://www.strava.com/activities/1748727988",
             segment: "",
             zwiftInsiderURL: "https://zwiftinsider.com/route/four-horsemen/",
-            power: "212 Watts"
+            power: "212 Watts",
+            isCompleted: false
         )
     }
 }
