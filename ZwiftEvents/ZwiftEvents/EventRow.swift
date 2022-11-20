@@ -20,7 +20,7 @@ struct EventRow: View {
             Text(event.route)
                 .font(.largeTitle)
                 .foregroundColor(.zwiftOrange)
-                .background(Color.black.opacity(0.4))
+                .background(Color.black.opacity(0.6))
                 .bold()
                 .offset(y: -60)
         }

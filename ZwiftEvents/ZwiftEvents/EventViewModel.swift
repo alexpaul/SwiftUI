@@ -16,7 +16,7 @@ final class EventViewModel: ObservableObject {
 
     private func loadEvents() {
         do {
-            events = try Event.events()
+            events = try Event.events().sorted { $0.route < $1.route }
         } catch {
             events = []
         }

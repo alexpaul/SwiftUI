@@ -29,6 +29,36 @@
             "stravaSegment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/the-mega-pretzel/",
             "powerTarget": "212 Watts"
+        },
+        {
+            "route": "The PRL Half",
+            "date": "TBD",
+            "startTime": "TBD",
+            "estimatedFinishTime": "2 HRS 30 MINS",
+            "title": "TBD",
+            "description": "This route takes you on four circuits of the “London Loop“, then turns around at the Surrey roundabout and heads towards the sprint and finish banner on The Mall.",
+            "distance": "43.1 miles",
+            "elevation": "3319 feet",
+            "thumbnailURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/the-prl-half-zwifthub.png",
+            "imageURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/the-prl-half-zwifthub.png",
+            "stravaSegment": "",
+            "zwiftInsiderURL": "https://zwiftinsider.com/route/the-prl-half/",
+            "powerTarget": "212 Watts"
+        },
+        {
+            "route": "The PRL Full",
+            "date": "TBD",
+            "startTime": "TBD",
+            "estimatedFinishTime": "7 HRS",
+            "title": "TBD",
+            "description": "",
+            "distance": "107.9 miles",
+            "elevation": "8312 feet",
+            "thumbnailURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/london-the-prl-full-zwifthub.png",
+            "imageURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/london-the-prl-full-zwifthub.png",
+            "stravaSegment": "",
+            "zwiftInsiderURL": "https://zwiftinsider.com/route/the-prl-full/",
+            "powerTarget": "212 Watts"
         }
     ]
 }
