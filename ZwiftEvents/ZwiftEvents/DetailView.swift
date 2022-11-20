@@ -39,7 +39,7 @@ struct DetailView: View {
             HStack{}
                 .frame(height: 8)
                 .frame(maxWidth: .infinity)
-                .background(.orange)
+                .background(Color.zwiftOrange)
                 .padding(.top, -10)
         }
     }
