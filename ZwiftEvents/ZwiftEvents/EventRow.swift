@@ -36,7 +36,6 @@ struct EventRow: View {
         } placeholder: {
             ProgressView()
         }
-        .padding(.bottom, 4)
     }
 }
 
