@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
-                LazyVGrid(columns: columns) {
+                LazyVGrid(columns: columns, spacing: 0) {
                     ForEach(viewModel.events, id: \.self) { event in
                         NavigationLink(destination: DetailView(event: event)) {
                             EventRow(event: event)
