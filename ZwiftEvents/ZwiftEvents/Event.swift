@@ -21,9 +21,10 @@ struct Event: Decodable, Hashable {
     let elevation: String
     let thumbnailURL: String
     let imageURL: String
-    let stravaSegment: String
+    let strava: String
+    let segment: String
     let zwiftInsiderURL: String
-    let powerTarget: String
+    let power: String
 }
 
 extension Event {
@@ -60,9 +61,10 @@ extension Event {
             elevation: "6927 feet",
             thumbnailURL: "https://preview.redd.it/ojot7r4qapc41.jpg?auto=webp&s=5b337b98734ef5141e57ba1f790d48f718f72724",
             imageURL: "https://zwiftinsider.com/wp-content/uploads/2020/05/four-horsemen-zwifthub.png",
-            stravaSegment: "https://www.strava.com/activities/1748727988",
+            strava: "https://www.strava.com/activities/1748727988",
+            segment: "",
             zwiftInsiderURL: "https://zwiftinsider.com/route/four-horsemen/",
-            powerTarget: "212 Watts"
+            power: "212 Watts"
         )
     }
 }

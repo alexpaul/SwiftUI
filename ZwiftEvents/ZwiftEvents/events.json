@@ -11,9 +11,10 @@
             "elevation": "6927 feet",
             "thumbnailURL": "https://preview.redd.it/ojot7r4qapc41.jpg?auto=webp&s=5b337b98734ef5141e57ba1f790d48f718f72724",
             "imageURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/four-horsemen-zwifthub.png",
-            "stravaSegment": "https://www.strava.com/activities/1748727988",
+            "strava": "https://www.strava.com/activities/1748727988",
+            "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/four-horsemen/",
-            "powerTarget": "212 Watts"
+            "power": "212 Watts"
         },
         {
             "route": "The Mega Pretzel",
@@ -26,9 +27,10 @@
             "elevation": "5375 feet",
             "thumbnailURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/the-mega-pretzel-zwifthub.png",
             "imageURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/the-mega-pretzel-zwifthub.png",
-            "stravaSegment": "",
+            "strava": "",
+            "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/the-mega-pretzel/",
-            "powerTarget": "212 Watts"
+            "power": "212 Watts"
         },
         {
             "route": "The PRL Half",
@@ -41,9 +43,10 @@
             "elevation": "3319 feet",
             "thumbnailURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/the-prl-half-zwifthub.png",
             "imageURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/the-prl-half-zwifthub.png",
-            "stravaSegment": "",
+            "strava": "",
+            "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/the-prl-half/",
-            "powerTarget": "212 Watts"
+            "power": "212 Watts"
         },
         {
             "route": "The PRL Full",
@@ -56,9 +59,10 @@
             "elevation": "8312 feet",
             "thumbnailURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/london-the-prl-full-zwifthub.png",
             "imageURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/london-the-prl-full-zwifthub.png",
-            "stravaSegment": "",
+            "strava": "",
+            "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/the-prl-full/",
-            "powerTarget": "212 Watts"
+            "power": "212 Watts"
         },
         {
             "route": "Surrey Hills",
@@ -71,24 +75,26 @@
             "elevation": "3390 feet",
             "thumbnailURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/surrey-hills-zwifthub.png",
             "imageURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/surrey-hills-zwifthub.png",
-            "stravaSegment": "",
+            "strava": "",
+            "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/surrey-hills/",
-            "powerTarget": "212 Watts"
+            "power": "212 Watts"
         },
         {
             "route": "Road to Sky",
             "date": "TBD",
             "startTime": "TBD",
-            "estimatedFinishTime": "2 HRS",
+            "estimatedFinishTime": "1 HR 45 MINS",
             "title": "TBD",
             "description": "Zwift created this route using GPS data to perfectly match the incline and distance of the storied climb with its 21 hairpin turns. The climb to Alp d’Huez actually has two different finish points: the “tourist version” and the Tour de France version. Alpe du Zwift matches the tourist version, which is ~2km shorter with 40 meters less climbing than the TdF. In all, Alpe du Zwift is 12.24km (7.6 miles) long, with a total elevation gain of over 1000 meters (3400′)!",
             "distance": "11.1 miles",
             "elevation": "3454 feet",
             "thumbnailURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/road-to-sky-zwifthub.png",
             "imageURL": "https://zwiftinsider.com/wp-content/uploads/2020/05/road-to-sky-zwifthub.png",
-            "stravaSegment": "https://www.strava.com/activities/5979456386",
+            "strava": "https://www.strava.com/activities/8145838626",
+            "segment": "https://www.strava.com/activities/8145838626/segments/3029468886916071912",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/road-to-sky/",
-            "powerTarget": "212 Watts"
+            "power": "206 Watts"
         }
     ]
 }

@@ -91,11 +91,11 @@ struct DetailView: View {
             .padding(.horizontal, 20)
             Divider()
             HStack {
-                Text("POWER TARGET")
+                Text("POWER")
                     .font(.headline)
                     .bold()
                 Spacer()
-                Text(event.powerTarget)
+                Text(event.power)
             }
             .padding(.horizontal, 20)
             Divider()
@@ -130,18 +130,26 @@ struct DetailView: View {
             .padding(.horizontal, 20)
             .padding(.bottom, 20)
             HStack {
-                if !event.stravaSegment.isEmpty {
-                    Text("Strava Segment")
+                if !event.strava.isEmpty {
+                    Text("STRAVA")
                         .onTapGesture {
-                            openURL(URL(string: event.stravaSegment)!)
+                            openURL(URL(string: event.strava)!)
                         }
                     Text("|")
                         .foregroundColor(Color(uiColor: .systemGray3))
                 }
-                Text("Zwift Insider")
+                Text("ZWIFT INSIDER")
                     .onTapGesture {
                         openURL(URL(string: event.zwiftInsiderURL)!)
                     }
+                if !event.segment.isEmpty {
+                    Text("|")
+                        .foregroundColor(Color(uiColor: .systemGray3))
+                    Text("SEGMENT")
+                        .onTapGesture {
+                            openURL(URL(string: event.segment)!)
+                        }
+                }
             }
             .foregroundColor(.orange)
             .padding(.bottom, 20)
