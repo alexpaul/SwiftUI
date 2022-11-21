@@ -33,7 +33,7 @@ struct EventRow: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: Constants.badgeSize, height: Constants.badgeSize)
-                    .foregroundColor(.zwiftOrange)
+                    .foregroundColor(.zwiftBlue)
                     .offset(x: 160, y: -120)
                     .shadow(color: .black, radius: Constants.shadowRadius)
             }
