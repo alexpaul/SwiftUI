@@ -45,7 +45,12 @@ struct EventRow: View {
                 .frame(height: 300)
                 .frame(maxWidth: .infinity)
         } placeholder: {
-            ProgressView()
+            ZStack {
+                ProgressView()
+            }
+            .frame(height: 300)
+            .frame(maxWidth: .infinity)
+            .background(Color(uiColor: .systemGray3))
         }
     }
 }
