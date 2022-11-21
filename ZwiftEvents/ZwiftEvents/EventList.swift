@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct EventList: View {
+    private let viewModel = EventViewModel()
+
+    private let columns: [GridItem] = [
+        GridItem(.fixed(UIScreen.main.bounds.width))
+    ]
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.vertical, showsIndicators: false) {
+            LazyVGrid(columns: columns, spacing: 0) {
+                ForEach(viewModel.events, id: \.self) { event in
+                    NavigationLink(destination: DetailView(event: event)) {
+                        EventRow(event: event)
+                    }
+                }
+            }
+            .navigationTitle("Zwift Routes")
+        }
     }
 }
 
