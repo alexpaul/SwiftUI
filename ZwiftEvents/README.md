@@ -21,7 +21,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 ```
 
-![Screen Shot 2022-11-21 at 11 30 17 AM](https://user-images.githubusercontent.com/1819208/203108323-748c21c5-fccf-4262-b17f-b99b5bf0a195.png)
+![Screen Shot 2022-11-21 at 11 35 03 AM](https://user-images.githubusercontent.com/1819208/203109774-f44bb30c-9cbe-4ed7-97d1-e68ff488ae00.png)
 
 ***
 
