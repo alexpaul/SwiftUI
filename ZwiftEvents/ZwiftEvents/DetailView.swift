@@ -19,14 +19,19 @@ struct DetailView: View {
     let event: Event
 
     var body: some View {
-        ScrollView {
-            Group {
-                header
-                eventDescription
-                resourceLinks
+        ZStack {
+            ScrollView {
+                Group {
+                    header
+                    eventDescription
+                    resourceLinks
+                }
+                .navigationTitle(event.title)
+                .navigationBarTitleDisplayMode(.inline)
             }
-            .navigationTitle(event.title)
-            .navigationBarTitleDisplayMode(.inline)
+            if event.title.lowercased().contains("birthday") {
+                ParticlesView()
+            }
         }
     }
 

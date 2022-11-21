@@ -10,6 +10,9 @@
 		5737512D29299AA4006854F7 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737512C29299AA4006854F7 /* EventViewModel.swift */; };
 		5737512F2929C6BA006854F7 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737512E2929C6BA006854F7 /* ColorTheme.swift */; };
 		57375131292B9F40006854F7 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57375130292B9F40006854F7 /* EventList.swift */; };
+		57375134292BF670006854F7 /* ParticlesGeometryEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57375133292BF670006854F7 /* ParticlesGeometryEffect.swift */; };
+		57375136292BF7C2006854F7 /* ParticlesModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57375135292BF7C2006854F7 /* ParticlesModifier.swift */; };
+		5737513A292BF942006854F7 /* ParticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57375139292BF942006854F7 /* ParticlesView.swift */; };
 		577FD20D292941510077E363 /* ZwiftEventsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FD20C292941510077E363 /* ZwiftEventsApp.swift */; };
 		577FD20F292941510077E363 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FD20E292941510077E363 /* ContentView.swift */; };
 		577FD211292941520077E363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577FD210292941520077E363 /* Assets.xcassets */; };
@@ -24,6 +27,9 @@
 		5737512C29299AA4006854F7 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		5737512E2929C6BA006854F7 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		57375130292B9F40006854F7 /* EventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
+		57375133292BF670006854F7 /* ParticlesGeometryEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesGeometryEffect.swift; sourceTree = "<group>"; };
+		57375135292BF7C2006854F7 /* ParticlesModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesModifier.swift; sourceTree = "<group>"; };
+		57375139292BF942006854F7 /* ParticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesView.swift; sourceTree = "<group>"; };
 		577FD209292941510077E363 /* ZwiftEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZwiftEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577FD20C292941510077E363 /* ZwiftEventsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZwiftEventsApp.swift; sourceTree = "<group>"; };
 		577FD20E292941510077E363 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +52,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57375132292BF643006854F7 /* Geometry Effect Animation */ = {
+			isa = PBXGroup;
+			children = (
+				57375133292BF670006854F7 /* ParticlesGeometryEffect.swift */,
+				57375135292BF7C2006854F7 /* ParticlesModifier.swift */,
+				57375139292BF942006854F7 /* ParticlesView.swift */,
+			);
+			path = "Geometry Effect Animation";
+			sourceTree = "<group>";
+		};
 		577FD200292941510077E363 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +90,7 @@
 				57375130292B9F40006854F7 /* EventList.swift */,
 				577FD20E292941510077E363 /* ContentView.swift */,
 				577FD21A292942240077E363 /* DetailView.swift */,
+				57375132292BF643006854F7 /* Geometry Effect Animation */,
 				577FD210292941520077E363 /* Assets.xcassets */,
 				577FD212292941520077E363 /* Preview Content */,
 			);
@@ -159,10 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57375134292BF670006854F7 /* ParticlesGeometryEffect.swift in Sources */,
 				57375131292B9F40006854F7 /* EventList.swift in Sources */,
 				577FD20F292941510077E363 /* ContentView.swift in Sources */,
 				5737512D29299AA4006854F7 /* EventViewModel.swift in Sources */,
+				57375136292BF7C2006854F7 /* ParticlesModifier.swift in Sources */,
 				5737512F2929C6BA006854F7 /* ColorTheme.swift in Sources */,
+				5737513A292BF942006854F7 /* ParticlesView.swift in Sources */,
 				577FD21B292942240077E363 /* DetailView.swift in Sources */,
 				577FD20D292941510077E363 /* ZwiftEventsApp.swift in Sources */,
 				577FD21D2929423B0077E363 /* EventRow.swift in Sources */,
