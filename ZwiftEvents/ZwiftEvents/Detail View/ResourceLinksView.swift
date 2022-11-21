@@ -13,7 +13,11 @@ struct ResourceLinksView: View {
     @Environment(\.openURL) private var openURL
     
     var body: some View {
+<<<<<<< HEAD
         VStack {
+=======
+        Group {
+>>>>>>> main
             HStack {
                 Text("RESOURCE LINKS")
                     .font(.headline)
