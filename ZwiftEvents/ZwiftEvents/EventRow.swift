@@ -10,29 +10,32 @@ import SwiftUI
 struct EventRow: View {
     let event: Event
 
-    private let badgeSize: Double = 40
+    private enum Constants {
+        static let badgeSize: Double = 40
+        static let shadowRadius: Double = 12
+    }
 
     var body: some View {
         ZStack {
             VStack(alignment: .center, spacing: 0) {
                 image
                 Color.zwiftOrange
-                    .frame(height: 12)
+                    .frame(height: 8)
             }
             Text(event.route)
                 .font(.largeTitle)
                 .foregroundColor(.zwiftOrange)
-                .background(Color.black.opacity(0.8))
                 .bold()
                 .offset(y: -60)
+                .shadow(color: .black, radius: Constants.shadowRadius)
             if event.isCompleted {
                 Image(systemName: "checkmark.seal.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: badgeSize, height: badgeSize)
+                    .frame(width: Constants.badgeSize, height: Constants.badgeSize)
                     .foregroundColor(.zwiftOrange)
                     .offset(x: 160, y: -120)
-                    .shadow(color: .black, radius: 8)
+                    .shadow(color: .black, radius: Constants.shadowRadius)
             }
         }
     }
@@ -41,14 +44,12 @@ struct EventRow: View {
         AsyncImage(url: URL(string: event.thumbnailURL)!) { image in
             image
                 .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(height: 300)
-                .frame(maxWidth: .infinity)
+                .aspectRatio(contentMode: .fit)
         } placeholder: {
             ZStack {
                 ProgressView()
             }
-            .frame(height: 300)
+            .frame(height: 320)
             .frame(maxWidth: .infinity)
             .background(Color(uiColor: .systemGray3))
         }
