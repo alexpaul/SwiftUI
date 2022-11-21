@@ -37,3 +37,9 @@ struct ContentView_Previews: PreviewProvider {
 
 ![Screen Shot 2022-11-20 at 3 58 46 PM](https://user-images.githubusercontent.com/1819208/202925875-e68bdfbc-91f3-42aa-b109-070ccfbde385.png)
 
+***
+
+## Resources
+
+* [Zwift Worlds and Cycling Routes](https://support.zwift.com/en_us/zwift-worlds-and-cycling-routes-Sy2_gxTGB)
+
