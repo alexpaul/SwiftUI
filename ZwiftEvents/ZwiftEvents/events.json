@@ -15,7 +15,13 @@
             "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/four-horsemen/",
             "power": "212 Watts",
-            "isCompleted": false
+            "isCompleted": false,
+            "photos": [
+                "https://res.cloudinary.com/dkah2peax/image/upload/v1669070659/Zwift/Road%20to%20Sky/adz-1000-feet_q1xdkw.jpg",
+                "https://res.cloudinary.com/dkah2peax/image/upload/v1669070660/Zwift/Road%20to%20Sky/adz-2000-feet_irzu9g.jpg",
+                "https://res.cloudinary.com/dkah2peax/image/upload/v1669070659/Zwift/Road%20to%20Sky/adz-3000-feet_ppempi.jpg",
+                "https://res.cloudinary.com/dkah2peax/image/upload/v1669070658/Zwift/Road%20to%20Sky/adz-summit_yt0rel.jpg"
+            ]
         },
         {
             "route": "The Mega Pretzel",
@@ -32,7 +38,8 @@
             "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/the-mega-pretzel/",
             "power": "212 Watts",
-            "isCompleted": false
+            "isCompleted": false,
+            "photos": []
         },
         {
             "route": "The PRL Half",
@@ -49,7 +56,8 @@
             "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/the-prl-half/",
             "power": "212 Watts",
-            "isCompleted": false
+            "isCompleted": false,
+            "photos": []
         },
         {
             "route": "The PRL Full",
@@ -66,7 +74,8 @@
             "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/the-prl-full/",
             "power": "212 Watts",
-            "isCompleted": false
+            "isCompleted": false,
+            "photos": []
         },
         {
             "route": "Surrey Hills",
@@ -83,7 +92,8 @@
             "segment": "",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/surrey-hills/",
             "power": "212 Watts",
-            "isCompleted": false
+            "isCompleted": false,
+            "photos": []
         },
         {
             "route": "Road to Sky",
@@ -100,7 +110,13 @@
             "segment": "https://www.strava.com/activities/8145838626/segments/3029468886916071912",
             "zwiftInsiderURL": "https://zwiftinsider.com/route/road-to-sky/",
             "power": "206 Watts",
-            "isCompleted": true
+            "isCompleted": true,
+            "photos": [
+                "https://res.cloudinary.com/dkah2peax/image/upload/v1669070659/Zwift/Road%20to%20Sky/adz-1000-feet_q1xdkw.jpg",
+                "https://res.cloudinary.com/dkah2peax/image/upload/v1669070660/Zwift/Road%20to%20Sky/adz-2000-feet_irzu9g.jpg",
+                "https://res.cloudinary.com/dkah2peax/image/upload/v1669070659/Zwift/Road%20to%20Sky/adz-3000-feet_ppempi.jpg",
+                "https://res.cloudinary.com/dkah2peax/image/upload/v1669070658/Zwift/Road%20to%20Sky/adz-summit_yt0rel.jpg"
+            ]
         }
     ]
 }

@@ -20,13 +20,14 @@ struct DetailView: View {
 
     var body: some View {
         ZStack {
-            ScrollView {
+            ScrollView(.vertical, showsIndicators: false) {
                 Group {
                     header
                     eventDescription
+                    if !event.photos.isEmpty { photos }
                     resourceLinks
                 }
-                .navigationTitle(event.title)
+                .navigationTitle(event.route)
                 .navigationBarTitleDisplayMode(.inline)
             }
             if event.title.lowercased().contains("birthday") {
@@ -37,7 +38,12 @@ struct DetailView: View {
 
     private var header: some View {
         Group {
+            Text(event.title)
+                .font(.title)
+                .padding(.bottom, 8)
+                .bold()
             Text(event.date)
+                .font(.title2)
             ZStack {
                 AsyncImage(url: URL(string: event.imageURL)!) { image in
                     image
@@ -126,8 +132,33 @@ struct DetailView: View {
             }
             .padding(.horizontal, 20)
             .font(.footnote)
-            .padding(.bottom, 20)
         }
+    }
+
+    private var photos: some View {
+        let itemSize: Double = 400
+        let rows: [GridItem] = [GridItem(.fixed(itemSize))]
+        return ScrollView(.horizontal, showsIndicators: false) {
+            LazyHGrid(rows: rows, spacing: 10) {
+                ForEach(event.photos, id: \.self) { photoURL in
+                    AsyncImage(url: URL(string: photoURL)!) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: itemSize, height: itemSize * 0.75)
+                            .background(.red)
+                    } placeholder: {
+                        ZStack {
+                            ProgressView()
+                        }
+                        .frame(width: itemSize, height: itemSize * 0.75)
+                        .background(Color(uiColor: .systemGray3))
+                    }
+                }
+            }
+            .padding(.horizontal, 10)
+        }
+        .background(Color(uiColor: .systemGray6))
     }
 
     private var resourceLinks: some View {
@@ -139,7 +170,7 @@ struct DetailView: View {
                 Spacer()
             }
             .padding(.horizontal, 20)
-            .padding(.bottom, 20)
+            .padding(.vertical, 20)
             HStack {
                 if !event.strava.isEmpty {
                     Text("STRAVA")
