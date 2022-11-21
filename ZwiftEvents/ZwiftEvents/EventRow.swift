@@ -31,7 +31,7 @@ struct EventRow: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: badgeSize, height: badgeSize)
                     .foregroundColor(.zwiftOrange)
-                    .offset(x: 180, y: -120)
+                    .offset(x: 160, y: -120)
                     .shadow(color: .black, radius: 8)
             }
         }
