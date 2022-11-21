@@ -13,6 +13,11 @@
 		57375134292BF670006854F7 /* ParticlesGeometryEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57375133292BF670006854F7 /* ParticlesGeometryEffect.swift */; };
 		57375136292BF7C2006854F7 /* ParticlesModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57375135292BF7C2006854F7 /* ParticlesModifier.swift */; };
 		5737513A292BF942006854F7 /* ParticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57375139292BF942006854F7 /* ParticlesView.swift */; };
+		5737513D292C3F19006854F7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737513C292C3F19006854F7 /* HeaderView.swift */; };
+		5737513F292C3F78006854F7 /* EventDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737513E292C3F78006854F7 /* EventDescriptionView.swift */; };
+		57375141292C3FB8006854F7 /* RaceGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57375140292C3FB8006854F7 /* RaceGroup.swift */; };
+		57375143292C400F006854F7 /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57375142292C400F006854F7 /* PhotosView.swift */; };
+		57375145292C41B6006854F7 /* ResourceLinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57375144292C41B6006854F7 /* ResourceLinksView.swift */; };
 		577FD20D292941510077E363 /* ZwiftEventsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FD20C292941510077E363 /* ZwiftEventsApp.swift */; };
 		577FD20F292941510077E363 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FD20E292941510077E363 /* ContentView.swift */; };
 		577FD211292941520077E363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577FD210292941520077E363 /* Assets.xcassets */; };
@@ -30,6 +35,11 @@
 		57375133292BF670006854F7 /* ParticlesGeometryEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesGeometryEffect.swift; sourceTree = "<group>"; };
 		57375135292BF7C2006854F7 /* ParticlesModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesModifier.swift; sourceTree = "<group>"; };
 		57375139292BF942006854F7 /* ParticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesView.swift; sourceTree = "<group>"; };
+		5737513C292C3F19006854F7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		5737513E292C3F78006854F7 /* EventDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDescriptionView.swift; sourceTree = "<group>"; };
+		57375140292C3FB8006854F7 /* RaceGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceGroup.swift; sourceTree = "<group>"; };
+		57375142292C400F006854F7 /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
+		57375144292C41B6006854F7 /* ResourceLinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLinksView.swift; sourceTree = "<group>"; };
 		577FD209292941510077E363 /* ZwiftEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZwiftEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577FD20C292941510077E363 /* ZwiftEventsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZwiftEventsApp.swift; sourceTree = "<group>"; };
 		577FD20E292941510077E363 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +72,19 @@
 			path = "Geometry Effect Animation";
 			sourceTree = "<group>";
 		};
+		5737513B292C3EFC006854F7 /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				57375140292C3FB8006854F7 /* RaceGroup.swift */,
+				5737513C292C3F19006854F7 /* HeaderView.swift */,
+				5737513E292C3F78006854F7 /* EventDescriptionView.swift */,
+				57375142292C400F006854F7 /* PhotosView.swift */,
+				57375144292C41B6006854F7 /* ResourceLinksView.swift */,
+				577FD21A292942240077E363 /* DetailView.swift */,
+			);
+			path = "Detail View";
+			sourceTree = "<group>";
+		};
 		577FD200292941510077E363 = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +112,7 @@
 				577FD21C2929423B0077E363 /* EventRow.swift */,
 				57375130292B9F40006854F7 /* EventList.swift */,
 				577FD20E292941510077E363 /* ContentView.swift */,
-				577FD21A292942240077E363 /* DetailView.swift */,
+				5737513B292C3EFC006854F7 /* Detail View */,
 				57375132292BF643006854F7 /* Geometry Effect Animation */,
 				577FD210292941520077E363 /* Assets.xcassets */,
 				577FD212292941520077E363 /* Preview Content */,
@@ -178,14 +201,19 @@
 			files = (
 				57375134292BF670006854F7 /* ParticlesGeometryEffect.swift in Sources */,
 				57375131292B9F40006854F7 /* EventList.swift in Sources */,
+				57375143292C400F006854F7 /* PhotosView.swift in Sources */,
 				577FD20F292941510077E363 /* ContentView.swift in Sources */,
 				5737512D29299AA4006854F7 /* EventViewModel.swift in Sources */,
 				57375136292BF7C2006854F7 /* ParticlesModifier.swift in Sources */,
+				57375145292C41B6006854F7 /* ResourceLinksView.swift in Sources */,
 				5737512F2929C6BA006854F7 /* ColorTheme.swift in Sources */,
 				5737513A292BF942006854F7 /* ParticlesView.swift in Sources */,
+				5737513F292C3F78006854F7 /* EventDescriptionView.swift in Sources */,
+				5737513D292C3F19006854F7 /* HeaderView.swift in Sources */,
 				577FD21B292942240077E363 /* DetailView.swift in Sources */,
 				577FD20D292941510077E363 /* ZwiftEventsApp.swift in Sources */,
 				577FD21D2929423B0077E363 /* EventRow.swift in Sources */,
+				57375141292C3FB8006854F7 /* RaceGroup.swift in Sources */,
 				577FD221292945C30077E363 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
