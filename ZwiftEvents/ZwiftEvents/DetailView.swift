@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+extension UINavigationController {
+    open override func viewWillLayoutSubviews() {
+        navigationBar.topItem?.backButtonDisplayMode = .minimal
+    }
+}
+
 struct DetailView: View {
     @Environment(\.openURL) private var openURL
 

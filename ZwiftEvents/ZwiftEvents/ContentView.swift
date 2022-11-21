@@ -26,7 +26,7 @@ struct ContentView: View {
                 }
                 .navigationTitle("Zwift Routes")
             }
-        }
+        }.accentColor(.zwiftOrange)
     }
 }
 

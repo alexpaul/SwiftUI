@@ -22,7 +22,7 @@ struct EventRow: View {
             Text(event.route)
                 .font(.largeTitle)
                 .foregroundColor(.zwiftOrange)
-                .background(Color.black.opacity(0.6))
+                .background(Color.black.opacity(0.8))
                 .bold()
                 .offset(y: -60)
             if event.isCompleted {
