@@ -11,11 +11,7 @@ struct HeaderView: View {
     let event: Event
 
     var body: some View {
-<<<<<<< HEAD
         VStack {
-=======
-        Group {
->>>>>>> main
             Text(event.title)
                 .font(.title)
                 .padding(.bottom, 8)
