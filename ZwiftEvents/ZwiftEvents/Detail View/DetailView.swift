@@ -22,9 +22,6 @@ struct DetailView: View {
                 .navigationTitle(event.route)
                 .navigationBarTitleDisplayMode(.inline)
             }
-            if event.title.lowercased().contains("birthday") {
-                ParticlesView()
-            }
         }
     }
 }
