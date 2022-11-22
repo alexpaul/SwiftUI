@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-extension UINavigationController {
-    open override func viewWillLayoutSubviews() {
-        navigationBar.topItem?.backButtonDisplayMode = .minimal
-    }
-}
-
 struct DetailView: View {
     let event: Event
 
@@ -40,5 +34,11 @@ struct DetailView_Previews: PreviewProvider {
         NavigationView {
             DetailView(event: Event.mockEvent())
         }
+    }
+}
+
+extension UINavigationController {
+    open override func viewWillLayoutSubviews() {
+        navigationBar.topItem?.backButtonDisplayMode = .minimal
     }
 }

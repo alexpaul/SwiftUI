@@ -12,7 +12,7 @@ struct EventDescriptionView: View {
     let diameter: Double = 20
 
     var body: some View {
-        Group {
+        VStack {
             HStack {
                 Text(event.startTime)
                     .font(.headline)
