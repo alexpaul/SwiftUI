@@ -41,18 +41,9 @@ struct EventRow: View {
     }
 
     private var image: some View {
-        AsyncImage(url: URL(string: event.thumbnailURL)!) { image in
-            image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-        } placeholder: {
-            ZStack {
-                ProgressView()
-            }
-            .frame(height: 320)
-            .frame(maxWidth: .infinity)
-            .background(Color(uiColor: .systemGray3))
-        }
+        Image(event.imageName)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
     }
 }
 
