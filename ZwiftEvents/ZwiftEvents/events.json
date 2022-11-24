@@ -26,7 +26,8 @@
                 "https://res.cloudinary.com/dkah2peax/image/upload/v1669147167/Zwift/Four%20Horsemen/four-horsemen-6000-feet_jnozhr.jpg",
                 "https://res.cloudinary.com/dkah2peax/image/upload/v1669147166/Zwift/Four%20Horsemen/four-horsemen-7000-feet_oxp081.jpg",
                 "https://res.cloudinary.com/dkah2peax/image/upload/v1669147162/Zwift/Four%20Horsemen/four-horsemen-complete_fcqgkp.jpg"
-            ]
+            ],
+            "world": "Watopia"
         },
         {
             "route": "The Mega Pretzel",
@@ -45,7 +46,8 @@
             "zwiftInsiderURL": "https://zwiftinsider.com/route/the-mega-pretzel/",
             "power": "212 Watts",
             "isCompleted": false,
-            "photos": []
+            "photos": [],
+            "world": "Watopia"
         },
         {
             "route": "Temples and Towers",
@@ -64,7 +66,8 @@
             "zwiftInsiderURL": "https://zwiftinsider.com/route/temples-and-towers/",
             "power": "220 Watts",
             "isCompleted": true,
-            "photos": []
+            "photos": [],
+            "world": "Makuri Islands"
         },
         {
             "route": "The PRL Half",
@@ -83,7 +86,8 @@
             "zwiftInsiderURL": "https://zwiftinsider.com/route/the-prl-half/",
             "power": "212 Watts",
             "isCompleted": false,
-            "photos": []
+            "photos": [],
+            "world": "London"
         },
         {
             "route": "The PRL Full",
@@ -102,7 +106,8 @@
             "zwiftInsiderURL": "https://zwiftinsider.com/route/the-prl-full/",
             "power": "212 Watts",
             "isCompleted": false,
-            "photos": []
+            "photos": [],
+            "world": "London"
         },
         {
             "route": "Surrey Hills",
@@ -121,7 +126,8 @@
             "zwiftInsiderURL": "https://zwiftinsider.com/route/surrey-hills/",
             "power": "212 Watts",
             "isCompleted": false,
-            "photos": []
+            "photos": [],
+            "world": "London"
         },
         {
             "route": "Road to Sky",
@@ -145,7 +151,8 @@
                 "https://res.cloudinary.com/dkah2peax/image/upload/v1669070660/Zwift/Road%20to%20Sky/adz-2000-feet_irzu9g.jpg",
                 "https://res.cloudinary.com/dkah2peax/image/upload/v1669070659/Zwift/Road%20to%20Sky/adz-3000-feet_ppempi.jpg",
                 "https://res.cloudinary.com/dkah2peax/image/upload/v1669070658/Zwift/Road%20to%20Sky/adz-summit_yt0rel.jpg"
-            ]
+            ],
+            "world": "Watopia"
         }
     ]
 }

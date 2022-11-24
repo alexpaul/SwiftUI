@@ -28,6 +28,7 @@ struct Event: Decodable, Hashable {
     let power: String
     let isCompleted: Bool
     let photos: [String]
+    let world: String
 }
 
 extension Event {
@@ -69,10 +70,11 @@ extension Event {
             segment: "",
             zwiftInsiderURL: "https://zwiftinsider.com/route/four-horsemen/",
             power: "212 Watts",
-            isCompleted: false,
+            isCompleted: true,
             photos: [
                 "https://res.cloudinary.com/dkah2peax/image/upload/v1669067254/Zwift/adz-1000-feet_ufqaoy.jpg"
-            ]
+            ],
+            world: "Watopia"
         )
     }
 }
