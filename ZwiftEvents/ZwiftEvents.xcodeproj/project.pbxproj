@@ -26,6 +26,7 @@
 		577FD21D2929423B0077E363 /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FD21C2929423B0077E363 /* EventRow.swift */; };
 		577FD21F292945AA0077E363 /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = 577FD21E292945AA0077E363 /* events.json */; };
 		577FD221292945C30077E363 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FD220292945C30077E363 /* Event.swift */; };
+		57DF8A9D292FEF63002940AB /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DF8A9C292FEF63002940AB /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		577FD21C2929423B0077E363 /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
 		577FD21E292945AA0077E363 /* events.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
 		577FD220292945C30077E363 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		57DF8A9C292FEF63002940AB /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,15 +106,12 @@
 		577FD20B292941510077E363 /* ZwiftEvents */ = {
 			isa = PBXGroup;
 			children = (
-				577FD20C292941510077E363 /* ZwiftEventsApp.swift */,
-				577FD220292945C30077E363 /* Event.swift */,
-				577FD21E292945AA0077E363 /* events.json */,
-				5737512E2929C6BA006854F7 /* ColorTheme.swift */,
-				5737512C29299AA4006854F7 /* EventViewModel.swift */,
-				577FD21C2929423B0077E363 /* EventRow.swift */,
-				57375130292B9F40006854F7 /* EventList.swift */,
-				577FD20E292941510077E363 /* ContentView.swift */,
+				57DF8AA2292FFE3B002940AB /* Main App */,
+				57DF8AA0292FFE08002940AB /* Models */,
+				57DF8AA1292FFE17002940AB /* View Models */,
+				57DF8A9F292FFDC8002940AB /* Main View */,
 				5737513B292C3EFC006854F7 /* Detail View */,
+				57DF8A9E292FFD84002940AB /* Web View */,
 				57375132292BF643006854F7 /* Geometry Effect Animation */,
 				577FD210292941520077E363 /* Assets.xcassets */,
 				577FD212292941520077E363 /* Preview Content */,
@@ -126,6 +125,58 @@
 				577FD213292941520077E363 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		57DF8A9E292FFD84002940AB /* Web View */ = {
+			isa = PBXGroup;
+			children = (
+				57DF8A9C292FEF63002940AB /* WebView.swift */,
+				57DF8AA3292FFE46002940AB /* Supporting Files */,
+			);
+			path = "Web View";
+			sourceTree = "<group>";
+		};
+		57DF8A9F292FFDC8002940AB /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				577FD21C2929423B0077E363 /* EventRow.swift */,
+				57375130292B9F40006854F7 /* EventList.swift */,
+				577FD20E292941510077E363 /* ContentView.swift */,
+			);
+			path = "Main View";
+			sourceTree = "<group>";
+		};
+		57DF8AA0292FFE08002940AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				577FD220292945C30077E363 /* Event.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		57DF8AA1292FFE17002940AB /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				5737512C29299AA4006854F7 /* EventViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		57DF8AA2292FFE3B002940AB /* Main App */ = {
+			isa = PBXGroup;
+			children = (
+				577FD20C292941510077E363 /* ZwiftEventsApp.swift */,
+			);
+			path = "Main App";
+			sourceTree = "<group>";
+		};
+		57DF8AA3292FFE46002940AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				577FD21E292945AA0077E363 /* events.json */,
+				5737512E2929C6BA006854F7 /* ColorTheme.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +261,7 @@
 				5737513A292BF942006854F7 /* ParticlesView.swift in Sources */,
 				5737513F292C3F78006854F7 /* EventDescriptionView.swift in Sources */,
 				5737513D292C3F19006854F7 /* HeaderView.swift in Sources */,
+				57DF8A9D292FEF63002940AB /* WebView.swift in Sources */,
 				577FD21B292942240077E363 /* DetailView.swift in Sources */,
 				577FD20D292941510077E363 /* ZwiftEventsApp.swift in Sources */,
 				577FD21D2929423B0077E363 /* EventRow.swift in Sources */,
