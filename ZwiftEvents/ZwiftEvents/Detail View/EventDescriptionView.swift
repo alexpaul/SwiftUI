@@ -14,6 +14,15 @@ struct EventDescriptionView: View {
     var body: some View {
         VStack {
             HStack {
+                Text(event.elevation)
+                Spacer()
+                Text(event.distance)
+            }
+            .font(.headline)
+            .bold()
+            .padding(.horizontal, 20)
+            Divider()
+            HStack {
                 Text(event.startTime)
                     .font(.headline)
                     .bold()
@@ -63,8 +72,6 @@ struct EventDescriptionView: View {
             .padding(.bottom, 10)
             VStack(alignment: .leading, spacing: 20) {
                 Text(event.description)
-                Text("Elevation: \(event.elevation)")
-                Text("Distance: \(event.distance)")
             }
             .padding(.horizontal, 20)
             .font(.footnote)
