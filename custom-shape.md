@@ -1,5 +1,7 @@
 # Using `Path` and `GeometryReader` to Draw a Cusom Shape 
 
+> Note: Custom Shape is centered in Parent View using `GeometryReader`. 
+
 <img width="1306" alt="Screen Shot 2022-11-27 at 3 50 16 PM" src="https://user-images.githubusercontent.com/1819208/204159057-83958222-b150-498a-ae93-7dcfeb4ad0a6.png">
 
 
