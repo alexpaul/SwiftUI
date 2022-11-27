@@ -118,3 +118,83 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 ```
+
+***
+
+## 3. Custon Shape with a left corner drawn 
+
+<img width="1392" alt="Screen Shot 2022-11-27 at 5 33 30 PM" src="https://user-images.githubusercontent.com/1819208/204163366-c7781585-ee3c-4479-ad3b-bb194cc658fb.png">
+
+
+try? it out 
+
+```swift
+import SwiftUI
+
+struct CustomShape: View {
+    let width: CGFloat
+    let height: CGFloat
+    let color: Color
+
+    @Environment(\.horizontalSizeClass) private var sizeClass
+
+    var body: some View {
+        GeometryReader { geometry in
+            let startPoint = CGPoint(
+                x: sizeClass == .regular ? width * 0.14 : width * 0.20,
+                y: height * 0.50
+            )
+            let endPoint = CGPoint(
+                x: width * 0.10,
+                y: height * 0.75
+            )
+            let adjustment: CGFloat = 40
+            Path { path in
+                path.move(to: startPoint)
+                path.addLine(to: CGPoint(x: width,
+                                         y: height * 0.50))
+                path.addLine(to: CGPoint(x: width,
+                                         y: height))
+                path.addLine(to: CGPoint(x: width * 0.10,
+                                         y: height))
+                path.addLine(to: CGPoint(x: width * 0.10,
+                                         y: height * 0.75))
+
+                // add curve (rounded corner at top left)
+                path.addCurve(to: startPoint,
+                              control1: CGPoint(x: endPoint.x,
+                                                y: endPoint.y),
+                              control2: CGPoint(x: startPoint.x - adjustment,
+                                                y: startPoint.y))
+
+            }
+            .fill(color)
+        }
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            GeometryReader { geometry in
+                let width = geometry.size.width
+                let height = geometry.size.height
+                CustomShape(
+                    width: width,
+                    height: height,
+                    color: .blue
+                )
+            }
+        }
+        .frame(height: 100)
+        .frame(maxWidth: .infinity)
+        .background(.orange)
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
