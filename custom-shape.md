@@ -218,7 +218,7 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
-## 4. Usinga a Custom SwiftUI View as a `background` modifier 
+## 4. Using a Custom SwiftUI View as a `background` modifier 
 
 <img width="1374" alt="Screen Shot 2022-11-27 at 7 47 21 PM" src="https://user-images.githubusercontent.com/1819208/204169645-7ff47ec4-59ef-4546-830c-939e82c8b0d5.png">
 
