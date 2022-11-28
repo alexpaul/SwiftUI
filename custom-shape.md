@@ -215,3 +215,109 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 ```
+
+***
+
+## 4. Usinga a Custom SwiftUI View as a `background` modifier 
+
+<img width="1374" alt="Screen Shot 2022-11-27 at 7 47 21 PM" src="https://user-images.githubusercontent.com/1819208/204169645-7ff47ec4-59ef-4546-830c-939e82c8b0d5.png">
+
+try? it out 
+
+```swift
+import SwiftUI
+
+struct CustomShape: View {
+    let width: CGFloat
+    let height: CGFloat
+    let radius: CGFloat
+    let color: Color
+
+    @Environment(\.horizontalSizeClass) private var sizeClass
+
+    var body: some View {
+        GeometryReader { geometry in
+            let startPoint = CGPoint(
+                x: radius,
+                y: 0
+            )
+            let endPoint = CGPoint(
+                x: (startPoint.x - radius),
+                y: radius
+            )
+            Path { path in
+                // 1
+                path.move(to: startPoint)
+                // 2
+                // top right point
+                path.addLine(to: CGPoint(x: width,
+                                         y: 0))
+                // 3
+                // bottom right point
+                path.addLine(to: CGPoint(x: width,
+                                         y: height))
+                // 4
+                // bottom left point
+                path.addLine(to: CGPoint(x: endPoint.x,
+                                         y: height))
+                // 5
+                path.addLine(to: CGPoint(x: endPoint.x,
+                                         y: radius))
+                // 6
+                // rounded corner at top left
+                path.addCurve(to: startPoint,
+                              control1: CGPoint(x: endPoint.x,
+                                                y: endPoint.y),
+                              control2: CGPoint(x: startPoint.x - radius,
+                                                y: startPoint.y))
+
+                // 7
+                // optional
+                path.closeSubpath()
+            }
+            .fill(color)
+        }
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        GeometryReader { geometry in
+            let width: CGFloat = 300
+            let height: CGFloat = 100
+            VStack {
+                Image("swiftui-logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Spacer()
+                VStack {
+                    Text("Using a SwiftUI Custom View as a `background` modifier")
+                        .font(.headline)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.white)
+                }
+                .frame(height: height)
+                .frame(width: width)
+                .background(
+                    CustomShape(
+                        width: width,
+                        height: height,
+                        radius: 40,
+                        color: .swiftyBlue
+                    )
+                )
+            }
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+extension Color {
+    static let swiftyBlue = Color(red: 5/255, green: 23/255, blue: 142/255)
+}
+```
