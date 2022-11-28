@@ -124,7 +124,7 @@ struct ContentView_Previews: PreviewProvider {
 ## 3. Custon Shape with a left corner drawn 
 
 
-![top-left-corner](https://user-images.githubusercontent.com/1819208/204168076-eac21b5f-9bfd-4333-a2de-600626ade5c7.jpg)
+![top-left-corner](https://user-images.githubusercontent.com/1819208/204168148-78f89cee-50d5-42bc-bc68-d82af53c433a.jpg)
 
 
 <img width="1363" alt="Screen Shot 2022-11-27 at 7 20 08 PM" src="https://user-images.githubusercontent.com/1819208/204167907-8482b630-b37c-4d88-940c-446d566c94a8.png">
