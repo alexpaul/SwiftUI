@@ -125,8 +125,7 @@ struct ContentView_Previews: PreviewProvider {
 
 ![top-left-corner](https://user-images.githubusercontent.com/1819208/204163437-ba658fc4-3476-4d84-b5cb-43afe63ac738.jpg)
 
-
-<img width="1392" alt="Screen Shot 2022-11-27 at 5 33 30 PM" src="https://user-images.githubusercontent.com/1819208/204163366-c7781585-ee3c-4479-ad3b-bb194cc658fb.png">
+<img width="1363" alt="Screen Shot 2022-11-27 at 7 20 08 PM" src="https://user-images.githubusercontent.com/1819208/204167907-8482b630-b37c-4d88-940c-446d566c94a8.png">
 
 
 try? it out 
@@ -137,6 +136,7 @@ import SwiftUI
 struct CustomShape: View {
     let width: CGFloat
     let height: CGFloat
+    let radius: CGFloat
     let color: Color
 
     @Environment(\.horizontalSizeClass) private var sizeClass
@@ -144,32 +144,42 @@ struct CustomShape: View {
     var body: some View {
         GeometryReader { geometry in
             let startPoint = CGPoint(
-                x: sizeClass == .regular ? width * 0.14 : width * 0.20,
-                y: height * 0.50
+                x: radius,
+                y: 0
             )
             let endPoint = CGPoint(
-                x: width * 0.10,
-                y: height * 0.75
+                x: (startPoint.x - radius),
+                y: radius
             )
-            let adjustment: CGFloat = 40
             Path { path in
+                // 1
                 path.move(to: startPoint)
+                // 2
+                // top right point
                 path.addLine(to: CGPoint(x: width,
-                                         y: height * 0.50))
+                                         y: 0))
+                // 3
+                // bottom right point
                 path.addLine(to: CGPoint(x: width,
                                          y: height))
-                path.addLine(to: CGPoint(x: width * 0.10,
+                // 4
+                // bottom left point
+                path.addLine(to: CGPoint(x: endPoint.x,
                                          y: height))
-                path.addLine(to: CGPoint(x: width * 0.10,
-                                         y: height * 0.75))
-
-                // add curve (rounded corner at top left)
+                // 5
+                path.addLine(to: CGPoint(x: endPoint.x,
+                                         y: radius))
+                // 6
+                // rounded corner at top left
                 path.addCurve(to: startPoint,
                               control1: CGPoint(x: endPoint.x,
                                                 y: endPoint.y),
-                              control2: CGPoint(x: startPoint.x - adjustment,
+                              control2: CGPoint(x: startPoint.x - radius,
                                                 y: startPoint.y))
 
+                // 7
+                // optional
+                path.closeSubpath()
             }
             .fill(color)
         }
@@ -185,13 +195,15 @@ struct ContentView: View {
                 CustomShape(
                     width: width,
                     height: height,
+                    radius: 60,
                     color: .blue
                 )
             }
         }
-        .frame(height: 100)
+        .frame(height: 200)
         .frame(maxWidth: .infinity)
-        .background(.orange)
+        .padding(.horizontal, 10)
+        .background(.gray)
     }
 }
 
