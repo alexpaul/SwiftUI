@@ -36,7 +36,16 @@ struct ContentView_Previews: PreviewProvider {
 }
 ```
 
-## Resources 
+***
+
+## My Sample SwiftUI Apps 
+
+* [ZwiftRoutes](https://github.com/alexpaul/ZwiftRoutes/)
+* [WorldCup2022](https://github.com/alexpaul/WorldCup2022/)
+
+***
+
+## Apple SwiftUI Resources 
 
 * [Apple: SwiftUI](https://developer.apple.com/xcode/swiftui/)
 * [Apple: SwiftUI Videos](https://developer.apple.com/videos/all-videos/?q=swiftui)
