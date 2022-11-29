@@ -1,6 +1,12 @@
 # `List`
 
-<img width="1353" alt="Screen Shot 2022-11-29 at 6 13 16 PM" src="https://user-images.githubusercontent.com/1819208/204669127-29b1a9b8-ecde-4f6f-9a37-23eea526d921.png">
+<img width="1359" alt="Screen Shot 2022-11-29 at 6 19 23 PM" src="https://user-images.githubusercontent.com/1819208/204669819-2e1ac049-6104-4882-80ee-e2e5f827b9ac.png">
+
+1. First Section is a horizontal list.
+2. Items are embedded in an `HStack` to make it a horizontal list. 
+3. The second `Section` is a vertical list.
+4. The are a varity of `Liat` Styles which includes: `automatic`, `grouped` and `plain`. 
+5. To hide the scroll indicators we set `scrollIndicators` to `hidden`. 
 
 try? it out 
 
