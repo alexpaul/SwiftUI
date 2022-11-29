@@ -321,3 +321,156 @@ extension Color {
     static let swiftyBlue = Color(red: 5/255, green: 23/255, blue: 142/255)
 }
 ```
+
+***
+
+## 5. Using a Custom Shape to draw 4 Views
+
+<img width="1363" alt="Screen Shot 2022-11-29 at 5 26 27 PM" src="https://user-images.githubusercontent.com/1819208/204662177-744557c4-04f2-47ca-b546-360bc34286d0.png">
+
+
+try? it out 
+
+```swift
+import SwiftUI
+
+struct CustomShape: View {
+    let width: CGFloat
+    let height: CGFloat
+    let radius: CGFloat
+    let color: Color
+    let bottomLeftOffset: CGFloat
+    let bottomRightOffset: CGFloat
+
+    @Environment(\.horizontalSizeClass) private var sizeClass
+
+    var body: some View {
+        GeometryReader { geometry in
+            let startPoint = CGPoint(
+                x: radius,
+                y: 0
+            )
+            let endPoint = CGPoint(
+                x: (startPoint.x - radius),
+                y: radius
+            )
+            Path { path in
+                // 1
+                path.move(to: startPoint)
+                // 2
+                // top right point
+                path.addLine(to: CGPoint(x: width,
+                                         y: 0))
+                // 3
+                // bottom right point
+                path.addLine(to: CGPoint(x: width - bottomRightOffset,
+                                         y: height))
+                // 4
+                // bottom left point
+                path.addLine(to: CGPoint(x: endPoint.x - bottomLeftOffset,
+                                         y: height))
+                // 5
+                path.addLine(to: CGPoint(x: endPoint.x,
+                                         y: radius))
+                // 7
+                // optional
+                path.closeSubpath()
+            }
+            .fill(color)
+        }
+    }
+}
+
+struct Container: View {
+    let width: CGFloat
+    let height: CGFloat
+    let color: Color
+    let cyclingTeam: String
+    let bottomLeftOffset: CGFloat
+    let bottomRightOffset: CGFloat
+
+    var body: some View {
+        Text(cyclingTeam)
+        .frame(width: width/2, height: height)
+        .foregroundColor(.white)
+        .font(.title2)
+        .multilineTextAlignment(.center)
+        .bold()
+        .background(
+            CustomShape(
+                width: width/2,
+                height: height,
+                radius: 0,
+                color: color,
+                bottomLeftOffset: bottomLeftOffset,
+                bottomRightOffset: bottomRightOffset
+            )
+        )
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            GeometryReader { geometry in
+                let width = geometry.size.width
+                let containerHeight: Double = 200
+                let offset: CGFloat = 22
+                VStack(alignment: .center, spacing: 0) {
+                    Spacer()
+                    HStack(alignment: .center, spacing: 0) {
+                        Container(
+                            width: width,
+                            height: containerHeight,
+                            color: .jumboVisma,
+                            cyclingTeam: "TEAM\nJUMBO\nVISMA",
+                            bottomLeftOffset: 0,
+                            bottomRightOffset: offset
+                        )
+                        Container(
+                            width: width,
+                            height: containerHeight,
+                            color: .bikeExchange,
+                            cyclingTeam: "TEAM\nBIKE\nEXCHANGE\nJAYCO",
+                            bottomLeftOffset: offset,
+                            bottomRightOffset: 0
+                        )
+                    }
+                    HStack(alignment: .center, spacing: 0) {
+                        Container(
+                            width: width,
+                            height: containerHeight,
+                            color: .ineosGrenadiers,
+                            cyclingTeam: "INEOS\nGRENADIERS\nCYCLING TEAM",
+                            bottomLeftOffset: 0,
+                            bottomRightOffset: offset
+                        )
+                        Container(
+                            width: width,
+                            height: containerHeight,
+                            color: .movieStarTeam,
+                            cyclingTeam: "MOVIESTAR\nTEAM",
+                            bottomLeftOffset: offset,
+                            bottomRightOffset: 0
+                        )
+                    }
+                    Spacer()
+                }
+            }
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+extension Color {
+    static let jumboVisma = Color(red: 238/255, green: 188/255, blue: 68/255)
+    static let bikeExchange = Color(red: 112/255, green: 41/255, blue: 124/255)
+    static let ineosGrenadiers = Color(red: 9/255, green: 24/255, blue: 44/255)
+    static let movieStarTeam = Color(red: 78/255, green: 168/255, blue: 222/255)
+}
+```
