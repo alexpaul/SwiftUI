@@ -42,6 +42,7 @@ struct ContentView_Previews: PreviewProvider {
 
 * [ZwiftRoutes](https://github.com/alexpaul/ZwiftRoutes/)
 * [WorldCup2022](https://github.com/alexpaul/WorldCup2022/)
+* [WWDCKit - Creating and Using a Swift Package](https://github.com/alexpaul/WWDCKit)
 
 ***
 
