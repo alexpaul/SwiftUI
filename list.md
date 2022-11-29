@@ -34,10 +34,10 @@ struct ContentView: View {
                 }
             }
         }
-        // 3
+        // 4
         // some other list styles are: grouped, automatic, plain
         .listStyle(.insetGrouped)
-        // 4
+        // 5
         .scrollIndicators(.hidden)
     }
 }
