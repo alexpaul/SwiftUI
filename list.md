@@ -5,7 +5,7 @@
 1. First Section is a horizontal list.
 2. Items are embedded in an `HStack` to make it a horizontal list. 
 3. The second `Section` is a vertical list.
-4. The are a varity of `Liat` Styles which includes: `automatic`, `grouped` and `plain`. 
+4. There are a varity of `List` Styles which includes: `automatic`, `grouped` and `plain`. 
 5. To hide the scroll indicators we set `scrollIndicators` to `hidden`. 
 
 try? it out 
