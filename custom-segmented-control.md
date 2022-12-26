@@ -21,9 +21,9 @@ struct ContentView: View {
             VStack(alignment: .center, spacing: 0) {
                 HStack(alignment: .center, spacing: 0) {
                     segmentedButton(title: "Progress", true)
-                        .foregroundColor(isLeftSelected ? .orange : .black)
+                        .foregroundColor(isLeftSelected ? .orange : Color(uiColor: .label))
                     segmentedButton(title: "Activites", false)
-                        .foregroundColor(isLeftSelected ? .black : .orange)
+                        .foregroundColor(isLeftSelected ? Color(uiColor: .label) : .orange)
                 }
                 .buttonStyle(.plain)
                 ZStack {
@@ -69,7 +69,7 @@ struct ContentView: View {
                 .font(.headline)
                 .frame(maxWidth: .infinity)
                 .frame(minHeight: Constants.buttonHeight)
-                .background(.clear)
+                .background(Color(uiColor: .systemGroupedBackground))
         }
     }
 }
