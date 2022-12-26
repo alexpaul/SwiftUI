@@ -1,6 +1,6 @@
 # Custom Segmented Control 
 
-![Screen Shot 2022-11-02 at 5 57 53 AM](https://user-images.githubusercontent.com/1819208/199460252-161f125b-2986-4317-ac83-cd4baf2fcb2c.png)
+![custom-segmented-control](https://user-images.githubusercontent.com/1819208/209569183-3280ad34-4ae3-4384-8adf-4f616b10f19a.gif)
 
 try? it out 
 
@@ -16,45 +16,36 @@ struct ContentView: View {
     @State private var isLeftSelected = true
 
     var body: some View {
-        VStack(alignment: .center, spacing: 0) {
-            HStack(alignment: .center, spacing: 0) {
-                Button(action: { changeSelection(true) }) {
-                    Text("Progress")
-                        .font(.headline)
-                        .frame(maxWidth: .infinity)
-                        .frame(minHeight: Constants.buttonHeight)
-                        .foregroundColor(isLeftSelected ? .orange : .black)
-                        .background(.clear)
-                }
-                Button(action: { changeSelection(false) }) {
-                    Text("Activities")
-                        .font(.headline)
-                        .frame(maxWidth: .infinity)
-                        .frame(minHeight: Constants.buttonHeight)
-                        .foregroundColor(isLeftSelected ? .black : .orange)
-                        .background(.clear)
-                }
-            }
-            ZStack {
-                HStack{}
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 2)
-                    .background(Color(uiColor: .systemGray3))
-                    .offset(y: 1)
+        GeometryReader { geometry in
+            let segmentedLineWidth: CGFloat = geometry.size.width * 0.50
+            VStack(alignment: .center, spacing: 0) {
                 HStack(alignment: .center, spacing: 0) {
-                    HStack {}
-                    .frame(maxWidth: .infinity)
-                    .frame(height: Constants.segmentedBorderHeight)
-                    .background(isLeftSelected ? .orange : .clear)
-                    HStack {}
-                    .frame(maxWidth: .infinity)
-                    .frame(height: Constants.segmentedBorderHeight)
-                    .background(isLeftSelected ? .clear : .orange)
+                    segmentedButton(title: "Progress", true)
+                        .foregroundColor(isLeftSelected ? .orange : .black)
+                    segmentedButton(title: "Activites", false)
+                        .foregroundColor(isLeftSelected ? .black : .orange)
                 }
+                .buttonStyle(.plain)
+                ZStack {
+                    HStack{}
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 2)
+                        .background(Color(uiColor: .systemGray3))
+                        .offset(y: 1)
+                    HStack(alignment: .bottom, spacing: 0) {
+                        if isLeftSelected {
+                            segmentedLine(width: segmentedLineWidth)
+                            Spacer()
+                        } else {
+                            Spacer()
+                            segmentedLine(width: segmentedLineWidth)
+                        }
+                    }
+                }
+                Spacer()
+                Text(isLeftSelected ? "Viewing your Progress" : "Viewing your Activities")
+                Spacer()
             }
-            Spacer()
-            Text(isLeftSelected ? "Viewing your Progress" : "Viewing your Activities")
-            Spacer()
         }
     }
 
@@ -62,6 +53,23 @@ struct ContentView: View {
         guard selection != isLeftSelected else { return }
         withAnimation {
             isLeftSelected.toggle()
+        }
+    }
+
+    private func segmentedLine(width: CGFloat) -> some View {
+        HStack {}
+            .frame(width: width)
+            .frame(height: Constants.segmentedBorderHeight)
+            .background(.orange)
+    }
+
+    private func segmentedButton(title: String, _ selection: Bool) -> some View {
+        Button(action: { changeSelection(selection) }) {
+            Text(title)
+                .font(.headline)
+                .frame(maxWidth: .infinity)
+                .frame(minHeight: Constants.buttonHeight)
+                .background(.clear)
         }
     }
 }
