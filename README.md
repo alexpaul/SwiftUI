@@ -73,5 +73,6 @@ struct ContentView_Previews: PreviewProvider {
 * [Discover concurrency in SwiftUI – WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10019/)
   * Prerequisites are "Meet async/await in Swift" and "Explore structured concurrency in Swift" from above.
 * [Data essentials in SwiftUI – WWDC20 🔖](https://developer.apple.com/videos/play/wwdc2020/10040/)
+  * Talks about `@State`, `@StateObject`, `@ObservableObject` and much more....
 
 
