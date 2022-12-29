@@ -1,4 +1,4 @@
-# Using `@Binding`to propagate changed to a Parent View
+# Using `@Binding`to propagate changes to a Parent View
 
 ![Screen Shot 2022-12-29 at 1 11 36 PM](https://user-images.githubusercontent.com/1819208/209992682-48123a9e-ba97-4d24-8462-8f15c7a5b1fe.png)
 
