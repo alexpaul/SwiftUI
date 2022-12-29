@@ -60,3 +60,17 @@ struct ContentView_Previews: PreviewProvider {
 * [Apple Sample Code: Fruta: Building a Feature-Rich App with SwiftUI](https://developer.apple.com/documentation/swiftui/fruta_building_a_feature-rich_app_with_swiftui)
 * [Apple Sample Code: Create Accessible Views and more sample code](https://developer.apple.com/documentation/swiftui/creating_accessible_views)
 
+***
+
+## Catching up with SwiftUI (version n - 1) via WWDC Videos 
+
+> The goal here is to sort the videos below in chronological viewing order.
+
+* [What's new is SwiftUI - WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10192/)
+* [Demystifying SwiftUI - WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10022/)
+* [Meet async/await in Swift – WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10132/)
+* [Explore structured concurrency in Swift – WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10134/)
+* [Discover concurrency in SwiftUI – WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10019/)
+* [Data essentials in SwiftUI – WWDC20 🔖](https://developer.apple.com/videos/play/wwdc2020/10040/)
+
+
