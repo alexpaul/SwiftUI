@@ -68,6 +68,7 @@ struct ContentView_Previews: PreviewProvider {
 
 * [What's new is SwiftUI - WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10192/)
 * [Demystifying SwiftUI - WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10022/)
+  * Best practices in SwiftUI, a must watch.
 * [Meet async/await in Swift – WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10132/)
 * [Explore structured concurrency in Swift – WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10134/)
 * [Discover concurrency in SwiftUI – WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10019/)
