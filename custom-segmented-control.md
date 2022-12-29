@@ -1,16 +1,21 @@
 # Custom Segmented Control 
 
-https://user-images.githubusercontent.com/1819208/209889029-be6e4928-0829-493a-9184-c6acfea4565e.mov
+![Screen Shot 2022-12-29 at 11 57 03 AM](https://user-images.githubusercontent.com/1819208/209984848-5c1e4e4a-be36-49b2-81bb-27a2082ee6eb.png)
+
 
 try? it out 
 
 ```swift
 import SwiftUI
 
-struct SegmentedView: View {
-    @State private var isLeftSelected = true
+extension Color {
+    static let segmentedBackgroundColor = Color(uiColor: .systemBackground)
+}
 
-    var action: ((Bool) -> Void)?
+struct SegmentedView: View {
+    @State private var isLeftTabSelected = true
+
+    var action: ((Bool) -> Void)
 
     private enum Constants {
         static let segmentedBorderHeight: Double = 4
@@ -23,38 +28,40 @@ struct SegmentedView: View {
             VStack(alignment: .center, spacing: 0) {
                 HStack(alignment: .center, spacing: 0) {
                     segmentedButton(title: "Progress", true)
-                        .foregroundColor(isLeftSelected ? .orange : Color(uiColor: .label))
+                        .foregroundColor(isLeftTabSelected ? .orange : Color(uiColor: .label))
                     segmentedButton(title: "Activites", false)
-                        .foregroundColor(isLeftSelected ? Color(uiColor: .label) : .orange)
+                        .foregroundColor(isLeftTabSelected ? Color(uiColor: .label) : .orange)
                 }
                 .buttonStyle(.plain)
                 ZStack {
                     segmentedDivider
-                    selectedTabState(width: segmentedLineWidth)
+                    updateTabState(width: segmentedLineWidth)
                 }
             }
+            .background(Color.segmentedBackgroundColor)
         }
+        .frame(height: 48)
     }
 
     private var segmentedDivider: some View {
-        HStack{}
+        Color(uiColor: .systemGray3)
             .frame(maxWidth: .infinity)
             .frame(height: 2)
-            .background(Color(uiColor: .systemGray3))
             .offset(y: 2)
+            .background(.clear)
     }
 
     private func tabSelectionChanged(_ selection: Bool) {
-        guard selection != isLeftSelected else { return }
+        guard selection != isLeftTabSelected else { return }
         withAnimation {
-            isLeftSelected.toggle()
+            isLeftTabSelected.toggle()
         }
-        action?(isLeftSelected)
+        action(isLeftTabSelected)
     }
 
-    private func selectedTabState(width: CGFloat) -> some View {
+    private func updateTabState(width: CGFloat) -> some View {
         HStack(alignment: .bottom, spacing: 0) {
-            if isLeftSelected {
+            if isLeftTabSelected {
                 focusedTab(width: width)
                 Spacer()
             } else {
@@ -74,25 +81,23 @@ struct SegmentedView: View {
     private func segmentedButton(title: String, _ selection: Bool) -> some View {
         Button(action: { tabSelectionChanged(selection) }) {
             Text(title)
-                .font(.headline)
                 .frame(maxWidth: .infinity)
                 .frame(minHeight: Constants.buttonHeight)
-                .background(Color(uiColor: .systemGroupedBackground))
+                .background(Color.segmentedBackgroundColor)
         }
     }
 }
 
 struct ContentView: View {
-    @State private var isLeftSelected = true
+    @State private var isLeftTabSelected = true
 
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
-            SegmentedView { isLeftSelected in
-                self.isLeftSelected = isLeftSelected
+            SegmentedView { isLeftTabSelected in
+                self.isLeftTabSelected = isLeftTabSelected
             }
-            .frame(height: 100)
             Spacer()
-            Text(isLeftSelected ? "Viewing your Progress" : "Viewing your Activities")
+            Text(isLeftTabSelected ? "Viewing your Progress" : "Viewing your Activities")
             Spacer()
         }
     }
