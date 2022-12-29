@@ -1,6 +1,7 @@
 # Using `@Binding`to propagate changes to a Parent View
 
-![Screen Shot 2022-12-29 at 1 11 36 PM](https://user-images.githubusercontent.com/1819208/209992682-48123a9e-ba97-4d24-8462-8f15c7a5b1fe.png)
+![Screen Shot 2022-12-29 at 1 24 31 PM](https://user-images.githubusercontent.com/1819208/209993936-5de2b530-6d5a-46b6-ac3e-8b6a9e5e79c6.png)
+
 
 try? it out 
 
@@ -14,15 +15,17 @@ struct NotesEditor: View {
     @Binding var notes: [String]
 
     @Environment(\.dismiss) private var dismiss
-    @State private var newNote = "Enter your note here...."
+    @State private var newNote = ""
 
     var body: some View {
         VStack {
-            Text("New note")
+            Text("Enter your note below")
                 .padding(.top, 20)
             TextEditor(text: $newNote)
+                .border(.gray)
                 .foregroundColor(.gray)
-                .background(.red)
+                .padding(.horizontal, 20)
+                .lineSpacing(5)
             Button(action: addNewNote) {
                 Text("Save")
             }
