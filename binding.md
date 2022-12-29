@@ -85,3 +85,9 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 ```
+
+***
+
+## Resources 
+
+* [Apple Docs: `@Binding`](https://developer.apple.com/documentation/swiftui/binding)
