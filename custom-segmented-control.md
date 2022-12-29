@@ -7,13 +7,15 @@ try? it out
 ```swift
 import SwiftUI
 
-struct ContentView: View {
+struct SegmentedView: View {
+    @State private var isLeftSelected = true
+
+    var action: ((Bool) -> Void)?
+
     private enum Constants {
         static let segmentedBorderHeight: Double = 4
         static let buttonHeight: Double = 44
     }
-
-    @State private var isLeftSelected = true
 
     var body: some View {
         GeometryReader { geometry in
@@ -27,36 +29,42 @@ struct ContentView: View {
                 }
                 .buttonStyle(.plain)
                 ZStack {
-                    HStack{}
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 2)
-                        .background(Color(uiColor: .systemGray3))
-                        .offset(y: 1)
-                    HStack(alignment: .bottom, spacing: 0) {
-                        if isLeftSelected {
-                            segmentedLine(width: segmentedLineWidth)
-                            Spacer()
-                        } else {
-                            Spacer()
-                            segmentedLine(width: segmentedLineWidth)
-                        }
-                    }
+                    segmentedDivider
+                    selectedTabState(width: segmentedLineWidth)
                 }
-                Spacer()
-                Text(isLeftSelected ? "Viewing your Progress" : "Viewing your Activities")
-                Spacer()
             }
         }
     }
 
-    private func changeSelection(_ selection: Bool) {
+    private var segmentedDivider: some View {
+        HStack{}
+            .frame(maxWidth: .infinity)
+            .frame(height: 2)
+            .background(Color(uiColor: .systemGray3))
+            .offset(y: 2)
+    }
+
+    private func tabSelectionChanged(_ selection: Bool) {
         guard selection != isLeftSelected else { return }
         withAnimation {
             isLeftSelected.toggle()
         }
+        action?(isLeftSelected)
     }
 
-    private func segmentedLine(width: CGFloat) -> some View {
+    private func selectedTabState(width: CGFloat) -> some View {
+        HStack(alignment: .bottom, spacing: 0) {
+            if isLeftSelected {
+                focusedTab(width: width)
+                Spacer()
+            } else {
+                Spacer()
+                focusedTab(width: width)
+            }
+        }
+    }
+
+    private func focusedTab(width: CGFloat) -> some View {
         HStack {}
             .frame(width: width)
             .frame(height: Constants.segmentedBorderHeight)
@@ -64,12 +72,28 @@ struct ContentView: View {
     }
 
     private func segmentedButton(title: String, _ selection: Bool) -> some View {
-        Button(action: { changeSelection(selection) }) {
+        Button(action: { tabSelectionChanged(selection) }) {
             Text(title)
                 .font(.headline)
                 .frame(maxWidth: .infinity)
                 .frame(minHeight: Constants.buttonHeight)
                 .background(Color(uiColor: .systemGroupedBackground))
+        }
+    }
+}
+
+struct ContentView: View {
+    @State private var isLeftSelected = true
+
+    var body: some View {
+        VStack(alignment: .center, spacing: 0) {
+            SegmentedView { isLeftSelected in
+                self.isLeftSelected = isLeftSelected
+            }
+            .frame(height: 100)
+            Spacer()
+            Text(isLeftSelected ? "Viewing your Progress" : "Viewing your Activities")
+            Spacer()
         }
     }
 }
