@@ -12,6 +12,10 @@ extension Color {
     static let segmentedBackgroundColor = Color(uiColor: .systemBackground)
 }
 
+/// `SegmentedView`: A custom SwiftUI View that contains two tabs.
+/// The `SegmentedView` contains a closure `action` which captures a `Bool` value
+/// this value informs the client of the selected tab`isLeftTabSelected`.
+/// The default value of `isLeftTabSelected` is true
 struct SegmentedView: View {
     @State private var isLeftTabSelected = true
 
@@ -88,6 +92,7 @@ struct SegmentedView: View {
     }
 }
 
+// MARK: - Implementation
 struct ContentView: View {
     @State private var isLeftTabSelected = true
 
