@@ -1,6 +1,6 @@
 # Custom Segmented Control 
 
-![custom-segmented-control](https://user-images.githubusercontent.com/1819208/209569183-3280ad34-4ae3-4384-8adf-4f616b10f19a.gif)
+https://user-images.githubusercontent.com/1819208/209889029-be6e4928-0829-493a-9184-c6acfea4565e.mov
 
 try? it out 
 
