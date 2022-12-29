@@ -91,3 +91,4 @@ struct ContentView_Previews: PreviewProvider {
 ## Resources 
 
 * [Apple Docs: `@Binding`](https://developer.apple.com/documentation/swiftui/binding)
+* [WWDC20: Data essentials in SwiftUI](https://developer.apple.com/videos/play/wwdc2020/10040/)
