@@ -66,7 +66,7 @@ struct ContentView_Previews: PreviewProvider {
 
 > The goal here is to sort the videos below in chronological viewing order.
 
-* [What's new is SwiftUI - WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10192/)
+* [What's new is SwiftUI - WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10018/)
 * [Demystifying SwiftUI - WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10022/)
   * Best practices in SwiftUI, a must watch.
 * [Meet async/await in Swift – WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10132/)
