@@ -15,6 +15,7 @@ struct SegmentedButton: View {
 
     private enum Constants {
         static let buttonHeight: CGFloat = 50
+        static let selectedBarHeight: CGFloat = 4
     }
 
     var body: some View {
@@ -34,7 +35,7 @@ struct SegmentedButton: View {
             .buttonStyle(.plain)
             Color(uiColor: isSelected == index ? .orange : .clear)
                 .frame(maxWidth: .infinity)
-                .frame(height: 4)
+                .frame(height: Constants.selectedBarHeight)
         }
     }
 }
