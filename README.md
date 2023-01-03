@@ -67,6 +67,10 @@ struct ContentView_Previews: PreviewProvider {
 > Those videos are organized with the assumption that you're supporting up to iOS 15.
 
 * [What's new is SwiftUI - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10018/)
+  * What's new in List, Button and TextField
+  * Canvas View
+  * Search API
+  * AttributedString
 * [Demystifying SwiftUI - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10022/)
   * Best practices in SwiftUI, a must watch.
 * [Meet async/await in Swift – WWDC21](https://developer.apple.com/videos/play/wwdc2021/10132/)
