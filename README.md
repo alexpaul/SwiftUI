@@ -62,18 +62,18 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
-## Catching up with SwiftUI (version n - 1) via WWDC Videos 
+## Catching up with SwiftUI via WWDC Videos 
 
-> The goal here is to sort the videos below in chronological viewing order.
+> Those videos are organized with the assumption that you're supporting up to iOS 15.
 
-* [What's new is SwiftUI - WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10018/)
-* [Demystifying SwiftUI - WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10022/)
+* [What's new is SwiftUI - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10018/)
+* [Demystifying SwiftUI - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10022/)
   * Best practices in SwiftUI, a must watch.
-* [Meet async/await in Swift – WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10132/)
-* [Explore structured concurrency in Swift – WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10134/)
-* [Discover concurrency in SwiftUI – WWDC21 🔖](https://developer.apple.com/videos/play/wwdc2021/10019/)
+* [Meet async/await in Swift – WWDC21](https://developer.apple.com/videos/play/wwdc2021/10132/)
+* [Explore structured concurrency in Swift – WWDC21](https://developer.apple.com/videos/play/wwdc2021/10134/)
+* [Discover concurrency in SwiftUI – WWDC21](https://developer.apple.com/videos/play/wwdc2021/10019/)
   * Prerequisites are "Meet async/await in Swift" and "Explore structured concurrency in Swift" from above.
-* [Data essentials in SwiftUI – WWDC20 🔖](https://developer.apple.com/videos/play/wwdc2020/10040/)
+* [Data essentials in SwiftUI – WWDC20](https://developer.apple.com/videos/play/wwdc2020/10040/)
   * Talks about `@State`, `@StateObject`, `@ObservableObject` and much more....
 * [Add rich graphics to your SwiftUI app - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10021/)
   * Safe Area
