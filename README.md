@@ -90,5 +90,5 @@ struct ContentView_Previews: PreviewProvider {
 * [App essentials in SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10037)
 * [Stacks, Grids, and Outlines in SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10031) 🔖
 * [Making Apps More Accessible With Custom Actions - WWDC19](https://developer.apple.com/videos/play/wwdc2019/250) 🔖
-* [VoiceOver efficiency with custom rotors](https://developer.apple.com/videos/play/wwdc2020/10116) 🔖
+* [VoiceOver efficiency with custom rotors - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10116) 🔖
 
