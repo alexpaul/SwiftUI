@@ -66,11 +66,12 @@ struct ContentView_Previews: PreviewProvider {
 
 > Those videos are organized with the assumption that you're supporting up to iOS 15.
 
+* [Introduction to SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10119) 🔖
 * [What's new is SwiftUI - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10018/)
-  * What's new in List, Button and TextField
-  * Canvas View
+  * What's new in `List`, `Button` and `TextField`
+  * `Canvas` View
   * Search API
-  * AttributedString
+  * `AttributedString`
 * [Demystifying SwiftUI - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10022/)
   * Best practices in SwiftUI, a must watch.
 * [Meet async/await in Swift – WWDC21](https://developer.apple.com/videos/play/wwdc2021/10132/)
@@ -78,11 +79,16 @@ struct ContentView_Previews: PreviewProvider {
 * [Discover concurrency in SwiftUI – WWDC21](https://developer.apple.com/videos/play/wwdc2021/10019/)
   * Prerequisites are "Meet async/await in Swift" and "Explore structured concurrency in Swift" from above.
 * [Data essentials in SwiftUI – WWDC20](https://developer.apple.com/videos/play/wwdc2020/10040/)
-  * Talks about `@State`, `@StateObject`, `@ObservableObject` and much more....
+  * `@State`
+  * `@Binding`
+  * `@ObservableObject`
 * [Add rich graphics to your SwiftUI app - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10021/)
   * Safe Area
-  * Canvas View 
-  * TimelineView
-* [SwiftUI Accessibility: Beyond the basics - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10119/)
-
+  * `Canvas` View 
+  * `TimelineView`
+* [SwiftUI Accessibility: Beyond the basics - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10119/) 🔖
+* [App essentials in SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10037)
+* [Stacks, Grids, and Outlines in SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10031) 🔖
+* [Making Apps More Accessible With Custom Actions - WWDC19](https://developer.apple.com/videos/play/wwdc2019/250) 🔖
+* [VoiceOver efficiency with custom rotors](https://developer.apple.com/videos/play/wwdc2020/10116) 🔖
 
