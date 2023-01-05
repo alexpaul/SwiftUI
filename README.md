@@ -45,6 +45,7 @@ struct ContentView_Previews: PreviewProvider {
 * [WWDCKit - Creating and Using a Swift Package](https://github.com/alexpaul/WWDCKit)
 * [Vocabulary](https://github.com/alexpaul/Vocabulary/)
 * [BookList](https://github.com/alexpaul/BookList/)
+* [MoviesApp](https://github.com/alexpaul/phanmovies)
 
 ***
 
