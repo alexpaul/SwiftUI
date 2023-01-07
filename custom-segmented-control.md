@@ -7,6 +7,27 @@ try? it out
 ```swift
 import SwiftUI
 
+struct SegmentedControl: View {
+    let titles: [String]
+
+    @Binding var isSelected: Int
+
+    var body: some View {
+        HStack(alignment: .center, spacing: 0) {
+            ForEach(
+                Array(titles.enumerated()),
+                id: \.offset
+            ) { index, title in
+                SegmentedButton(
+                    title: title,
+                    index: index,
+                    isSelected: $isSelected
+                )
+            }
+        }
+    }
+}
+
 struct SegmentedButton: View {
     let title: String
     let index: Int
@@ -41,24 +62,16 @@ struct SegmentedButton: View {
 }
 
 struct ContentView: View {
-    @State private var isSelected = 0 // default is set to first tab
-
     private var titles = ["First", "Second", "Third", "Fourth"]
+
+    @State private var isSelected = 0 // default is set to first tab
 
     var body: some View {
         VStack {
-            HStack(alignment: .center, spacing: 0) {
-                ForEach(
-                    Array(titles.enumerated()),
-                    id: \.offset
-                ) { index, title in
-                    SegmentedButton(
-                        title: title,
-                        index: index,
-                        isSelected: $isSelected
-                    )
-                }
-            }
+            SegmentedControl(
+                titles: titles,
+                isSelected: $isSelected
+            )
             Spacer()
             Text("\(titles[isSelected]) tab selected")
             Spacer()
