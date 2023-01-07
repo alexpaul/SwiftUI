@@ -63,9 +63,7 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
-## Catching up with SwiftUI via WWDC Videos 
-
-> Those videos are organized with the assumption that you're supporting up to iOS 15.
+## SwiftUI WWDC Videos (Target: iOS 15)
 
 * [Introduction to SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10119) 🔖
 * [What's new is SwiftUI - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10018/)
@@ -92,4 +90,16 @@ struct ContentView_Previews: PreviewProvider {
 * [Stacks, Grids, and Outlines in SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10031) 🔖
 * [Making Apps More Accessible With Custom Actions - WWDC19](https://developer.apple.com/videos/play/wwdc2019/250) 🔖
 * [VoiceOver efficiency with custom rotors - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10116) 🔖
+
+***
+
+## SwiftUI WWDC Videos (Target: iOS 16)
+
+* [What's new in SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10052/)
+* [The SwiftUI cookbook for navigation - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10054/)
+* [Compose custom layouts with SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10056/)
+* [Use SwiftUI with UIKit - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10072/)
+* [The craft of SwiftUI API design: Progressive disclosure - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10059/)
+* [Efficiency awaits: Background tasks in SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10142/)
+
 
