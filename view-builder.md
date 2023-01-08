@@ -54,5 +54,6 @@ struct ContentView_Previews: PreviewProvider {
 
 ## Resources 
 
+* [Swift docs: Result Builders](https://docs.swift.org/swift-book/LanguageGuide/AdvancedOperators.html#ID630)
 * [Apple docs: `ViewBuilder`](https://developer.apple.com/documentation/swiftui/viewbuilder)
 * [Swift by Sundell: Adding SwiftUI’s ViewBuilder attribute to functions](https://www.swiftbysundell.com/tips/adding-swiftui-viewbuilder-to-functions/)
