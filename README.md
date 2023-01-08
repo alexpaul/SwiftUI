@@ -71,13 +71,13 @@ struct ContentView_Previews: PreviewProvider {
   * `Canvas` View
   * Search API
   * `AttributedString`
-* [The craft of SwiftUI API design: Progressive disclosure - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10059/)
+* [The craft of SwiftUI API design: Progressive disclosure - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10059/) ⭐️
   * Cases to consider when designing your SwiftUI components: 
     * Common use cases
     * Intelligent defaults
     * Optimize the call site
     * Compose, don't enumerate
-* [Demystifying SwiftUI - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10022/)
+* [Demystifying SwiftUI - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10022/) ⭐️
   * Best practices in SwiftUI, a must watch.
 * [Meet async/await in Swift – WWDC21](https://developer.apple.com/videos/play/wwdc2021/10132/)
 * [Explore structured concurrency in Swift – WWDC21](https://developer.apple.com/videos/play/wwdc2021/10134/)
@@ -103,10 +103,10 @@ struct ContentView_Previews: PreviewProvider {
 
 ## SwiftUI WWDC Videos (Target: iOS 16)
 
-* [What's new in SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10052/)
-* [The SwiftUI cookbook for navigation - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10054/)
-* [Compose custom layouts with SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10056/)
-* [Use SwiftUI with UIKit - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10072/)
-* [Efficiency awaits: Background tasks in SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10142/)
+* [What's new in SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10052/) 🔖
+* [The SwiftUI cookbook for navigation - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10054/) 🔖
+* [Compose custom layouts with SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10056/) 🔖
+* [Use SwiftUI with UIKit - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10072/) 🔖
+* [Efficiency awaits: Background tasks in SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10142/) 🔖
 
 
