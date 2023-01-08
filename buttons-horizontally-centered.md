@@ -1,5 +1,7 @@
 # Buttons Horizontally Centered 
 
+> `GeometryReader` passes their container size down to child views. For passing values up and more complexity with layouts. See the new [Layout](https://developer.apple.com/videos/play/wwdc2022/10056/) type introduced iOS 16.
+
 ![Screen Shot 2023-01-08 at 2 30 28 PM](https://user-images.githubusercontent.com/1819208/211215126-53f32a63-54b3-4d01-ad57-50eb4de2afe8.png)
 
 try? it out 
