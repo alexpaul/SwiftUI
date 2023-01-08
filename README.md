@@ -106,6 +106,10 @@ struct ContentView_Previews: PreviewProvider {
 * [What's new in SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10052/) 🔖
 * [The SwiftUI cookbook for navigation - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10054/) 🔖
 * [Compose custom layouts with SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10056/) 🔖
+  * Grid
+  * Layout
+  * ViewThatFits
+  * AnyLayout
 * [Use SwiftUI with UIKit - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10072/) 🔖
 * [Efficiency awaits: Background tasks in SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10142/) 🔖
 
