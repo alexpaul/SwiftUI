@@ -16,7 +16,8 @@ struct ContentView: View {
     // 1
     // Experiment with removing `@ViewBuilder` from the function below
     // You will notice that you recieve the following compiler error:
-    // Function declares an opaque return type 'some View', but the return statements in its body do not have matching underlying types
+    // Function declares an opaque return type 'some View', but the return statements in its body
+    // do not have matching underlying types
 
     // 2
     // You can wrap the View's in `AnyView`
