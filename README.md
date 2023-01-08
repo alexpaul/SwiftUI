@@ -91,6 +91,8 @@ struct ContentView_Previews: PreviewProvider {
   * Safe Area
   * `Canvas` View 
   * `TimelineView`
+  * `TimelineView`
+* [Building Custom Views with SwiftUI - WWDC19](https://developer.apple.com/videos/play/wwdc2019/237/) 🔖
 * [SwiftUI Accessibility: Beyond the basics - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10119/) 🔖
 * [App essentials in SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10037)
 * [Stacks, Grids, and Outlines in SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10031) 🔖
