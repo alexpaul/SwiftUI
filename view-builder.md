@@ -25,8 +25,9 @@ struct ContentView: View {
     // ..and use an explict `return AnyView(Image(systemName: "exclamationmark.triangle.fill"))`
 
     // 3
-    // Or the best practice approach here using a `ViewBuilder` would be to
-    // mark the function as a `ViewBuilder`
+    // Or using the best practice approach of using a `ViewBuilder`
+    // This is the similar approach that allows `View`s like `HStack` and `VStack` to 
+    // compose multiple "types" of `View`s in SwiftUI
 
     @ViewBuilder func load() -> some View {
         let error = Bool.random()
