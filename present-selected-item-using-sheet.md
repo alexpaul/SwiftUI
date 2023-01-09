@@ -1,4 +1,4 @@
-# Present a selected item using `sheet`
+# Present a selected item from a `List` using `sheet`
 
 ![Screen Shot 2023-01-08 at 7 31 22 PM](https://user-images.githubusercontent.com/1819208/211226490-723ee964-eb75-494b-bc8a-ff6dde7ac9a1.png)
 
