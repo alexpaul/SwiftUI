@@ -91,12 +91,12 @@ struct ContentView_Previews: PreviewProvider {
   * Safe Area
   * `Canvas` View 
   * `TimelineView`
-* [Building Custom Views with SwiftUI - WWDC19](https://developer.apple.com/videos/play/wwdc2019/237/) 🔖
-* [SwiftUI Accessibility: Beyond the basics - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10119/) 🔖
+* [Building Custom Views with SwiftUI - WWDC19](https://developer.apple.com/videos/play/wwdc2019/237/) 
+* [SwiftUI Accessibility: Beyond the basics - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10119/) 
 * [App essentials in SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10037)
-* [Stacks, Grids, and Outlines in SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10031) 🔖
-* [Making Apps More Accessible With Custom Actions - WWDC19](https://developer.apple.com/videos/play/wwdc2019/250) 🔖
-* [VoiceOver efficiency with custom rotors - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10116) 🔖
+* [Stacks, Grids, and Outlines in SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10031) 
+* [Making Apps More Accessible With Custom Actions - WWDC19](https://developer.apple.com/videos/play/wwdc2019/250) 
+* [VoiceOver efficiency with custom rotors - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10116) 
 
 ***
 
@@ -109,13 +109,13 @@ struct ContentView_Previews: PreviewProvider {
   * MenuBarExtra
   * ShareLink
   * Table
-* [The SwiftUI cookbook for navigation - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10054/) 🔖
+* [The SwiftUI cookbook for navigation - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10054/) 
 * [Compose custom layouts with SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10056/)
   * Grid
   * Layout
   * ViewThatFits
   * AnyLayout
-* [Use SwiftUI with UIKit - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10072/) 🔖
-* [Efficiency awaits: Background tasks in SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10142/) 🔖
+* [Use SwiftUI with UIKit - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10072/) 
+* [Efficiency awaits: Background tasks in SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10142/) 
 
 
