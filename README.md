@@ -102,6 +102,7 @@ struct ContentView_Previews: PreviewProvider {
 
 ## SwiftUI WWDC Videos (Target: iOS 16)
 
+* [What's new in Xcode - WWDC22](https://developer.apple.com/videos/play/wwdc2022/110427/)
 * [What's new in SwiftUI - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10052/)
   * Chart
   * NavigationStack
