@@ -52,3 +52,51 @@ struct ContentView_Previews: PreviewProvider {
 ```
 
 ***
+
+## Reveal more animation
+
+try? it out
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    let introContent = "The Super Mario Bros. Movie is an upcoming computer-animated fantasy adventure comedy film based on the Mario video game franchise published by Nintendo, who also co-produced the film with Illumination and its distributor Universal Pictures."
+    let moreContent = """
+    The Super Mario Bros. Movie is an upcoming computer-animated fantasy adventure comedy film based on the Mario video game franchise published by Nintendo, who also co-produced the film with Illumination and its distributor Universal Pictures. It is the franchise’s third film adaptation, following the Japanese anime film Super Mario Bros.: The Great Mission to Rescue Princess Peach! (1986) and the American live-action film Super Mario Bros. (1993). Directed by Aaron Horvath and Michael Jelenic (in Jelenic's feature directorial debut) from a screenplay by Matthew Fogel, the film features an ensemble voice cast including Chris Pratt and Charlie Day as the titular brothers, alongside Anya Taylor-Joy, Jack Black, Keegan-Michael Key, Seth Rogen, Fred Armisen, Sebastian Maniscalco, Charles Martinet and Kevin Michael Richardson.
+
+    After the critical and commercial failure of the 1993 film, Nintendo was reluctant to license its intellectual properties for film adaptations. Mario creator Shigeru Miyamoto became interested in developing another film when Nintendo was bringing its older games to the Virtual Console service, and through Nintendo's work with Universal Parks & Resorts to create Super Nintendo World, he met Illumination founder Chris Meledandri. By 2016, the two were discussing a Mario film and in January 2018, Nintendo announced that it would collaborate with Illumination and Universal to produce it. Production was underway by 2020, and the cast was publicly announced in September 2021. A teaser trailer for the film and the first official trailer were shown via Nintendo Direct presentations on October 6, 2022, and November 29, 2022, respectively.
+
+    The Super Mario Bros. Movie is scheduled for release in the United States on April 7, 2023, and in Japan on April 28.
+    """
+
+    @State private var isShowingMoreContext = false
+
+    var body: some View {
+        ScrollView {
+            VStack {
+                HStack {
+                    Text("The Super Mario Bros. Movie")
+                        .bold()
+                    Image(systemName: isShowingMoreContext ? "chevron.up" : "chevron.down")
+                }
+                .padding(.bottom, 20)
+                    .onTapGesture {
+                        withAnimation(.easeIn(duration: 0.5)) {
+                            isShowingMoreContext.toggle()
+                        }
+                    }
+                Text(isShowingMoreContext ? moreContent : introContent)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, 20)
+            }
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
