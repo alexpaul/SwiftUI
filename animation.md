@@ -56,6 +56,8 @@ struct ContentView_Previews: PreviewProvider {
 
 ## Reveal more animation
 
+![reveal-animation](https://user-images.githubusercontent.com/1819208/212473423-bea89ed6-5131-4a3a-a73a-9d484bf9f31e.gif)
+
 try? it out
 
 ```swift
