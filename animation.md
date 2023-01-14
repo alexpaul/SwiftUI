@@ -1,5 +1,7 @@
 # Animation 
 
+> Mario animations all inspired by my son's love for all things Mario. He can't wait for the Super Mario Bros movie coming April 2023. 
+
 ## Search Animation 
 
 ![mario-searching-ui](https://user-images.githubusercontent.com/1819208/212473166-d5460075-e6fd-498e-987f-1c55ac425fe6.gif)
