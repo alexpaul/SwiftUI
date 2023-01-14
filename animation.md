@@ -2,7 +2,7 @@
 
 ## Search Animation 
 
-![search-animation](https://user-images.githubusercontent.com/1819208/212469637-d1a91a6a-0760-4080-bd79-57d722e1337c.gif)
+![mario-searching-ui](https://user-images.githubusercontent.com/1819208/212473166-d5460075-e6fd-498e-987f-1c55ac425fe6.gif)
 
 
 try? it out
@@ -15,13 +15,14 @@ struct ContentView: View {
     // "Source of truth" to be monitored for changes
     @State private var isAnimating = false
 
-    let diameter: CGFloat = 20
+    let diameter: CGFloat = 90
 
     var body: some View {
         VStack {
-            Circle()
+            Image("mario")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
                 .frame(width: diameter, height: diameter)
-                .foregroundColor(.blue)
                 // 2
                 // here we want to animate the `y` offset (up and down animation)
                 .offset(y: isAnimating ? -80 : -10)
