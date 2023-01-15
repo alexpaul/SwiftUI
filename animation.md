@@ -58,7 +58,7 @@ struct ContentView_Previews: PreviewProvider {
 
 ## Reveal more animation
 
-![reveal-animation](https://user-images.githubusercontent.com/1819208/212473423-bea89ed6-5131-4a3a-a73a-9d484bf9f31e.gif)
+![more-content-animation](https://user-images.githubusercontent.com/1819208/212522999-288b50fe-5965-41e0-9656-14d53a365652.gif)
 
 try? it out
 
@@ -75,27 +75,32 @@ struct ContentView: View {
     The Super Mario Bros. Movie is scheduled for release in the United States on April 7, 2023, and in Japan on April 28.
     """
 
-    @State private var isShowingMoreContext = false
+    @State private var isShowingMoreContent = false
 
     var body: some View {
         ScrollView {
             VStack {
+                Image("super-mario-bros-movie")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.bottom, 20)
                 HStack {
                     Text("The Super Mario Bros. Movie")
                         .bold()
-                    Image(systemName: isShowingMoreContext ? "chevron.up" : "chevron.down")
+                    Image(systemName: isShowingMoreContent ? "chevron.up" : "chevron.down")
                 }
                 .padding(.bottom, 20)
                     .onTapGesture {
                         withAnimation(.easeIn(duration: 0.5)) {
-                            isShowingMoreContext.toggle()
+                            isShowingMoreContent.toggle()
                         }
                     }
-                Text(isShowingMoreContext ? moreContent : introContent)
+                Text(isShowingMoreContent ? moreContent : introContent)
                     .frame(maxWidth: .infinity)
                     .padding(.horizontal, 20)
             }
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
