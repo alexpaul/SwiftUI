@@ -58,7 +58,8 @@ struct ContentView_Previews: PreviewProvider {
 
 ## Reveal more animation
 
-![more-content-animation](https://user-images.githubusercontent.com/1819208/212522999-288b50fe-5965-41e0-9656-14d53a365652.gif)
+![reveal-more-animation](https://user-images.githubusercontent.com/1819208/212593830-2640485e-6a84-4669-a9ae-7f23c1dcd1d1.gif)
+
 
 try? it out
 
@@ -108,6 +109,15 @@ struct ContentView: View {
                 .background(.background)
                 .shadow(radius: 8)
                 .padding(.horizontal, 20)
+                Button(action:{}) {
+                    Text("Buy Tickets")
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+                        .padding()
+                }
+                .background(.blue)
+                .cornerRadius(24)
+                .padding()
             }
         }
         .edgesIgnoringSafeArea(.top)
