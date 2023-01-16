@@ -7,7 +7,7 @@ Throughout this repo you'll come across "try? it out" code snippets, copy, paste
 ![Screen Shot 2022-10-31 at 1 41 10 PM](https://user-images.githubusercontent.com/1819208/199073709-5de1df03-9e64-44c4-8784-cfe6f9177dca.png)
 
 
-try? it out. 
+try? it out
 
 ```swift
 import SwiftUI
