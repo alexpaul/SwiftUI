@@ -91,13 +91,23 @@ struct ContentView: View {
                 }
                 .padding(.bottom, 20)
                     .onTapGesture {
-                        withAnimation(.easeIn(duration: 0.5)) {
+                        withAnimation(.easeInOut(duration: 0.5)) {
                             isShowingMoreContent.toggle()
                         }
                     }
-                Text(isShowingMoreContent ? moreContent : introContent)
-                    .frame(maxWidth: .infinity)
-                    .padding(.horizontal, 20)
+                VStack {
+                    Text(isShowingMoreContent ? moreContent : introContent)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                }
+                .overlay(
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .border(.gray, width: 1)
+                )
+                .background(.background)
+                .shadow(radius: 8)
+                .padding(.horizontal, 20)
             }
         }
         .edgesIgnoringSafeArea(.top)
