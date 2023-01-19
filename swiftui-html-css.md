@@ -1,5 +1,7 @@
 # Rendering Web Content in a SwiftUI View using HTML and CSS
 
+[Blog Post](https://alexpaul.dev/2023/01/19/rendering-web-content-in-swiftui-using-uiviewrepresentable-html-and-css/)
+
 ## 1. `UIViewRepresentable` 
 
 ```swift
