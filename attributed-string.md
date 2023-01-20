@@ -42,4 +42,4 @@ struct ContentView_Previews: PreviewProvider {
 
 ## Resources 
 
-* []()
+* [Apple docs: `AttributdString`](https://developer.apple.com/documentation/foundation/attributedstring)
