@@ -92,6 +92,8 @@ struct ContentView: View {
                 }
                 .padding(.bottom, 20)
                     .onTapGesture {
+                        // 1
+                        // we add a `withAnimation` block when State changes, namely `isShowingMoreContent`
                         withAnimation(.easeInOut(duration: 0.5)) {
                             isShowingMoreContent.toggle()
                         }
