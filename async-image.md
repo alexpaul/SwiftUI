@@ -1,4 +1,6 @@
-# AsyncImage
+# `AsyncImage`
+
+> A view that asynchronously loads and displays an image.
 
 ![Screen Shot 2023-01-21 at 5 38 18 PM](https://user-images.githubusercontent.com/1819208/213889771-5b10fc0d-5f37-4bde-9545-3db989a613dc.png)
 
@@ -26,3 +28,9 @@ struct RemoteImageView_Previews: PreviewProvider {
     }
 }
 ```
+
+***
+
+## Resources
+
+* [Apple docs: `AsyncImage`](https://developer.apple.com/documentation/swiftui/asyncimage)
