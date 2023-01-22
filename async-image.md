@@ -2,7 +2,7 @@
 
 > A view that asynchronously loads and displays an image.
 
-![Screen Shot 2023-01-21 at 7 19 59 PM](https://user-images.githubusercontent.com/1819208/213895100-e628e7b9-c540-4db4-955f-cd216f902055.png)
+![Screen Shot 2023-01-21 at 7 43 38 PM](https://user-images.githubusercontent.com/1819208/213895537-e01b5ecd-9ccc-4343-ae82-fda1e8d6d1d2.png)
 
 
 try? it out
