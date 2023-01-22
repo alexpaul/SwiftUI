@@ -11,8 +11,6 @@ try? it out
 import SwiftUI
 
 struct RemoteImageView: View {
-    @ObservedObject var remoteConfigProvider = RemoteConfigurationProvider()
-
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
             Text("Happy Lunar New Year")
