@@ -1,8 +1,9 @@
 # `AsyncImage`
 
 > A view that asynchronously loads and displays an image.
+> 
+![Screen Shot 2023-01-21 at 7 18 54 PM](https://user-images.githubusercontent.com/1819208/213895078-2a2c53d4-9d2c-4fd0-a87b-50fad418fc75.png)
 
-![Screen Shot 2023-01-21 at 5 38 18 PM](https://user-images.githubusercontent.com/1819208/213889771-5b10fc0d-5f37-4bde-9545-3db989a613dc.png)
 
 try? it out
 
@@ -10,14 +11,24 @@ try? it out
 import SwiftUI
 
 struct RemoteImageView: View {
-    private let imageURL = "https://images.mypandit.com/myPandit_web/images/Content/Rabbit-astrology.jpg"
+    @ObservedObject var remoteConfigProvider = RemoteConfigurationProvider()
 
     var body: some View {
-        AsyncImage(url: URL(string: imageURL)) { image in
-            image.resizable()
-                .aspectRatio(contentMode: .fit)
-        } placeholder: {
-            ProgressView()
+        VStack(alignment: .center, spacing: 20) {
+            Text("Happy Lunar New Year")
+                .font(.title)
+            Text("Year of the Rabbit")
+                .font(.title3)
+            AsyncImage(
+                url: URL(
+                    string: "https://cdn11.bigcommerce.com/s-b7kra6t/product_images/uploaded_images/deskr1pnthbdnz7wk7ma5p7qah7g2dlqkkygd6fk.jpeg"
+                )
+            ) { image in
+                image.resizable()
+                    .aspectRatio(contentMode: .fit)
+            } placeholder: {
+                ProgressView()
+            }
         }
     }
 }
