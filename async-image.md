@@ -1,8 +1,8 @@
 # `AsyncImage`
 
 > A view that asynchronously loads and displays an image.
-> 
-![Screen Shot 2023-01-21 at 7 18 54 PM](https://user-images.githubusercontent.com/1819208/213895078-2a2c53d4-9d2c-4fd0-a87b-50fad418fc75.png)
+
+![Screen Shot 2023-01-21 at 7 19 59 PM](https://user-images.githubusercontent.com/1819208/213895100-e628e7b9-c540-4db4-955f-cd216f902055.png)
 
 
 try? it out
