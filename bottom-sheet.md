@@ -14,7 +14,7 @@ try? it out
 import SwiftUI
 
 struct ContactsView: View {
-    private var names: [String] = [
+    private var names = [
         "Reginald", "Holman", "Elexis", "Gardner",
         "Hakeem", "Flynn", "Hayleigh", "Holton",
         "Mario", "Garber", "Norman", "Longo",
