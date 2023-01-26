@@ -28,6 +28,7 @@ struct ContactsView: View {
                     Text(name)
                 }
             }
+            // Available in iOS16+
             .scrollIndicators(.hidden)
             HStack {
                 Button(action: {}) {
@@ -69,6 +70,7 @@ struct ContentView: View {
                     }
                     .sheet(isPresented: $isPresented) {
                         ContactsView()
+                            // Available in iOS16+
                             .presentationDetents([
                                 .medium,
                                 .large
