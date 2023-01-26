@@ -1,6 +1,8 @@
 # Bottom Sheet 
 
-A bottom sheet using `presentationDetents`. 
+## A bottom sheet using `presentationDetents`
+
+> Note: `presentationDetents` is available in iOS16+
 
 ![Screen Shot 2023-01-25 at 9 09 07 PM](https://user-images.githubusercontent.com/1819208/214742369-2d019134-94b8-4bbb-8cd5-92382cbba87c.png)
 
