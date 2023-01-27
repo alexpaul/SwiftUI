@@ -94,7 +94,7 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
-## 1. Example 
+## 2. Example 
 
 ..work in progress
 
