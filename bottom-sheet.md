@@ -1,8 +1,8 @@
-# Bottom Sheet 
-
-## A bottom sheet using `presentationDetents`
+# Bottom Sheet using `presentationDetents`
 
 > Note: `presentationDetents` is available in iOS 16+
+
+## 1. Example 
 
 ![Screen Shot 2023-01-25 at 9 09 07 PM](https://user-images.githubusercontent.com/1819208/214742369-2d019134-94b8-4bbb-8cd5-92382cbba87c.png)
 
@@ -81,6 +81,101 @@ struct ContentView: View {
             }
             .frame(height: 80)
             .background(.orange)
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
+***
+
+## 1. Example 
+
+..work in progress
+
+```swift
+import SwiftUI
+
+struct RadioButton: View {
+    @State private var isSelected = false
+
+    var body: some View {
+        Circle()
+            .strokeBorder(.gray, lineWidth: 2)
+            .background(
+                Circle()
+                    .frame(width: 14, height: 14)
+                    .foregroundColor(isSelected ? .blue : .clear)
+            )
+            .frame(width: 24, height: 24)
+            .onTapGesture {
+                isSelected.toggle()
+            }
+    }
+}
+
+struct PreferenceView: View {
+    let imageName: String
+    let preferenceTitle: String
+
+    var body: some View {
+        VStack {
+            HStack(alignment: .center, spacing: 10) {
+                Image(imageName)
+                    .resizable()
+                    .frame(width: 44, height: 44)
+                    .aspectRatio(contentMode: .fill)
+                    .cornerRadius(22)
+                Text(preferenceTitle)
+                Spacer()
+                RadioButton()
+            }
+            .padding(.horizontal, 20)
+        }
+    }
+}
+
+struct ProfileList: View {
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .center, spacing: 20) {
+                Text("Your Preferences")
+                    .font(.headline)
+                    .padding(.top, 40)
+                Divider()
+                PreferenceView(imageName: "swift", preferenceTitle: "Swift")
+                PreferenceView(imageName: "wakanda", preferenceTitle: "Wakanda")
+            }
+        }
+    }
+}
+
+struct ContentView: View {
+    @State private var isPresented = true
+
+    var body: some View {
+        VStack {
+            Button(action: {
+                isPresented.toggle()
+            }) {
+                Text("Change Preference")
+            }
+            .sheet(isPresented: $isPresented) {
+                ProfileList()
+                    .presentationDetents([
+                        .fraction(0.3),
+                        .medium,
+                        .large
+                    ])
+            }
+            Image("swift")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
         }
     }
 }
