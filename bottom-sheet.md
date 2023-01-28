@@ -96,32 +96,36 @@ struct ContentView_Previews: PreviewProvider {
 
 ## 2. Example 
 
-..work in progress
+work in progress...
 
 ```swift
 import SwiftUI
 
 struct RadioButton: View {
+    var outerDiameter: CGFloat = 24 // default value
+    var innerDiameter: CGFloat = 14 // default value
+
     @State private var isSelected = false
 
     var body: some View {
-        Circle()
-            .strokeBorder(.gray, lineWidth: 2)
-            .background(
-                Circle()
-                    .frame(width: 14, height: 14)
-                    .foregroundColor(isSelected ? .blue : .clear)
-            )
-            .frame(width: 24, height: 24)
-            .onTapGesture {
-                isSelected.toggle()
-            }
+        Button(action: {
+            isSelected.toggle()
+        }) {
+            Circle()
+                .strokeBorder(.gray, lineWidth: 2)
+                .background(
+                    Circle()
+                        .frame(width: innerDiameter, height: innerDiameter)
+                        .foregroundColor(isSelected ? .blue : .clear)
+                )
+                .frame(width: outerDiameter, height: outerDiameter)
+        }
     }
 }
 
-struct PreferenceView: View {
+struct ProfileRow: View {
     let imageName: String
-    let preferenceTitle: String
+    let profileName: String
 
     var body: some View {
         VStack {
@@ -129,9 +133,9 @@ struct PreferenceView: View {
                 Image(imageName)
                     .resizable()
                     .frame(width: 44, height: 44)
-                    .aspectRatio(contentMode: .fill)
+                    .aspectRatio(contentMode: .fit)
                     .cornerRadius(22)
-                Text(preferenceTitle)
+                Text(profileName)
                 Spacer()
                 RadioButton()
             }
@@ -140,30 +144,47 @@ struct PreferenceView: View {
     }
 }
 
+struct Profile {
+    let image: String
+    let name: String
+
+    static var mockData: [Profile] {
+        [
+            .init(image: "swift", name: "Swift"),
+            .init(image: "wakanda", name: "Wakanda"),
+            .init(image: "super-mario-bros-movie", name: "Mario"),
+        ]
+    }
+}
+
 struct ProfileList: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .center, spacing: 20) {
-                Text("Your Preferences")
+                Text("Your Profiles")
                     .font(.headline)
                     .padding(.top, 40)
                 Divider()
-                PreferenceView(imageName: "swift", preferenceTitle: "Swift")
-                PreferenceView(imageName: "wakanda", preferenceTitle: "Wakanda")
+                ForEach(Profile.mockData, id: \.image) { profile in
+                    ProfileRow(imageName: profile.image, profileName: profile.name)
+                }
             }
         }
     }
 }
 
 struct ContentView: View {
-    @State private var isPresented = true
+    @State private var isPresented = false
 
     var body: some View {
         VStack {
             Button(action: {
                 isPresented.toggle()
             }) {
-                Text("Change Preference")
+                HStack {
+                    Text("Change Profile")
+                    Image(systemName: "chevron.down")
+                }
             }
             .sheet(isPresented: $isPresented) {
                 ProfileList()
