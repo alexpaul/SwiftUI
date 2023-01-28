@@ -101,15 +101,25 @@ work in progress...
 ```swift
 import SwiftUI
 
-struct Profile {
+struct Profile: Equatable {
     let image: String
     let name: String
+    let isSelected: Bool
 
     static var mockData: [Profile] {
         [
-            .init(image: "swift", name: "Swift"),
-            .init(image: "wakanda", name: "Wakanda"),
-            .init(image: "super-mario-bros-movie", name: "Mario"),
+            .init(image: "swift",
+                  name: "Swift",
+                  isSelected: false
+                 ),
+            .init(image: "wakanda",
+                  name: "Wakanda",
+                  isSelected: false
+                 ),
+            .init(image: "super-mario-bros-movie",
+                  name: "Mario",
+                  isSelected: false
+                 ),
         ]
     }
 }
@@ -118,7 +128,7 @@ struct RadioButton: View {
     var outerDiameter: CGFloat = 24 // default value
     var innerDiameter: CGFloat = 14 // default value
 
-    @State private var isSelected = false
+    @Binding var isSelected: Bool
 
     var body: some View {
         Button(action: {
@@ -137,20 +147,26 @@ struct RadioButton: View {
 }
 
 struct ProfileRow: View {
-    let imageName: String
-    let profileName: String
+    let profile: Profile
+
+    @State private var isSelected = false
+
+    var action: (Profile) -> ()
 
     var body: some View {
         VStack {
             HStack(alignment: .center, spacing: 10) {
-                Image(imageName)
+                Image(profile.name)
                     .resizable()
                     .frame(width: 44, height: 44)
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(22)
-                Text(profileName)
+                Text(profile.name)
                 Spacer()
-                RadioButton()
+                RadioButton(isSelected: $isSelected)
+                    .onChange(of: isSelected) { newValue in
+                        action(profile)
+                    }
             }
             .padding(.horizontal, 20)
         }
@@ -158,6 +174,12 @@ struct ProfileRow: View {
 }
 
 struct ProfileList: View {
+    // @State private var isSelected = false
+
+    @State private var selectedProfile: Profile?
+
+    var action: (Profile) -> ()
+
     var body: some View {
         ScrollView {
             VStack(alignment: .center, spacing: 20) {
@@ -166,9 +188,9 @@ struct ProfileList: View {
                     .padding(.top, 40)
                 Divider()
                 ForEach(Profile.mockData, id: \.image) { profile in
-                    ProfileRow(imageName: profile.image,
-                               profileName: profile.name
-                    )
+                    ProfileRow(profile: profile) { selected in
+                        action(selected)
+                    }
                 }
             }
         }
@@ -177,6 +199,8 @@ struct ProfileList: View {
 
 struct ContentView: View {
     @State private var isPresented = false
+    @State private var currentImage = "swift"
+
     var body: some View {
         VStack {
             Button(action: {
@@ -188,14 +212,17 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $isPresented) {
-                ProfileList()
+                ProfileList() { selectedProfile in
+                    print(selectedProfile.name)
+                    currentImage = selectedProfile.image
+                }
                     .presentationDetents([
                         .fraction(0.3),
                         .medium,
                         .large
                     ])
             }
-            Image("swift")
+            Image(currentImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
         }
