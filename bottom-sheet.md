@@ -101,6 +101,19 @@ work in progress...
 ```swift
 import SwiftUI
 
+struct Profile {
+    let image: String
+    let name: String
+
+    static var mockData: [Profile] {
+        [
+            .init(image: "swift", name: "Swift"),
+            .init(image: "wakanda", name: "Wakanda"),
+            .init(image: "super-mario-bros-movie", name: "Mario"),
+        ]
+    }
+}
+
 struct RadioButton: View {
     var outerDiameter: CGFloat = 24 // default value
     var innerDiameter: CGFloat = 14 // default value
@@ -144,19 +157,6 @@ struct ProfileRow: View {
     }
 }
 
-struct Profile {
-    let image: String
-    let name: String
-
-    static var mockData: [Profile] {
-        [
-            .init(image: "swift", name: "Swift"),
-            .init(image: "wakanda", name: "Wakanda"),
-            .init(image: "super-mario-bros-movie", name: "Mario"),
-        ]
-    }
-}
-
 struct ProfileList: View {
     var body: some View {
         ScrollView {
@@ -166,7 +166,9 @@ struct ProfileList: View {
                     .padding(.top, 40)
                 Divider()
                 ForEach(Profile.mockData, id: \.image) { profile in
-                    ProfileRow(imageName: profile.image, profileName: profile.name)
+                    ProfileRow(imageName: profile.image,
+                               profileName: profile.name
+                    )
                 }
             }
         }
@@ -175,7 +177,6 @@ struct ProfileList: View {
 
 struct ContentView: View {
     @State private var isPresented = false
-
     var body: some View {
         VStack {
             Button(action: {
