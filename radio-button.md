@@ -8,10 +8,10 @@ try? it out
 import SwiftUI
 
 struct RadioButton: View {
-    @State private var isSelected = false
+    var outerDiameter: CGFloat = 24 // default value
+    var innerDiameter: CGFloat = 14 // default value
 
-    private let outerCircleDiameter: CGFloat = 60
-    private let innerCircleDiameter: CGFloat = 44
+    @State private var isSelected = false
 
     var body: some View {
         Button(action: {
@@ -21,17 +21,17 @@ struct RadioButton: View {
                 .strokeBorder(.gray, lineWidth: 2)
                 .background(
                     Circle()
-                        .frame(width: innerCircleDiameter, height: innerCircleDiameter)
+                        .frame(width: innerDiameter, height: innerDiameter)
                         .foregroundColor(isSelected ? .blue : .clear)
                 )
-                .frame(width: outerCircleDiameter, height: outerCircleDiameter)
+                .frame(width: outerDiameter, height: outerDiameter)
         }
     }
 }
 
 struct ContentView: View {
     var body: some View {
-        RadioButton()
+        RadioButton(outerDiameter: 60, innerDiameter: 44)
     }
 }
 
