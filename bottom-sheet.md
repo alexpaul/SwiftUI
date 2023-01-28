@@ -190,6 +190,7 @@ struct ProfileList: View {
                 ForEach(Profile.mockData, id: \.image) { profile in
                     ProfileRow(profile: profile) { selected in
                         action(selected)
+                        // TODO: Dismiss Sheet
                     }
                 }
             }
