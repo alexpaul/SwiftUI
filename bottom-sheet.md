@@ -96,7 +96,7 @@ struct ContentView_Previews: PreviewProvider {
 
 ## 2. Example 
 
-![Screen Shot 2023-01-29 at 7 01 30 AM](https://user-images.githubusercontent.com/1819208/215324753-5e38c4eb-b27b-49cc-b9ad-5d0c03da5c47.png)
+![Screen Shot 2023-01-29 at 7 56 36 AM](https://user-images.githubusercontent.com/1819208/215327655-81e86a31-5f16-4cf2-a648-80cbca6778cf.png)
 
 
 try? it out 
@@ -120,6 +120,9 @@ struct Profile: Equatable {
             ),
             .init(image: "super-mario-bros-movie",
                   name: "Mario"
+            ),
+            .init(image: "year-of-the-rabbit",
+                  name: "Year of the Rabbit 🧧 🐇"
             ),
             .init(image: "javascript",
                   name: "JavaScript"
@@ -169,6 +172,20 @@ struct RadioButton: View {
     }
 }
 
+struct ProfileImage: View {
+    let profile: Profile
+
+    var body: some View {
+        Image(profile.image)
+            .resizable()
+            .frame(width: 44, height: 44)
+            .aspectRatio(contentMode: .fit)
+            .cornerRadius(22)
+        Text(profile.name)
+            .font(.headline)
+    }
+}
+
 struct ProfileRow: View {
     let profile: Profile
 
@@ -177,12 +194,7 @@ struct ProfileRow: View {
     var body: some View {
         VStack {
             HStack(alignment: .center, spacing: 10) {
-                Image(profile.image)
-                    .resizable()
-                    .frame(width: 44, height: 44)
-                    .aspectRatio(contentMode: .fit)
-                    .cornerRadius(22)
-                Text(profile.name)
+                ProfileImage(profile: profile)
                 Spacer()
                 RadioButton(profile: profile)
                     .environmentObject(viewModel)
@@ -210,7 +222,7 @@ struct ProfileList: View {
                     .font(.headline)
                     .padding(.top, 40)
                 Divider()
-                ForEach(viewModel.profiles, id: \.image) { profile in
+                ForEach(viewModel.profiles, id: \.image)  { profile in
                     ProfileRow(profile: profile)
                         .environmentObject(viewModel)
                         .onChange(of: viewModel.selectedProfile,
@@ -236,33 +248,42 @@ struct ContentView: View {
     @State private var isBottomSheetPresented = false
 
     var body: some View {
-        VStack {
-            Button(action: {
-                isBottomSheetPresented.toggle()
-            }) {
+        ScrollView {
+            VStack {
                 HStack {
-                    Text("Change Profile")
-                    Image(systemName: "chevron.down")
+                    ProfileImage(profile: viewModel.selectedProfile)
+                    Spacer()
+                    Image(systemName: "chevron.down.circle")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .onTapGesture {
+                            isBottomSheetPresented.toggle()
+                        }
                 }
+                .frame(maxWidth: .infinity)
                 .padding(20)
+                .background(Color(uiColor: .systemGray5))
+                .cornerRadius(12)
+                .padding(.horizontal, 20)
+                .padding(.vertical, 60)
+                .sheet(isPresented: $isBottomSheetPresented) {
+                    ProfileList()
+                        .onChange(of: viewModel.selectedProfile,
+                                  perform: { [weak viewModel] profile in
+                            guard let viewModel else { return }
+                            viewModel.selectedProfile = profile
+                        })
+                        .environmentObject(viewModel)
+                        .presentationDetents([
+                            .fraction(0.4),
+                            .medium,
+                            .large
+                        ])
+                }
+                Image(viewModel.selectedProfile.image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
             }
-            .sheet(isPresented: $isBottomSheetPresented) {
-                ProfileList()
-                    .onChange(of: viewModel.selectedProfile,
-                              perform: { [weak viewModel] profile in
-                        guard let viewModel else { return }
-                        viewModel.selectedProfile = profile
-                    })
-                .environmentObject(viewModel)
-                .presentationDetents([
-                    .fraction(0.4),
-                    .medium,
-                    .large
-                ])
-            }
-            Image(viewModel.selectedProfile.image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
         }
     }
 }
