@@ -101,6 +101,8 @@ work in progress...
 ```swift
 import SwiftUI
 
+// MARK: - Profile Model
+
 struct Profile: Equatable {
     let image: String
     let name: String
@@ -123,6 +125,19 @@ struct Profile: Equatable {
     }
 }
 
+// MARK: - View Model
+
+final class ProfileViewModel: ObservableObject {
+    @Published var profiles: [Profile] = []
+    @Published var selectedProfile = Profile.mockData[0]
+
+    init() {
+        profiles = Profile.mockData
+    }
+}
+
+// MARK: - Profie Row
+
 struct RadioButton: View {
     var outerDiameter: CGFloat = 24 // default value
     var innerDiameter: CGFloat = 14 // default value
@@ -134,7 +149,7 @@ struct RadioButton: View {
             isSelected.toggle()
         }) {
             Circle()
-                .strokeBorder(.gray, lineWidth: 2)
+                .strokeBorder(isSelected ? .blue : .gray, lineWidth: 2)
                 .background(
                     Circle()
                         .frame(width: innerDiameter, height: innerDiameter)
@@ -148,9 +163,9 @@ struct RadioButton: View {
 struct ProfileRow: View {
     let profile: Profile
 
-    @State private var isSelected = false
+    @EnvironmentObject var viewModel: ProfileViewModel
 
-    var action: (Profile) -> ()
+    @State private var isSelected = false
 
     var body: some View {
         VStack {
@@ -163,8 +178,9 @@ struct ProfileRow: View {
                 Text(profile.name)
                 Spacer()
                 RadioButton(isSelected: $isSelected)
-                    .onChange(of: isSelected) { newValue in
-                        action(profile)
+                    .onChange(of: isSelected) {[weak viewModel] _ in
+                        guard let viewModel else { return }
+                        viewModel.selectedProfile = profile
                     }
             }
             .padding(.horizontal, 20)
@@ -172,11 +188,12 @@ struct ProfileRow: View {
     }
 }
 
-struct ProfileList: View {
-    @State private var selectedProfile: Profile?
-    @Environment(\.dismiss) var dismiss
+// MARK: - Profile List
 
-    var action: (Profile) -> ()
+struct ProfileList: View {
+    @State private var isRowDisabled = false
+    @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var viewModel: ProfileViewModel
 
     var body: some View {
         ScrollView {
@@ -185,29 +202,35 @@ struct ProfileList: View {
                     .font(.headline)
                     .padding(.top, 40)
                 Divider()
-                ForEach(Profile.mockData, id: \.image) { profile in
-                    ProfileRow(profile: profile) { selected in
-                        action(selected)
-                        selectedProfile = selected
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                            dismiss()
-                        }
-                    }
-                    .disabled(selectedProfile != nil)
+                ForEach(viewModel.profiles, id: \.image) { profile in
+                    ProfileRow(profile: profile)
+                        .environmentObject(viewModel)
+                        .onChange(of: viewModel.selectedProfile,
+                                  perform: { [weak viewModel] selected in
+                            guard let viewModel else { return }
+                            isRowDisabled = true
+                            viewModel.selectedProfile = selected
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                dismiss()
+                            }
+                        })
+                    .disabled(isRowDisabled)
                 }
             }
         }
     }
 }
 
+// MARK: - Main View
+
 struct ContentView: View {
-    @State private var isPresented = false
-    @State private var currentImage = "swift"
+    @ObservedObject private var viewModel = ProfileViewModel()
+    @State private var isBottomSheetPresented = false
 
     var body: some View {
         VStack {
             Button(action: {
-                isPresented.toggle()
+                isBottomSheetPresented.toggle()
             }) {
                 HStack {
                     Text("Change Profile")
@@ -215,18 +238,21 @@ struct ContentView: View {
                 }
                 .padding(20)
             }
-            .sheet(isPresented: $isPresented) {
-                ProfileList() { selectedProfile in
-                    print(selectedProfile.name)
-                    currentImage = selectedProfile.image
-                }
-                    .presentationDetents([
-                        .fraction(0.4),
-                        .medium,
-                        .large
-                    ])
+            .sheet(isPresented: $isBottomSheetPresented) {
+                ProfileList()
+                    .onChange(of: viewModel.selectedProfile,
+                              perform: { [weak viewModel] profile in
+                        guard let viewModel else { return }
+                        viewModel.selectedProfile = profile
+                    })
+                .environmentObject(viewModel)
+                .presentationDetents([
+                    .fraction(0.4),
+                    .medium,
+                    .large
+                ])
             }
-            Image(currentImage)
+            Image(viewModel.selectedProfile.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
         }
