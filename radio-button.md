@@ -11,14 +11,14 @@ struct RadioButton: View {
     var outerDiameter: CGFloat = 24 // default value
     var innerDiameter: CGFloat = 14 // default value
 
-    @State private var isSelected = false
+    @Binding var isSelected: Bool
 
     var body: some View {
         Button(action: {
             isSelected.toggle()
         }) {
             Circle()
-                .strokeBorder(.gray, lineWidth: 2)
+                .strokeBorder(isSelected ? .blue : .gray, lineWidth: 2)
                 .background(
                     Circle()
                         .frame(width: innerDiameter, height: innerDiameter)
