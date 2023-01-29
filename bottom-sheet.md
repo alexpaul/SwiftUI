@@ -188,8 +188,8 @@ struct ProfileList: View {
                 Divider()
                 ForEach(Profile.mockData, id: \.image) { profile in
                     ProfileRow(profile: profile) { selected in
-                        selectedProfile = selected
                         action(selected)
+                        selectedProfile = selected
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                             dismiss()
                         }
@@ -214,6 +214,7 @@ struct ContentView: View {
                     Text("Change Profile")
                     Image(systemName: "chevron.down")
                 }
+                .padding(20)
             }
             .sheet(isPresented: $isPresented) {
                 ProfileList() { selectedProfile in
@@ -221,7 +222,7 @@ struct ContentView: View {
                     currentImage = selectedProfile.image
                 }
                     .presentationDetents([
-                        .fraction(0.33),
+                        .fraction(0.4),
                         .medium,
                         .large
                     ])
