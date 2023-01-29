@@ -4,8 +4,7 @@
 
 ## 1. Example 
 
-![Screen Shot 2023-01-29 at 7 56 36 AM](https://user-images.githubusercontent.com/1819208/215327655-81e86a31-5f16-4cf2-a648-80cbca6778cf.png)
-
+![Screen Shot 2023-01-29 at 8 04 53 AM](https://user-images.githubusercontent.com/1819208/215328004-8d81d4b2-0e53-40e6-ab0f-d11aca823bda.png)
 
 try? it out 
 
