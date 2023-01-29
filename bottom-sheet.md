@@ -156,7 +156,7 @@ struct ProfileRow: View {
     var body: some View {
         VStack {
             HStack(alignment: .center, spacing: 10) {
-                Image(profile.name)
+                Image(profile.image)
                     .resizable()
                     .frame(width: 44, height: 44)
                     .aspectRatio(contentMode: .fit)
@@ -174,9 +174,8 @@ struct ProfileRow: View {
 }
 
 struct ProfileList: View {
-    // @State private var isSelected = false
-
     @State private var selectedProfile: Profile?
+    @Environment(\.dismiss) var dismiss
 
     var action: (Profile) -> ()
 
@@ -189,9 +188,13 @@ struct ProfileList: View {
                 Divider()
                 ForEach(Profile.mockData, id: \.image) { profile in
                     ProfileRow(profile: profile) { selected in
+                        selectedProfile = selected
                         action(selected)
-                        // TODO: Dismiss Sheet
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            dismiss()
+                        }
                     }
+                    .disabled(selectedProfile != nil)
                 }
             }
         }
@@ -218,7 +221,7 @@ struct ContentView: View {
                     currentImage = selectedProfile.image
                 }
                     .presentationDetents([
-                        .fraction(0.3),
+                        .fraction(0.33),
                         .medium,
                         .large
                     ])
