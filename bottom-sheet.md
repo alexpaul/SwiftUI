@@ -104,22 +104,21 @@ import SwiftUI
 struct Profile: Equatable {
     let image: String
     let name: String
-    let isSelected: Bool
 
     static var mockData: [Profile] {
         [
             .init(image: "swift",
-                  name: "Swift",
-                  isSelected: false
-                 ),
+                  name: "Swift"
+            ),
             .init(image: "wakanda",
-                  name: "Wakanda",
-                  isSelected: false
-                 ),
+                  name: "Wakanda Forever"
+            ),
             .init(image: "super-mario-bros-movie",
-                  name: "Mario",
-                  isSelected: false
-                 ),
+                  name: "Mario"
+            ),
+            .init(image: "javascript",
+                  name: "JavaScript"
+            ),
         ]
     }
 }
