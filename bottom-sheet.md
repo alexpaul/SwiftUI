@@ -96,7 +96,10 @@ struct ContentView_Previews: PreviewProvider {
 
 ## 2. Example 
 
-work in progress...
+![Screen Shot 2023-01-29 at 7 01 30 AM](https://user-images.githubusercontent.com/1819208/215324753-5e38c4eb-b27b-49cc-b9ad-5d0c03da5c47.png)
+
+
+try? it out 
 
 ```swift
 import SwiftUI
@@ -142,21 +145,27 @@ struct RadioButton: View {
     var outerDiameter: CGFloat = 24 // default value
     var innerDiameter: CGFloat = 14 // default value
 
-    @Binding var isSelected: Bool
+    @EnvironmentObject var viewModel: ProfileViewModel
+
+    let profile: Profile
 
     var body: some View {
         Button(action: {
-            isSelected.toggle()
+            viewModel.selectedProfile = profile
         }) {
             Circle()
-                .strokeBorder(isSelected ? .blue : .gray, lineWidth: 2)
+                .strokeBorder(isSelectedProfile ? .blue : .gray, lineWidth: 2)
                 .background(
                     Circle()
                         .frame(width: innerDiameter, height: innerDiameter)
-                        .foregroundColor(isSelected ? .blue : .clear)
+                        .foregroundColor(isSelectedProfile ? .blue : .clear)
                 )
                 .frame(width: outerDiameter, height: outerDiameter)
         }
+    }
+
+    private var isSelectedProfile: Bool {
+        profile == viewModel.selectedProfile
     }
 }
 
@@ -164,8 +173,6 @@ struct ProfileRow: View {
     let profile: Profile
 
     @EnvironmentObject var viewModel: ProfileViewModel
-
-    @State private var isSelected = false
 
     var body: some View {
         VStack {
@@ -177,8 +184,9 @@ struct ProfileRow: View {
                     .cornerRadius(22)
                 Text(profile.name)
                 Spacer()
-                RadioButton(isSelected: $isSelected)
-                    .onChange(of: isSelected) {[weak viewModel] _ in
+                RadioButton(profile: profile)
+                    .environmentObject(viewModel)
+                    .onChange(of: viewModel.selectedProfile) {[weak viewModel] _ in
                         guard let viewModel else { return }
                         viewModel.selectedProfile = profile
                     }
