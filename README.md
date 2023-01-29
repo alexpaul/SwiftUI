@@ -1,5 +1,8 @@
 # SwiftUI
 
+<a href="https://www.buymeacoffee.com/alexpaulnyc" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
+
 This repo contains SwiftUI code which showcases [View](https://developer.apple.com/documentation/swiftui/view) components like `List`, `AsyncImage`, [Property Wrappers](https://developer.apple.com/documentation/swiftui/model-data) like [@Binding](binding.md) and much more SwiftyUI snacks. I've also created a few sample SwiftUI apps which you will find below. `Text("Enjoy!")`
 
 Throughout this repo you'll come across "try? it out" code snippets, copy, paste into a SwiftUI `ContentView` or similar test View.
