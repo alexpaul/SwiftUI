@@ -1,6 +1,6 @@
 # Bottom Sheet using `presentationDetents`
 
-> Note: `presentationDetents` in SwiftUI is available in iOS 16+, for iOS 15 support see [UIKit's implementation](https://github.com/alexpaul/UIKit/edit/main/bottom-sheet.md).
+> Note: `presentationDetents` in SwiftUI is available in iOS 16+, for iOS 15 support see [UIKit's implementation](https://github.com/alexpaul/UIKit/main/bottom-sheet.md).
 
 ## 1. Example 
 
