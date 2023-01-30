@@ -7,6 +7,18 @@ This repo contains SwiftUI code which showcases [View](https://developer.apple.c
 
 Throughout this repo you'll come across "try? it out" code snippets, copy, paste into a SwiftUI `ContentView` or similar test View.
 
+***
+
+## Questions to keep in mind when designing a SwiftUI View 
+
+* What data does the view need? 
+* How will it use that data? 
+* Where does the data come from? 
+
+> Questions from [Data Essentials in SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10040/)
+
+***
+
 ![Screen Shot 2022-10-31 at 1 41 10 PM](https://user-images.githubusercontent.com/1819208/199073709-5de1df03-9e64-44c4-8784-cfe6f9177dca.png)
 
 
