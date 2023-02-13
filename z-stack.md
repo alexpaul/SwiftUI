@@ -1,6 +1,97 @@
 # Using `ZStack`
 
-## 1. Example
+## 1. Example 
+
+<img width="1355" alt="Screen Shot 2023-02-12 at 9 13 28 PM" src="https://user-images.githubusercontent.com/1819208/218355541-41251ca3-f2ad-4378-a65e-c274c721aa4c.png">
+
+
+```swift
+import SwiftUI
+
+extension Color {
+  static var topView: Self { .yellow }
+  static var secondView: Self { .teal }
+  static var parentView: Self { .green }
+}
+
+struct ContentView: View {
+  var body: some View {
+    VStack {
+      Text("ZStack Hierarchy")
+        .font(.title)
+        .underline()
+      VStack {
+        HStack {
+          Text("(3)")
+          Spacer()
+          Text("`Rectange`")
+        }
+        .frame(width: 200, height: 4)
+        .padding()
+        
+        Rectangle()
+          .frame(width: 200, height: 4)
+          .foregroundColor(.topView)
+        HStack {
+          Text("(2)")
+          Spacer()
+          Text("`VStack`")
+        }
+        Rectangle()
+          .frame(height: 4)
+          .foregroundColor(.secondView)
+          .padding(.bottom, 10)
+        HStack {
+          Text("(1)")
+          Spacer()
+          Text("`ZStack`")
+        }
+        Rectangle()
+          .frame(height: 4)
+          .foregroundColor(.parentView)
+      }
+      .padding(20)
+      // (1)
+      ZStack {
+        // (2)
+        VStack {
+          HStack {
+            Text("Top Left")
+            Spacer()
+            Text("Top Right")
+          }
+          .padding()
+          Spacer()
+          HStack {
+            Text("Bottom Left")
+            Spacer()
+            Text("Bottom Right")
+          }
+          .padding()
+        }
+        .background(Color.secondView)
+        // (3)
+        Rectangle()
+          .frame(width: 200, height: 200)
+          .foregroundColor(.topView)
+          .overlay(Text("Center of ZStack "))
+      }
+      .frame(width: 400, height: 400)
+      .background(Color.parentView)
+    }
+  }
+}
+
+struct ContentView_Previews: PreviewProvider {
+  static var previews: some View {
+    ContentView()
+  }
+}
+```
+
+***
+
+## 2. Example
 
 ![Screen Shot 2022-11-03 at 11 15 18 AM](https://user-images.githubusercontent.com/1819208/199760613-307ab81c-5eea-446c-a3b4-f61f03d66a02.png)
 
@@ -58,7 +149,7 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
-## 2. Example 
+## 3. Example 
 
 ![Screen Shot 2023-01-23 at 6 28 20 PM](https://user-images.githubusercontent.com/1819208/214175448-1516fa95-fdb1-4a8f-9472-64963d1988e3.png)
 
