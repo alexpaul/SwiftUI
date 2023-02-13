@@ -1,5 +1,12 @@
 # Using `ZStack`
 
+## Resources
+
+* [Apple docs: `ZStack`](https://developer.apple.com/documentation/swiftui/zstack)
+* [Apple docs: Making fine adjustments to a view’s position](https://developer.apple.com/documentation/swiftui/making-fine-adjustments-to-a-view-s-position)
+
+***
+
 ## 1. Example 
 
 <img width="1330" alt="Screen Shot 2023-02-12 at 9 23 18 PM" src="https://user-images.githubusercontent.com/1819208/218356498-fdc041f7-bf3a-479d-b07b-0cc6f165ed1d.png">
