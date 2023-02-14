@@ -1,6 +1,7 @@
 # Handling Alerts
 
-![Screen Shot 2023-02-14 at 6 15 34 AM](https://user-images.githubusercontent.com/1819208/218721443-9a022b2d-6d4e-4f26-9461-452665272d5a.png)
+![Screen Shot 2023-02-14 at 6 20 24 AM](https://user-images.githubusercontent.com/1819208/218722366-042e38b0-de66-4cf6-a173-7a4157134166.png)
+
 
 try? it out 
 
@@ -8,15 +9,15 @@ try? it out
 import SwiftUI
 
 struct ContentView: View {
-    @State private var errorCode = 0
+    @State private var statusCode = 0
     @State private var isShowingAlert = false
     @State private var isPresented = false
 
     var body: some View {
         VStack {
             Button(action: {
-                errorCode = Self.randomErrorCode
-                if errorCode > 202 {
+                statusCode = Self.networkStatusCode
+                if statusCode > 202 {
                     isShowingAlert = true
                 } else {
                     isPresented = true
@@ -24,7 +25,7 @@ struct ContentView: View {
             }) {
                 Text("Submit Request")
             }
-            .alert("Network Error\n Status Code: \(errorCode)",
+            .alert("Network Error\n Status Code: \(statusCode)",
                    isPresented: $isShowingAlert) {
                 Button("Ok", role: .cancel) {}
             }
@@ -34,7 +35,7 @@ struct ContentView: View {
         }
     }
 
-    private static var randomErrorCode: Int {
+    private static var networkStatusCode: Int {
         [200, 201, 202, 404, 500].randomElement() ?? 400
     }
 }
