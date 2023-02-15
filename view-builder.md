@@ -1,5 +1,7 @@
 # ViewBuilder 
 
+> A custom parameter attribute that constructs views from closures.
+
 ![Screen Shot 2023-01-08 at 6 23 24 AM](https://user-images.githubusercontent.com/1819208/211193505-b08af62d-319b-4c22-8122-fe1d79f91ecb.png)
 
 try? it out
