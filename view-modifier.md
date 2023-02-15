@@ -1,5 +1,7 @@
 # ViewModifier
 
+> Apple docs: A modifier that you apply to a view or another view modifier, producing a different version of the original value.
+
 ![Screen Shot 2023-01-07 at 6 04 13 PM](https://user-images.githubusercontent.com/1819208/211173435-0ef96410-2ec3-409b-920b-ca09c9ec44ec.png)
 
 try? it out 
