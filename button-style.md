@@ -36,3 +36,9 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 ```
+
+***
+
+## Resources
+
+* [Apple docs: `ButtonStyle`](https://developer.apple.com/documentation/swiftui/buttonstyle)
