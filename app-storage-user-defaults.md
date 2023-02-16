@@ -1,6 +1,6 @@
 # Using `@AppStore` 
 
-> `@AppStore` stores data to `UserDefaults`.
+> Apple docs: A property wrapper type that reflects a value from UserDefaults and invalidates a view on a change in value in that user default.
 
 ![Screen Shot 2022-10-31 at 5 41 42 PM](https://user-images.githubusercontent.com/1819208/199116064-2e01072e-f6d0-4613-84a3-6431ac526b9e.png)
 
@@ -92,3 +92,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 ```
+
+***
+
+* [Apple docs: `@AppStorage`](https://developer.apple.com/documentation/swiftui/appstorage)
