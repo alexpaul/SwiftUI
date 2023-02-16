@@ -95,4 +95,6 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
+## Resources
+
 * [Apple docs: `@AppStorage`](https://developer.apple.com/documentation/swiftui/appstorage)
