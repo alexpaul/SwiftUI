@@ -1,8 +1,5 @@
 # SwiftUI
 
-<a href="https://www.buymeacoffee.com/alexpaulnyc" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
-
-
 This repo contains SwiftUI code which showcases [View](https://developer.apple.com/documentation/swiftui/view) components like `List`, `AsyncImage`, [Property Wrappers](https://developer.apple.com/documentation/swiftui/model-data) like [@Binding](binding.md) and much more SwiftyUI snacks. I've also created a few sample SwiftUI apps which you will find below. `Text("Enjoy!")`
 
 Throughout this repo you'll come across "try? it out" code snippets, copy, paste into a SwiftUI `ContentView` or similar test View.
@@ -77,5 +74,9 @@ struct ContentView_Previews: PreviewProvider {
 * [Apple Sample Code: Food Truck: Building a SwiftUI multiplatform app](https://developer.apple.com/documentation/swiftui/food_truck_building_a_swiftui_multiplatform_app)
 * [Apple Sample Code: Fruta: Building a Feature-Rich App with SwiftUI](https://developer.apple.com/documentation/swiftui/fruta_building_a_feature-rich_app_with_swiftui)
 * [Apple Sample Code: Create Accessible Views and more sample code](https://developer.apple.com/documentation/swiftui/creating_accessible_views)
+
+***
+
+<a href="https://www.buymeacoffee.com/alexpaulnyc" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"> If any of the info here was valuable in your SwiftUI quest.</a>
 
 
