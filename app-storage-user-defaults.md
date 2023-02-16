@@ -51,6 +51,10 @@ enum Theme: String {
 }
 
 struct ContentView: View {
+    // 1
+    // `@AppStorage` is a Property Wrapper around `UserDefaults` used to
+    // persist "small" amounts of data
+    // `UserDefaults` is not a recommended storage for large files
     @AppStorage("theme") var theme: String = Theme.light.rawValue
 
     private var currentTheme: Theme {
@@ -63,6 +67,10 @@ struct ContentView: View {
                 .foregroundColor(currentTheme.foregroundColor)
                 .padding(.bottom, 20)
             Button(currentTheme.buttonTitle) {
+                // 2
+                // Update the `UserDefault` `theme` key
+                // Since `@AppStorage` also handles state,
+                // the SwiftUI View will be updated
                 theme = currentTheme.toggle.rawValue
             }
             .foregroundColor(currentTheme.foregroundColor)
