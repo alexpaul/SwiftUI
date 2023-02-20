@@ -1,6 +1,7 @@
 # CollapsibleView 
 
-<img width="1436" alt="Screen Shot 2023-02-20 at 9 07 28 AM" src="https://user-images.githubusercontent.com/1819208/220129646-a5e542dd-7c27-4173-8377-f0b6fbda4046.png">
+<img width="1435" alt="Screen Shot 2023-02-20 at 9 17 42 AM" src="https://user-images.githubusercontent.com/1819208/220131767-3061de17-8003-4a6c-a922-9111b3666df9.png">
+
 
 try? it out 
 
@@ -18,15 +19,17 @@ struct CollapsibleView: View {
             VStack {
                 HStack {
                     Text(isCollapsed ? "Read less" : "Read more")
-                        .multilineTextAlignment(.center)
                     Image(systemName: isCollapsed ? "chevron.down" : "chevron.up")
                         .onTapGesture {
-                            isCollapsed.toggle()
+                            withAnimation {
+                                isCollapsed.toggle()
+                            }
                         }
                 }
                 .padding(.bottom, 10)
                 Text(isCollapsed ? fullText : summary)
                     .shadow(radius: 0)
+                    .animation(.linear(duration: 0.3), value: isCollapsed)
             }
             .frame(maxWidth: .infinity)
             .lineSpacing(10)
