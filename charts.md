@@ -33,7 +33,7 @@ struct ContentView: View {
             Text("IRONMAN Nice Bike Elevation (First 2 sections of 4)")
             Chart(Workout.data) { workout in
                 BarMark(
-                    x: .value("", workout.segment),
+                    x: .value("Segment", workout.segment),
                     y: .value("Elevation", workout.elevation)
                 )
             }
