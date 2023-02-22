@@ -29,8 +29,10 @@ struct Workout: Identifiable {
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("IRONMAN Nice Bike Elevation (First 2 sections of 4)")
+        VStack(alignment: .center, spacing: 8) {
+            Text("IRONMAN Nice 🇫🇷")
+                .font(.title)
+            Text("Bike Elevation (First 2 sections of 4)")
             Chart(Workout.data) { workout in
                 BarMark(
                     x: .value("Segment", workout.segment),
