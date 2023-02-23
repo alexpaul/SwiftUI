@@ -2,8 +2,7 @@
 
 ## Example 1
 
-![Screen Shot 2023-02-19 at 11 15 07 AM](https://user-images.githubusercontent.com/1819208/219960467-d33c4b6f-2783-4883-97d2-2f8ec53b68eb.png)
-
+<img width="1277" alt="Screen Shot 2023-02-23 at 10 59 58 AM" src="https://user-images.githubusercontent.com/1819208/220961879-da430922-1eb4-4da0-b8e2-f8e9f6f37499.png">
 
 try? it out 
 
@@ -38,6 +37,9 @@ struct ContentView: View {
                     x: .value("Segment", workout.segment),
                     y: .value("Elevation", workout.elevation)
                 )
+                .annotation(position: .top) {
+                    Text("\(workout.elevation) feet")
+                }
             }
             .chartYAxisLabel("Elevation (Feet)")
         }
