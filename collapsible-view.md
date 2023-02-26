@@ -19,15 +19,17 @@ struct CollapsibleView: View {
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
-                HStack {
-                    Text(isCollapsed ? "Read less" : "Read more")
-                    Spacer()
-                    Image(systemName: isCollapsed ? "chevron.down" : "chevron.up")
-                        .onTapGesture {
-                            withAnimation {
-                                isCollapsed.toggle()
-                            }
-                        }
+                Button(action: {
+                    withAnimation {
+                        isCollapsed.toggle()
+                    }
+                }) {
+                    HStack {
+                        Text(isCollapsed ? "Read less" : "Read more")
+                        Spacer()
+                        Image(systemName: isCollapsed ? "chevron.down" : "chevron.up")
+                    }
+                    .foregroundColor(foregroundColor)
                 }
                 .padding(.bottom, 10)
                 Text(isCollapsed ? fullText : summary)
@@ -53,6 +55,10 @@ struct CollapsibleView: View {
         colorScheme == .light ? .white : .black
     }
 
+    private var foregroundColor: Color {
+        colorScheme == .light ? .black : .white
+    }
+
     private var border: Color {
         colorScheme == .light ? .black.opacity(0.4) : .white.opacity(0.4)
     }
@@ -69,6 +75,7 @@ struct ContentView: View {
                 summary: summmary,
                 fullText: fullText
             )
+            .padding(.top, 60)
             Spacer()
         }
     }
