@@ -1,6 +1,6 @@
 # CollapsibleView 
 
-<img width="1435" alt="Screen Shot 2023-02-20 at 9 17 42 AM" src="https://user-images.githubusercontent.com/1819208/220131767-3061de17-8003-4a6c-a922-9111b3666df9.png">
+![Screen Shot 2023-02-25 at 9 02 13 PM](https://user-images.githubusercontent.com/1819208/221388236-c1e89e60-ac16-4d35-a7e2-32b37c72a422.png)
 
 
 try? it out 
@@ -11,6 +11,8 @@ import SwiftUI
 struct CollapsibleView: View {
     let summary: String
     let fullText: String
+
+    @Environment(\.colorScheme) private var colorScheme
 
     @State private var isCollapsed = false
 
@@ -28,18 +30,26 @@ struct CollapsibleView: View {
                 }
                 .padding(.bottom, 10)
                 Text(isCollapsed ? fullText : summary)
-                    .shadow(radius: 0)
-                    .animation(.linear(duration: 0.3), value: isCollapsed)
+                Divider()
+                    .padding(.vertical, 20)
+                Text("© 2023 alexpaul.dev")
             }
-            .frame(maxWidth: .infinity)
             .lineSpacing(10)
             .kerning(0.8)
-            .padding(.vertical, 20)
-            .padding(.horizontal, 20)
-            .background(.white)
-            .shadow(radius: 12)
+            .padding(20)
         }
+        .background(background)
+        .border(border, width: 1)
+        .shadow(radius: 12)
         .padding(.horizontal, 20)
+    }
+
+    private var background: Color {
+        colorScheme == .light ? .white : .black
+    }
+
+    private var border: Color {
+        colorScheme == .light ? .black.opacity(0.4) : .white.opacity(0.4)
     }
 }
 
@@ -49,12 +59,11 @@ struct ContentView: View {
     let fullText = "Alex Paul is a Software Engineer who works at the New York Times Company writing iOS applications. Alex started his career as a Software Engineer in 2015. Prior to joining the Times, Alex taught iOS development to underrepresented individuals at Pursuit Transformation."
 
     var body: some View {
-        VStack {
+        ScrollView {
             CollapsibleView(
                 summary: summmary,
                 fullText: fullText
             )
-            .padding(.top, 40)
             Spacer()
         }
     }
