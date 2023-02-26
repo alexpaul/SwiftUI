@@ -1,6 +1,6 @@
 # CollapsibleView 
 
-![Screen Shot 2023-02-25 at 9 02 13 PM](https://user-images.githubusercontent.com/1819208/221388236-c1e89e60-ac16-4d35-a7e2-32b37c72a422.png)
+![Screen Shot 2023-02-25 at 9 13 50 PM](https://user-images.githubusercontent.com/1819208/221388534-a26d5214-d181-44cc-86be-15f8cc8b6d49.png)
 
 
 try? it out 
@@ -18,9 +18,10 @@ struct CollapsibleView: View {
 
     var body: some View {
         VStack {
-            VStack {
+            VStack(alignment: .leading) {
                 HStack {
                     Text(isCollapsed ? "Read less" : "Read more")
+                    Spacer()
                     Image(systemName: isCollapsed ? "chevron.down" : "chevron.up")
                         .onTapGesture {
                             withAnimation {
@@ -32,7 +33,11 @@ struct CollapsibleView: View {
                 Text(isCollapsed ? fullText : summary)
                 Divider()
                     .padding(.vertical, 20)
-                Text("© 2023 alexpaul.dev")
+                HStack {
+                    Spacer()
+                    Text("© 2023 alexpaul.dev")
+                    Spacer()
+                }
             }
             .lineSpacing(10)
             .kerning(0.8)
