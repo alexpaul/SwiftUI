@@ -1,22 +1,30 @@
 # TextField 
 
-![Screen Shot 2023-03-01 at 6 32 47 PM](https://user-images.githubusercontent.com/1819208/222291075-a22399e7-8100-4208-9b33-af89c204972b.png)
+![Screen Shot 2023-03-01 at 6 42 18 PM](https://user-images.githubusercontent.com/1819208/222292240-f164411c-114c-4328-9f1a-abb4b7189d48.png)
 
 
 try? it out
 
 ```swift
+import SwiftUI
+
 struct ContentView: View {
     @State private var username = ""
+    @State private var password = ""
 
     var body: some View {
-        VStack {
+        VStack(alignment: .center, spacing: 20) {
             TextField("Please enter your username", text: $username)
-                .textFieldStyle(.roundedBorder)
-                .autocapitalization(.none)
-                .autocorrectionDisabled(true)
-                .multilineTextAlignment(.center)
+            SecureField("Please enter your password", text: $password)
         }
+        .frame(width: 300)
+        .multilineTextAlignment(.center)
+        .textFieldStyle(.roundedBorder)
+        .autocapitalization(.none)
+        .autocorrectionDisabled(true)
+        .padding(20)
+        .background(.teal)
+        .cornerRadius(8)
     }
 }
 
