@@ -35,6 +35,10 @@ final class Favorites: ObservableObject {
     func add(_ color: Color) {
         colors.append(color)
     }
+
+    func remove(at index: Int) {
+        colors.remove(at: index)
+    }
 }
 ```
 
@@ -122,9 +126,14 @@ struct FavoritesView: View {
     @EnvironmentObject var favorites: Favorites
 
     var body: some View {
-        List(favorites.colors, id: \.self) { color in
-            ColorRow(color: color)
-                .background(color)
+        List {
+            ForEach(Array(favorites.colors.enumerated()), id: \.offset) { index, color in
+                ColorRow(color: color)
+                    .background(color)
+                    .onTapGesture {
+                        favorites.remove(at: index)
+                    }
+            }
         }
     }
 }
