@@ -1,4 +1,4 @@
-# Handling State: Using `ObservableObject`, `@Published`, `StateObject`,`.environmentObject(_:)` and `EnvironmentObject`
+# Handling Data in SwiftUI: Using `ObservableObject`, `@Published`, `StateObject`,`.environmentObject(_:)` and `EnvironmentObject`
 
 This SwiftUI sample app uses the above mentioned modifiers and Property Wrappers to add selected colors to a "Favorites" tab.
 
