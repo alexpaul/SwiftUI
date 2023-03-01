@@ -1,5 +1,7 @@
 # TextField 
 
+## 1. `TextField` and `SecureField`
+
 ![Screen Shot 2023-03-01 at 6 42 18 PM](https://user-images.githubusercontent.com/1819208/222292240-f164411c-114c-4328-9f1a-abb4b7189d48.png)
 
 
@@ -25,6 +27,50 @@ struct ContentView: View {
         .padding(20)
         .background(.teal)
         .cornerRadius(8)
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
+***
+
+## 2. Custom `TextFieldStyle` 
+
+![Screen Shot 2023-03-01 at 6 54 38 PM](https://user-images.githubusercontent.com/1819208/222294144-f1705dd3-9492-4e02-9f6a-97d67303f772.png)
+
+```swift
+import SwiftUI
+
+struct CustomTextFieldStyle: TextFieldStyle {
+    func _body(configuration: TextField<_Label>) -> some View {
+        configuration
+            .padding(20)
+            .foregroundColor(.white)
+            .bold()
+            .kerning(0.8)
+            .background(.orange)
+            .autocapitalization(.none)
+            .autocorrectionDisabled(true)
+            .cornerRadius(24)
+            .multilineTextAlignment(.center)
+            .shadow(radius: 12)
+    }
+}
+
+struct ContentView: View {
+    @State private var username = ""
+
+    var body: some View {
+        VStack {
+            TextField("Enter your username", text: $username)
+                .textFieldStyle(CustomTextFieldStyle())
+        }
+        .padding(.horizontal, 20)
     }
 }
 
