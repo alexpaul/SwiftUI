@@ -1,6 +1,6 @@
 # Handling Data in SwiftUI: Using `ObservableObject`, `@Published`, `StateObject`,`.environmentObject(_:)` and `EnvironmentObject`
 
-This SwiftUI sample app uses the above mentioned modifiers and Property Wrappers to add selected colors to a "Favorites" tab.
+This SwiftUI sample app uses the above mentioned modifiers and Property Wrappers to add / delete selected colors to and from the "Favorites" tab.
 
 ![Screen Shot 2022-10-25 at 4 49 34 PM](https://user-images.githubusercontent.com/1819208/197879179-e8aba439-1012-446d-b04a-9cccd8fb5d1f.png)
 
@@ -131,7 +131,9 @@ struct FavoritesView: View {
                 ColorRow(color: color)
                     .background(color)
                     .onTapGesture {
-                        favorites.remove(at: index)
+                        withAnimation {
+                            favorites.remove(at: index)
+                        }
                     }
             }
         }
