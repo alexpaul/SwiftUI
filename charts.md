@@ -114,6 +114,93 @@ struct ContentView_Previews: PreviewProvider {
 }
 ```
 
+***
+
+## Example 3
+
+![Screen Shot 2023-03-14 at 3 30 32 PM](https://user-images.githubusercontent.com/1819208/225116640-340e0c5a-c2de-4788-814b-1c1d3acc5657.png)
+
+
+try? it out 
+
+```swift
+//
+//  ContentView.swift
+//  SwiftUIPlayground
+//
+//  Created by Alex Paul
+//
+
+import SwiftUI
+import Charts
+
+struct Segment: Identifiable {
+    let section: Int
+    let power: Int
+    let duration: Int
+
+    var id: UUID { UUID() }
+
+    static var data: [Segment] {
+        [
+            .init(
+                section: 0,
+                power: 160,
+                duration: 20
+            ),
+            .init(
+                section: 1,
+                power: 225,
+                duration: 60
+            ),
+            .init(
+                section: 2,
+                power: 160,
+                duration: 20
+            ),
+            .init(
+                section: 3,
+                power: 225,
+                duration: 60
+            ),
+            .init(
+                section: 4,
+                power: 160,
+                duration: 20
+            )
+        ]
+    }
+}
+
+struct SegmentChart: View {
+    var body: some View {
+        Chart(Segment.data) { segment in
+            BarMark(
+                x: .value("Section", segment.section),
+                y: .value("Power", segment.power),
+                width: .init(integerLiteral: segment.duration)
+            )
+            .annotation(position: .top) {
+                Text("\(segment.power) watts")
+                    .font(.caption2)
+            }
+        }
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        SegmentChart()
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
 ## Resources 
 
 * [Apple docs: Swift Charts](https://developer.apple.com/documentation/charts)
