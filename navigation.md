@@ -34,3 +34,9 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 ```
+
+***
+
+## Resources 
+
+* [Apple docs: `NavigationStack`](https://developer.apple.com/documentation/swiftui/navigationstack)
