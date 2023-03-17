@@ -146,3 +146,40 @@ extension Color {
     static var backgroundColor = Color.white
 }
 ```
+
+***
+
+## Example 3
+
+![Screen Shot 2023-03-17 at 7 25 33 PM](https://user-images.githubusercontent.com/1819208/226069065-c40b1dae-b131-4930-9f78-ffa75ef2a6ba.png)
+
+
+try? it out 
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        HStack(alignment: .center, spacing: 10) {
+            ProgressView()
+                .progressViewStyle(CircularProgressViewStyle(tint: .red))
+                // .controlSize(.large)
+                .scaleEffect(1.2)
+            Text("Loading...")
+        }
+        .padding()
+        .overlay {
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(.gray, lineWidth: 1)
+        }
+        .shadow(radius: 4)
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
