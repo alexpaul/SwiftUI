@@ -58,13 +58,28 @@ extension Color {
 
 ## Example 2
 
-![Screen Shot 2023-03-01 at 2 06 51 PM](https://user-images.githubusercontent.com/1819208/222239888-e7c8fd53-07eb-4423-9ad1-7fdcbc34c70e.png)
-
+![Screen Shot 2023-03-17 at 6 59 35 PM](https://user-images.githubusercontent.com/1819208/226066612-4df98003-d62f-48ae-b576-d396dae4e7b0.png)
 
 try? it out
 
 ```swift
 import SwiftUI
+
+struct Loader: View {
+    var body: some View {
+        Circle()
+            .frame(width: 40)
+            .foregroundColor(.contentColor)
+            .overlay {
+                ProgressView()
+                    .progressViewStyle(
+                        CircularProgressViewStyle(
+                            tint: .backgroundColor
+                        )
+                    )
+            }
+    }
+}
 
 struct CustomButton: View {
     let title: String
@@ -93,7 +108,7 @@ struct ButtonList: View {
 
 struct ContentView: View {
     let timer = Timer.publish(
-        every: 5,
+        every: 8,
         on: .main,
         in: .common
     ).autoconnect()
@@ -104,17 +119,11 @@ struct ContentView: View {
         VStack(alignment: .center, spacing: 20) {
             Text("Some View")
             if counter == 0 {
-                ZStack {
-                    ButtonList()
-                        .opacity(0)
-                    ProgressView()
-                }
-            } else {
-                ZStack {
-                    ButtonList()
-                        .opacity(1)
-                }
+                Loader()
             }
+            ButtonList()
+                .disabled(counter == 0)
+                .opacity(counter == 0 ? 0.25 : 1)
             Text("Some Other View")
         }
         .onReceive(timer) { time in
@@ -130,5 +139,10 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+extension Color {
+    static var contentColor = Color.black
+    static var backgroundColor = Color.white
 }
 ```
