@@ -2,8 +2,7 @@
 
 ## Example 1
 
-![Screen Shot 2023-03-17 at 3 48 51 PM](https://user-images.githubusercontent.com/1819208/226014474-0a5de271-b39a-49ac-8fea-89fdd54e68da.png)
-
+![Screen Shot 2023-03-17 at 4 57 53 PM](https://user-images.githubusercontent.com/1819208/226045530-d420ccb8-30c4-4144-a329-792e3504838d.png)
 
 try? it out 
 
@@ -11,24 +10,26 @@ try? it out
 import SwiftUI
 
 struct LoadingView: View {
-    private var contentColor = Color.white
-    private var backgroundColor = Color.orange
+    var text = "Loading"
 
     var body: some View {
         Rectangle()
-            .frame(width: 80, height: 80)
+            .frame(width: 120, height: 120)
             .cornerRadius(12)
-            .foregroundColor(backgroundColor)
+            .foregroundColor(.backgroundColor)
             .overlay {
                 ProgressView() {
-                    Text("Loading")
-                        .font(.caption)
+                    Text(text)
+                        .font(.footnote)
                         .multilineTextAlignment(.center)
-                        .foregroundColor(contentColor)
+                        .foregroundColor(.contentColor)
+                        .padding(.horizontal, 10)
+                        .lineSpacing(8)
+                        .kerning(0.4)
                 }
                 .progressViewStyle(
                     CircularProgressViewStyle(
-                        tint: contentColor
+                        tint: .contentColor
                     )
                 )
             }
@@ -37,7 +38,7 @@ struct LoadingView: View {
 
 struct ContentView: View {
     var body: some View {
-        LoadingView()
+        LoadingView(text: "Booking Flight ✈️")
     }
 }
 
@@ -45,6 +46,11 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+extension Color {
+    static var contentColor = Color.white
+    static var backgroundColor = Color.orange
 }
 ```
 
