@@ -2,7 +2,7 @@
 
 ## Example 1
 
-![Screen Shot 2023-03-17 at 3 46 25 PM](https://user-images.githubusercontent.com/1819208/226013215-34165e35-d1ec-41c3-9ffe-2b330f66c7f5.png)
+![Screen Shot 2023-03-17 at 3 48 51 PM](https://user-images.githubusercontent.com/1819208/226014474-0a5de271-b39a-49ac-8fea-89fdd54e68da.png)
 
 
 try? it out 
@@ -10,7 +10,7 @@ try? it out
 ```swift
 import SwiftUI
 
-struct ContentView: View {
+struct LoadingView: View {
     private var contentColor = Color.white
     private var backgroundColor = Color.orange
 
@@ -32,6 +32,12 @@ struct ContentView: View {
                     )
                 )
             }
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        LoadingView()
     }
 }
 
