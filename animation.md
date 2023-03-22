@@ -135,7 +135,7 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
-## Example 3 - using `.transtion`
+## Example 3 - using `.transition`
 
 ![transition-animation](https://user-images.githubusercontent.com/1819208/226891506-994e1613-3779-4466-956b-a7d38da3d43b.gif)
 
