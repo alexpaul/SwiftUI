@@ -2,7 +2,7 @@
 
 > Mario animations all inspired by my son's love for all things Mario. He can't wait for the Super Mario Bros movie coming April 2023. 
 
-## Search Animation 
+## Example 1 
 
 ![mario-searching-ui](https://user-images.githubusercontent.com/1819208/212473166-d5460075-e6fd-498e-987f-1c55ac425fe6.gif)
 
@@ -56,7 +56,7 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
-## Reveal more animation
+## Example 2
 
 ![reveal-more-animation](https://user-images.githubusercontent.com/1819208/212593830-2640485e-6a84-4669-a9ae-7f23c1dcd1d1.gif)
 
@@ -123,6 +123,49 @@ struct ContentView: View {
             }
         }
         .edgesIgnoringSafeArea(.top)
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
+***
+
+## Example 3
+
+![transition-animation](https://user-images.githubusercontent.com/1819208/226891506-994e1613-3779-4466-956b-a7d38da3d43b.gif)
+
+
+try? it out 
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    @State private var isTransitioning = false
+
+    var body: some View {
+        VStack(alignment: .center, spacing: 20) {
+            Spacer()
+            Group {
+                if isTransitioning {
+                    Image("clock")
+                } else {
+                    Image("swiftui-logo")
+                }
+            }
+            .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.5)))
+            Spacer()
+            Button(action: {
+                isTransitioning.toggle()
+            }) {
+                Text("Transition")
+            }
+        }
     }
 }
 
