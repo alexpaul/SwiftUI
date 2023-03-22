@@ -2,7 +2,7 @@
 
 > Mario animations all inspired by my son's love for all things Mario. He can't wait for the Super Mario Bros movie coming April 2023. 
 
-## Example 1 
+## Example 1 - using `.animation`
 
 ![mario-searching-ui](https://user-images.githubusercontent.com/1819208/212473166-d5460075-e6fd-498e-987f-1c55ac425fe6.gif)
 
@@ -56,7 +56,7 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
-## Example 2
+## Example 2 - using `withAnimation`
 
 ![reveal-more-animation](https://user-images.githubusercontent.com/1819208/212593830-2640485e-6a84-4669-a9ae-7f23c1dcd1d1.gif)
 
@@ -135,7 +135,7 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
-## Example 3
+## Example 3 - using `.transtion`
 
 ![transition-animation](https://user-images.githubusercontent.com/1819208/226891506-994e1613-3779-4466-956b-a7d38da3d43b.gif)
 
