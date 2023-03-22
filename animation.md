@@ -1,5 +1,15 @@
 # Animation 
 
+> [Apple docs on Animation](https://developer.apple.com/documentation/swiftui/animations): You tell SwiftUI how to draw your app’s user interface for different states, and then rely on SwiftUI to make interface updates when the state changes. To avoid abrupt visual transitions when the state changes, add animation in one of the following ways:
+
+* Animate all of the visual changes for a state change by changing the state inside a call to the `withAnimation(_:_:)` global function.
+
+* Add animation to a particular view when a specific value changes by applying the `animation(_:value:)` view modifier to the view.
+
+* Animate changes to a `Binding` by using the binding’s `animation(_:)` method.
+
+
+
 > Mario animations all inspired by my son's love for all things Mario. He can't wait for the Super Mario Bros movie coming April 2023. 
 
 ## Example 1 - using `.animation`
@@ -175,3 +185,12 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 ```
+
+***
+
+## Resources 
+
+* [Apple docs: Animations](https://developer.apple.com/documentation/swiftui/animations)
+* [Apple docs: `withAnimation`](https://developer.apple.com/documentation/swiftui/withanimation(_:_:)/)
+* [Apple docs: `animation`](https://developer.apple.com/documentation/swiftui/view/animation(_:value:))
+* [Apple docs: `.transition`](https://developer.apple.com/documentation/swiftui/view/transition(_:))
