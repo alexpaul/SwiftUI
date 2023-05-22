@@ -63,6 +63,17 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
+## SwiftUI @ WWDC 
+
+2021 
+* [Demystifying SwiftUI - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10022/)
+
+2020  
+* [Introduction to SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10119)
+* [Data essentials in SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10040/)
+
+
+
 ## Apple SwiftUI Resources 
 
 * [Apple: SwiftUI](https://developer.apple.com/xcode/swiftui/)
