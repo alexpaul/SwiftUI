@@ -70,7 +70,7 @@ struct ContentView_Previews: PreviewProvider {
 
 2020  
 * [Introduction to SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10119)
-* [Data essentials in SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10040/)
+* [Data essentials in SwiftUI - WWDC20](https://developer.apple.com/videos/play/wwdc2020/10040/) ⭐️
 
 
 
