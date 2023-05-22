@@ -83,6 +83,59 @@ struct ContentView_Previews: PreviewProvider {
 
 ***
 
+## 3. Tip Calculator 
+
+![Screenshot 2023-05-22 at 5 33 11 PM](https://github.com/alexpaul/SwiftUI/assets/1819208/4efb7b31-5efe-4687-921b-ea8e44bdca19)
+
+
+try? it out 
+
+```swift
+import SwiftUI
+
+struct TipTextField: TextFieldStyle {
+    func _body(configuration: TextField<_Label>) -> some View {
+        configuration
+            .padding(20)
+            .foregroundColor(.black)
+            .background(.orange.opacity(0.5))
+            .cornerRadius(8)
+    }
+}
+
+struct ContentView: View {
+    @State private var billAmount = ""
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            Text("Calculate Tip")
+            TextField(
+                "0",
+                text: $billAmount
+            )
+            .textFieldStyle(TipTextField())
+            Text(tipAmount)
+                .font(.system(.title, weight: .bold))
+        }
+        .padding(.horizontal, 20)
+    }
+
+    private var tipAmount: String {
+        guard let amount = Double(billAmount),
+            amount > 0 else {
+            return "Tip"
+        }
+        return String(format: "Tip Amount: $%.2f", amount * 0.15)
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
 ## Resources
 
 * [Apple docs: `TextField`](https://developer.apple.com/documentation/swiftui/textfield)
