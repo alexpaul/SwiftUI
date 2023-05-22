@@ -65,6 +65,9 @@ struct ContentView_Previews: PreviewProvider {
 
 ## SwiftUI @ WWDC 
 
+2022
+* [Use SwiftUI with UIKit - WWDC22](https://developer.apple.com/videos/play/wwdc2022/10072/)
+
 2021 
 * [Demystifying SwiftUI - WWDC21](https://developer.apple.com/videos/play/wwdc2021/10022/)
 
