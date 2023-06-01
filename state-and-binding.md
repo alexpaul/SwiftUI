@@ -40,7 +40,7 @@ struct ButtonNavigation: View {
         }
         .padding(.horizontal, 20)
         .onAppear {
-            start = values[0]
+            start = values[start]
         }
     }
 
