@@ -1,5 +1,87 @@
 # `@State` and `@Binding`
 
+## Example 1
+
+![Screenshot 2023-05-31 at 8 56 04 PM](https://github.com/alexpaul/SwiftUI/assets/1819208/d48f256b-5fd7-458c-ae34-9d03e0e3670a)
+
+
+try? it out 
+
+```swift
+import SwiftUI
+
+struct ActionButton: View {
+    let title: String
+
+    var action: () -> Void
+
+    var body: some View {
+        Button(action: {
+            action()
+        }) {
+            Text(title)
+                .frame(maxWidth: .infinity)
+                .padding()
+                .foregroundColor(.white)
+        }
+        .background(.purple)
+        .clipShape(RoundedRectangle(cornerRadius: 24))
+    }
+}
+
+struct ButtonNavigation: View {
+    @State private var values = Array(0...10)
+    @Binding var start: Int
+
+    var body: some View {
+        HStack(spacing: 40) {
+            ActionButton(title: "Previous") { decrement() }
+            ActionButton(title: "Next") { increment() }
+        }
+        .padding(.horizontal, 20)
+        .onAppear {
+            start = values[0]
+        }
+    }
+
+    private func increment() {
+        guard start < values.count - 1 else {
+            return
+        }
+        start = values[start + 1]
+    }
+
+    private func decrement() {
+        guard start > 0 else {
+            return
+        }
+        start = values[start - 1]
+    }
+}
+
+struct ContentView: View {
+    @State private var start = 0
+
+    var body: some View {
+        VStack {
+            Text("\(start)")
+                .font(.largeTitle)
+            ButtonNavigation(start: $start)
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
+***
+
+## Example 2
+
 ![Screenshot 2023-05-21 at 2 21 57 PM](https://github.com/alexpaul/SwiftUI/assets/1819208/8e7aa625-bcea-490d-885d-cdd1f03f257b)
 
 try? it out 
