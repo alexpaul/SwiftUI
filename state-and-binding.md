@@ -30,8 +30,9 @@ struct ActionButton: View {
 }
 
 struct ButtonNavigation: View {
-    @State private var values = Array(0...10)
-    @Binding var start: Int
+    @Binding var startIndex: Int
+
+    let values: [Int]
 
     var body: some View {
         HStack(spacing: 40) {
@@ -40,33 +41,37 @@ struct ButtonNavigation: View {
         }
         .padding(.horizontal, 20)
         .onAppear {
-            start = values[start]
+            startIndex = values[startIndex]
         }
     }
 
     private func increment() {
-        guard start < values.count - 1 else {
+        guard startIndex < values.count - 1 else {
             return
         }
-        start = values[start + 1]
+        startIndex = values[startIndex + 1]
     }
 
     private func decrement() {
-        guard start > 0 else {
+        guard startIndex > 0 else {
             return
         }
-        start = values[start - 1]
+        startIndex = values[startIndex - 1]
     }
 }
 
 struct ContentView: View {
-    @State private var start = 0
+    @State private var values = Array(0...10)
+    @State private var startIndex = 9
 
     var body: some View {
         VStack {
-            Text("\(start)")
+            Text("\(startIndex)")
                 .font(.largeTitle)
-            ButtonNavigation(start: $start)
+            ButtonNavigation(
+                startIndex: $startIndex,
+                values: values
+            )
         }
     }
 }
