@@ -63,7 +63,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Text("\(startIndex)")
+            Text("\(values[startIndex])")
                 .font(.largeTitle)
             ButtonNavigation(
                 startIndex: $startIndex,
