@@ -40,23 +40,20 @@ struct ButtonNavigation: View {
             ActionButton(title: "Next") { increment() }
         }
         .padding(.horizontal, 20)
-        .onAppear {
-            startIndex = values[startIndex]
-        }
     }
 
     private func increment() {
         guard startIndex < values.count - 1 else {
             return
         }
-        startIndex = values[startIndex + 1]
+        startIndex += 1
     }
 
     private func decrement() {
         guard startIndex > 0 else {
             return
         }
-        startIndex = values[startIndex - 1]
+        startIndex -= 1
     }
 }
 
