@@ -48,3 +48,4 @@ struct ContentView_Previews: PreviewProvider {
 ## Resources 
 * [Apple documentation: Applying custom fonts to text](https://developer.apple.com/documentation/swiftui/applying-custom-fonts-to-text/)
 * [Code with Chris: SwiftUI: How to add custom fonts to your app](https://codewithchris.com/swiftui/swiftui-custom-fonts/)
+* [Font Space](https://www.fontspace.com/category/pixelated)
