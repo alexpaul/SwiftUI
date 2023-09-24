@@ -1,6 +1,6 @@
 # Adding a custom font 
 
-> Design inspired by my son who attending his first App design workshop today 09/23/23. He specifically called out needing a pixelated font 😊.
+> Design inspired by my son who attended his first App design workshop today 09/23/23. He specifically called out needing a pixelated font 😊.
 
 ![Screenshot 2023-09-23 at 7 30 19 PM](https://github.com/alexpaul/SwiftUI/assets/1819208/b8b02b88-5a21-4d1f-ac95-7b6a6ecf4f67)
 
