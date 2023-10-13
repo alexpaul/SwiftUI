@@ -11,10 +11,6 @@ try? it out
 import SwiftUI
 
 struct ContentView: View {
-    @Namespace var startID
-    @Namespace var middleID
-    @Namespace var endID
-
     private let numbers = Array(0...20)
     private let horizontalPadding: CGFloat = 10
 
