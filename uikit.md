@@ -1,4 +1,4 @@
-# UIKit and SwiftUI 
+# UIKit hosting a SwiftUI View
 
 ![Screenshot 2023-11-01 at 8 01 25 PM](https://github.com/alexpaul/SwiftUI/assets/1819208/c84274e7-bbbd-4111-b731-8925471d8b9c)
 
