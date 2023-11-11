@@ -1,5 +1,8 @@
 # Search 
 
+* `searchable`
+* `onSubmit`
+
 ![Screen Shot 2022-11-10 at 6 57 20 AM](https://user-images.githubusercontent.com/1819208/201084711-6550db6c-4a92-4051-ae43-22ca955081b1.png)
 
 
