@@ -1,6 +1,6 @@
 # Loading `gif`'s in SwiftUI
 
-> `gif` selection was inspired by my viewing of Godzilla x Kong with my son opening weekend (Godzilla tradition 😊) 👦🏾 ❤️.
+> `gif` selection was inspired by my viewing of "Godzilla x Kong" with my son opening weekend (Godzilla tradition 😊) 👦🏾 ❤️.
 
 ![loading-gif-in-swiftui](https://github.com/alexpaul/SwiftUI/assets/1819208/7a5f6c77-2f97-4a8f-8cf6-083ec5d33e3c)
 
