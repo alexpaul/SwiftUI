@@ -1,7 +1,6 @@
 # Button 
 
-![Screenshot 2024-04-05 at 12 34 31 PM](https://github.com/alexpaul/SwiftUI/assets/1819208/31879c33-f41c-434a-8811-871b25846f9e)
-
+![Screenshot 2024-04-05 at 12 36 05 PM](https://github.com/alexpaul/SwiftUI/assets/1819208/a4592d25-1189-4bf3-8579-f037d0e51a58)
 
 ```swift
 import SwiftUI
