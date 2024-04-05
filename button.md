@@ -1,41 +1,28 @@
 # Button 
 
-![Screen Shot 2022-11-01 at 8 31 57 PM](https://user-images.githubusercontent.com/1819208/199367102-40b19ad9-823d-499a-9372-051d544f262e.png)
+![Screenshot 2024-04-05 at 12 34 31 PM](https://github.com/alexpaul/SwiftUI/assets/1819208/31879c33-f41c-434a-8811-871b25846f9e)
 
 
 ```swift
 import SwiftUI
 
 struct ContentView: View {
-    private enum Constants {
-        static let segmentedBorderHeight: Double = 1
-        static let buttonHeight: Double = 44
-    }
-
-    @State private var isSelected = 0
-
     var body: some View {
-        Button(action: performAction) {
-            Text("Press for SwiftUI")
-                .frame(minHeight: 44)
-                .frame(maxWidth: .infinity)
-                .foregroundColor(.white)
-                .bold()
-        }
-        .background(.blue)
-        .cornerRadius(22)
-        .padding(.horizontal, 20)
-    }
+        Button {
 
-    private func performAction() {
-        print("Button Pressed")
+        } label: {
+            Text("Press for SwiftUI")
+                .foregroundStyle(.white)
+                .padding(.vertical, 8)
+                .padding(.horizontal, 20)
+                .background(.blue, in: RoundedRectangle(cornerRadius: 16))
+        }
+        .buttonStyle(.plain)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }
 ```
 
