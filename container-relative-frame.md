@@ -24,10 +24,6 @@ struct ContentView: View {
 }
 ```
 
-## Resources 
-
-* [`containerRelativeFrame(_:alignment:)`](https://developer.apple.com/documentation/swiftui/view/containerrelativeframe(_:alignment:)?changes=_5)
-
 *** 
 
 ## Example 2 
@@ -73,3 +69,9 @@ struct ContentView: View {
     ContentView()
 }
 ```
+
+***
+
+## Resources 
+
+* [`containerRelativeFrame(_:alignment:)`](https://developer.apple.com/documentation/swiftui/view/containerrelativeframe(_:alignment:)?changes=_5)
