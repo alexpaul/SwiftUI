@@ -14,6 +14,8 @@
 > 
 > The size provided to this modifier is the size of a container like the ones listed above subtracting any safe area insets that might be applied to that container.
 
+[`containerRelativeFrame(_:alignment:)`](https://developer.apple.com/documentation/swiftui/view/containerrelativeframe(_:alignment:)?changes=_5)
+
 ## Example 1
 
 ![Screenshot 2024-06-16 at 9 27 43 AM](https://github.com/alexpaul/SwiftUI/assets/1819208/f9d08799-6f03-4cb2-ac6f-04050f497842)
