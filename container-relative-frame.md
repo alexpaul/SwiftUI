@@ -1,5 +1,19 @@
 # Using `containerRelativeFrame`
 
+> Use this modifier to specify a size for a view’s width, height, or both that is dependent on the size of the nearest container. Different things can represent a “container” including:
+> 
+> * The window presenting a view on iPadOS or macOS, or the screen of a device on iOS.
+> 
+> * A column of a NavigationSplitView
+> 
+> * A NavigationStack
+> 
+> * A tab of a TabView
+> 
+> * A scrollable view like ScrollView or List
+> 
+> The size provided to this modifier is the size of a container like the ones listed above subtracting any safe area insets that might be applied to that container.
+
 ## Example 1
 
 ![Screenshot 2024-06-16 at 9 27 43 AM](https://github.com/alexpaul/SwiftUI/assets/1819208/f9d08799-6f03-4cb2-ac6f-04050f497842)
