@@ -63,3 +63,9 @@ struct ContentView: View {
     ContentView()
 }
 ```
+
+***
+
+## Resource 
+
+* [What’s new for Apple developers](https://developer.apple.com/whats-new/)
