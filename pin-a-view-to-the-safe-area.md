@@ -30,7 +30,7 @@ struct WWDC24: View {
             .padding()
             .background(.primary, in: RoundedRectangle(cornerRadius: 8).stroke(lineWidth: 1))
         }
-        .clipped() // avoid content from showing in the status bar
+        .clipped() // avoids showing content in the status bar when scrolling
         .padding(.horizontal, 20)
         .padding(.bottom, 40)
         .safeAreaInset(edge: .top) {
