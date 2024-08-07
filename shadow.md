@@ -2,33 +2,12 @@
 
 ## Example 1
 
-<img width="1294" alt="Screenshot 2024-08-07 at 6 21 45 AM" src="https://github.com/user-attachments/assets/b783701b-84ea-4856-a5fc-5ac4a8e282f4">
+![Screenshot 2024-08-07 at 11 47 30 AM](https://github.com/user-attachments/assets/792239fd-1e1e-4885-ae4d-c91a6a652a16)
 
 ```swift
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 10) {
-            Text("Olympics 2024")
-                .font(.largeTitle)
-            Text("Julien Alfred won Saint Lucia")
-            HStack {
-                Text("🥇")
-                Text("🥈")
-            }
-            .font(.title)
-            Text("🇱🇨")
-            .font(.largeTitle)
-        }
-        .frame(width: 300, height: 300)
-        .background(
-            Color(.blackBase),
-            in: .rect(cornerRadius: 4)
-                .stroke(lineWidth: 1)
-        )
-        .background(
-            Color(.whiteBase)
-                .shadow(color: .blue, radius: 12, x: 0, y: 2)
-        )
+        SaintLuciaOlympics2024()
     }
 }
 
