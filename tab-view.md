@@ -36,7 +36,8 @@ struct ContentView: View {
                     .aspectRatio(contentMode: .fit)
             }
         }
-        .tabViewStyle(.page(indexDisplayMode: .always))
+        .tabViewStyle(.page)
+        .indexViewStyle(.page(backgroundDisplayMode: .always))
     }
 }
 
