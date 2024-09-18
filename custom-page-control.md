@@ -2,6 +2,8 @@
 
 If you're here, you're likely looking for a custom control to replace the default page dots in SwiftUI. This Custom Page Control provides a tailored solution for that. 
 
+![custom-page-control](https://github.com/user-attachments/assets/ae27331d-ede4-4774-94ab-5731c5505d74)
+
 ## CustomPageControl.swift
 
 ```swift
