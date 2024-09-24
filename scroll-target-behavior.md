@@ -38,6 +38,8 @@ struct ContentView: View {
 
 ![Screenshot 2024-09-24 at 5 57 39 PM](https://github.com/user-attachments/assets/f03efcce-c130-4ed6-8608-8ca473cbbfd9)
 
+try? it out 
+
 ```swift
 import SwiftUI
 
