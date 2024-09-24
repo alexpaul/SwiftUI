@@ -1,4 +1,4 @@
-# Scroll Target Behavir
+# Scroll Target Behavior
 
 > Note: Avaiable in iOS 17+
 
