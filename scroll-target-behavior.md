@@ -29,3 +29,9 @@ struct ContentView: View {
     ContentView()
 }
 ```
+
+***
+
+## Resources 
+
+* [`ScrollTargetBehavior`](https://developer.apple.com/documentation/swiftui/scrolltargetbehavior)
