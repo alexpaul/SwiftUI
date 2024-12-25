@@ -1,7 +1,6 @@
 # LazyVGrid
 
-<img width="1376" alt="Screenshot 2024-12-25 at 10 22 11 AM" src="https://github.com/user-attachments/assets/d46e1765-d0a1-450c-9b71-1f63cb3de03e" />
-
+<img width="1398" alt="Screenshot 2024-12-25 at 10 24 05 AM" src="https://github.com/user-attachments/assets/ed2e1a78-f84b-4b69-8305-aaf2a03f0ff4" />
 
 try? it out 
 
